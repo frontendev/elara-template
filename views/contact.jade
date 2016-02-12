@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  //Top container
+  div.container-fluid.img-contact(style='position: relative; overflow-x: hidden;')
+    div.shape-para.hidden-xs
+      //- ToDo: resolver el tema del sobreflujo para el paralelogramo de la derecha 
+    div.shape-para-inv.hidden-xs
+    div.container
+      div.row
+        div.col-xs-12.col-sm-6.col-md-4.col-lg-4.card
+          ul.list-unstyled
+            li
+              i.fa.fa-phone.fa-lg.icon
+              span.bold Central de Reservas:
+              span.thin +54 (11) 5032-2558
+            li
+              i.fa.fa-bell.fa-lg.icon
+              span.bold FrontDesk:
+              span.thin +55 (22) 2623-2554
+            li
+              i.fa.fa-whatsapp.fa-lg.icon
+              span.bold WhatsApp:
+              span.thin +54 9 (11) 6522 7365
+            li
+              i.fa.fa-envelope.fa-lg.icon
+              span.thin reservas.9dejulio@htlhoteles.com
+        div.col-lg-offset-5.col-lg-3
+          h1.contact-title-top Contacto
+    //End Top container
+    
+    //content
+  div.container.content.styleb
+    div.row
+      div.col-sm-6
+        p.subtitle HTL 9 De Julio - 
+          span.light Buenos Aires, Argentina
+        p.description
+          i.fa.fa-map-marker.org.fa-lg
+          |  Avenida 9 de Julio y Adolfo Alsina
+        
+        div.embed-responsive.embed-responsive-16by9
+          div#c-map
+        p.subtitle Horarios de atención
+        ul.list-unstyled.schedules
+          li Central de Reservas:
+            span Lunes a Sábado de 8:00 a 22:00 hs
+          li FrontDesk:
+            span Lunes a Viernes de 9:00 a 18:00 hs
+          li WhatsApp:
+            span Todos los días las 24 hs
+          
+      div.col-sm-6
+        p.subtitle2 Envie su consulta y le responderemos a la brevedad
+        form.form-horizontal
+          div.form-group
+            div.col-sm-6
+              input.form-control#inputName(type='text' placeholder='Nombre Completo')
+            div.col-sm-6
+              input.form-control(type='email' class='form-control' id='inputMail' placeholder='E-mail')  
+          div.form-group.has-feedback
+            div.col-sm-3
+              input.form-control#inputCheckIn(type='text' placeholder='Check in')
+              i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+            div.col-sm-3
+              input.form-control#inputCheckOut(type='email' placeholder='Check Out')
+              i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+            div.col-sm-6
+              select.form-control
+                option(selected disable) País
+                option Argentina
+                option Brasil
+                option Paraguay
+                option Uruguay
+          div.form-group
+            div.col-sm-12
+              textarea.form-control(rows='6' placeholder='Mensaje')
+          div.form-group
+            div.col-sm-12
+              button.btn.btn-warning(type='submit') Enviar Mensaje
+
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  script(type='text/javascript' src='javascripts/contact-map.js')
+  script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)

@@ -1,0 +1,712 @@
+/*
+ * Elara template  by Damian Palacios
+ * v0.0.1
+ * for Div It
+*/
+ @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+ @import "color";
+ @import "mixins";
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+//  Elara Settings
+//  -----------------
+//
+//  Table of Contents:
+//
+//   - Global
+//   - Top Nav
+//   - Search
+//   - HTL Description
+//   - Backgrounds
+
+// 1 - Global
+body {
+  font-family: 'Roboto', sans-serif;
+}
+// 2 Top Nav
+.navbar {
+  min-height: 81px;
+  background-color: $white;
+  border-bottom: 1px solid $min-grey;
+  margin-bottom: 0;
+}
+.logo-sm {
+  padding-top: 20px;
+}
+.navbar-default .navbar-nav>li>a, {
+  color: $mid-grey;
+  text-transform: uppercase;
+  font-weight: 300;
+  &:hover {
+    color: $orange;
+  }
+}
+.navbar-right {
+  padding-top: 20px;
+  .dropdown-menu>li>a {
+    color: $min-grey;
+    font-weight: 300;
+  }
+  .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: $white;
+    color: $orange;
+  }
+}
+.navbar-toggle {
+  margin-top: 23px;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: $white;
+}
+.fx-flag-nav {
+  position: relative;
+  top: -2px;
+}
+
+.shape-para {
+	width: 50%;
+  position: absolute;
+  left: -10%;
+	height: 100%;
+  min-height: 100%;
+	-webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+	background: transparentize($skyblue, .2);
+}
+.shape-para-inv {
+	width: 50%;
+  position: absolute;
+  top: 0;
+  right: -45%;
+	height: 100%;
+  min-height: 100%;
+	-webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+	background: transparentize($skyblue, .2);
+}
+
+
+// Search (large)
+
+.search-box {
+  height: 290px;
+  background-color: lighten($orange, 8%);
+  margin: 20px 0;
+  color: $white;
+  .title-top {
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 10px;
+    letter-spacing: 3px;
+  }
+  .title-sub {
+    margin-top: 0;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  .img-price {
+    position: relative;
+    right: 0;
+    top: 15px;
+    width: 85px;
+  }
+  label {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .label-light {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: $mid-grey;
+  }
+  .form-group {
+    &.left {
+      padding-right: 8px;
+      .fa {
+        right: 7px;
+      }
+    }
+    &.right {
+      padding-left: 8px;
+      .fa {
+        right: 14px;
+      }
+    }
+  }
+  .form-control {
+    height: 40px !important;
+    padding: 6px 0 6px 8px;
+    letter-spacing: 0px;
+    font-size: 15px;
+  }
+  .has-feedback .form-control {
+    padding-right: 27.5px;
+  }
+  .fa-calendar{
+    color: $min-grey;
+    top: 44px !important;
+  }
+  .fa-info {
+    color: $white;
+  }
+  .btn {
+    border-radius: 5px;
+    border-bottom: 4px solid $btn-info-border;
+    &:hover {
+      border-bottom: 4px solid darken($btn-info-border, 15%);
+    }
+  }
+  .btn-lg {
+    padding: 6px 16px;
+  }
+  .checkbox {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+// Search (normal)
+.search-box-n {
+  background: transparentize($orangeS, .35);
+  margin: 0 0 5px;
+  padding: 11px 0 0px;
+  color: $white;
+  position: relative;
+  top: 17px;
+
+  .title-top {
+    text-shadow: 1px 1px 0 #000;
+    white-space: nowrap;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .form-control {
+    height: 40px !important;
+  }
+  label {
+    font-size: 18px;
+    text-align: right;
+    top: 8px;
+  }
+  .has-feedback .form-control-feedback {
+    color: $min-grey;
+    top: 14px;
+    right: 20px;
+  }
+  .btn-lg {
+    padding: 7px 16px 8px !important;
+  }
+}
+// Mercado Pago - Pago con tarjetas del home
+.mp-box {
+  @include bshadow(0, 2px, 1px, $mid-grey);
+  padding-top: 15px;
+  padding-bottom: 5px;
+  .info {
+    @include title (16px, 300);
+  }
+}
+
+//  Description
+.content {
+
+  //This ine applies only to divs with class "container"
+  &.styleb {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    color: $darkBlue;
+  }
+  .title {
+    margin-top: 0;
+    @include title(24px,700);
+  }
+  .subtitle {
+    @include title(18px,500);
+  }
+  .subtitle2 {
+    @include title(18px,300);
+  }
+  .description {
+    @include title(16px,300);
+  }
+
+  //For sections
+  .sTitle {
+    @include title(24px,400);
+    color: $darkBlue;
+    margin-top: 20px;
+  }
+  .sSubtitle {
+    @extend .description;
+    color: $mid-grey;
+    &.last {
+      padding-top: 20px;
+    }
+  }
+  .sSubtitleb {
+    @extend .subtitle;
+    color: $darkBlue;
+    padding-bottom: 10px;
+  }
+
+  // For font-awesome icons
+  .fa {
+    color: $min-grey;
+    &.org {
+      color: orange;
+    }
+    &.icon {
+      width: 30px;
+      padding-bottom: 15px;
+    }
+  }
+  .form-horizontal {
+    margin-top: 20px;
+    .form-group {
+      margin-bottom: 30px;
+    }
+    .form-control {
+      height: 40px;
+    }
+    textarea.form-control {
+      height: auto !important;
+    }
+    .has-feedback .form-control {
+      padding-right: 36.5px;
+    }
+    .has-feedback {
+       .fa {
+         color: $mid-grey;
+         top: 14px;
+       }
+     }
+     .btn {
+        padding: 12px 18px;
+     }
+  }
+  .schedules {
+    li {
+      font-weight: 500;
+      padding-top: 10px;
+      &:first-child {
+        padding-top: 0;
+      }
+      span {
+        font-weight: 300;
+      }
+    }
+  }
+
+  // Made for services
+  .item-list {
+    margin-bottom: 40px;
+    dt {
+      @include title(16px, 500);
+    }
+    dd {
+      color: $darkBlue;
+      padding-left: 33px;
+    }
+    .icon {
+      padding-bottom: 10px !important;
+      color: $mid-grey;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.gallery {
+  .imgBox {
+    margin-bottom: 30px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    &:hover {
+      @include bshadow(0,0, 8px, $min-grey);
+    }
+  }
+}
+#map {
+  width: 750px;
+  height: 315px;
+}
+#c-map {
+  width: 555px;
+  height: 295px;
+}
+.amenities {
+  background: #ededed;
+  padding: 15px 0;
+  margin-left: 0px;
+  color: $mid-grey;
+
+  li .icon {
+    width: 30px;
+    padding-bottom: 15px;
+  }
+  li:last-child .icon {
+    margin-bottom: -10px;
+    padding-bottom: 0;
+  }
+  .amt-name {
+  }
+  .amt-more {
+    padding-top: 5px;
+    margin-bottom: 0;
+  }
+}
+.promo {
+  background-image: url('../img/pt-orange.png');
+  @include bg-size(cover);
+
+
+  .line {
+    background-color: $white;
+    top: 20px;
+    height: 1px,
+  }
+  .title {
+    color: $white;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 15px;
+    margin-top: 0;
+  }
+  .panel-info {
+    border: none;
+
+    &>.panel-heading {
+      background-color: $blue;
+      color: $white;
+      padding: 8px 12px;
+      font-weight: 400;
+      font-size: 14px;
+      border: none;
+    }
+
+    .panel-body {
+      padding: 0;
+    }
+  }
+  .btn-promo {
+    background-color: transparentize($orange, .75);
+    border: 1px solid $white;
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 24px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: transparentize($orange, .35);
+    }
+  }
+}
+
+
+// Rooms
+.media-cont {
+  .thumbnail {
+    padding: 10px;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
+    transition: all .5s;
+
+    &:hover {
+      @include bshadow(0,0, 8px, $mid-grey);
+    }
+    .caption {
+      padding: 10px 0 0;
+      font-size: 17px;
+      font-weight:500;
+      color: $min-grey;
+
+      .rm-title {
+        margin-top: 0;
+        color: $brand-info;
+      }
+      .rm-size {
+        letter-spacing: 1px;
+      }
+      .rm-ocupant {
+      }
+      .rm-description {
+        font-weight: 300;
+        color: $mid-grey;
+      }
+    }
+  }
+}
+
+
+// Suscribe
+.suscribe {
+  padding-top: 30px;
+  padding-bottom: 28px;
+
+  .sus-text {
+    font-size: 22px;
+    position: relative;
+    color: #021940;
+    top: 4px;
+    padding-right: 15px;
+    color: $darkBlue;
+
+    .fa-envelope-o {
+      top: -2px;
+      position: relative;
+      padding-right: 3px;
+    }
+  }
+  .input-lg {
+    margin-right: 10px;
+  }
+}
+// Fonts
+
+.thin {
+  font-weight: 100;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+.black {
+  font-weight: 900;
+}
+
+// paddings
+.pl {
+  padding-left: 0;
+}
+.pt30 {
+  padding-top: 30px;
+}
+
+// Backgrounds
+.img-cover {
+  background-image: url('../images/cover/bg-search-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  @include bg-size(cover);
+}
+.bg-search-n {
+  // Set a default value
+  background: red;
+  // Safari 5.1 to 6.0
+  background: -webkit-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
+  // Opera 11.1 to 12.0
+  background: -o-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
+  // Firefox 3.6 to 15
+  background: -moz-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
+  // Standard syntax
+  background: repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
+  min-height: 175px;
+  position: relative;
+  margin-bottom: -80px;
+}
+.img-contact {
+  background-image: url('../images/cover/bg-contacto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  @include bg-size(cover);
+  min-height: 265px;
+}
+.bg-min-grey {
+  margin-top: 30px;
+  background-color: $gray-lighter;
+}
+
+
+// Contacto
+.card {
+  background: $gallery;
+  border-left: 2px solid $orange;
+  font-size: 16px;
+  margin-top: 30px;
+  color: $mid-grey;
+  ul li {
+    padding-top: 15px;
+
+    .icon {
+      width: 30px;
+      color: $orange;
+    }
+  }
+}
+.contact-title-top {
+  font-size: 52px;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 #000;
+  color: white;
+  position: relative;
+  bottom: -140px;
+}
+
+
+// Footer
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  h3.title {
+    margin-top: 40px !important;
+    color: $white;
+  }
+  ul , .ft-icon {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    li {
+      padding-bottom: 8px;
+    }
+  }
+  .copyright {
+    border-top: 1px dashed;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  a {
+    color: $white;
+  }
+}
+
+
+//  Media Queries
+//  375px or less
+@media (max-width: 375px) {
+  .search-box {
+    .title-top {
+      letter-spacing: 0 !important;
+    }
+    .title-sub {
+      font-weight: 700;
+      letter-spacing: 0 !important;
+    }
+  }
+}
+//  Media Queries
+//  400px or less
+@media (max-width: 400px) {
+  .search-box {
+    .title-top {
+      letter-spacing: 2px;
+      color: red;
+    }
+    .title-sub {
+      letter-spacing: 2px;
+    }
+  }
+}
+//  Media Queries
+//  768px or less
+@media (max-width: 768px) {
+  .navbar-collapse {
+    margin-top: 15px;
+  }
+  .navbar-right {
+    padding-top: 0;
+  }
+  .search-box {
+    .form-group {
+      &.left {
+        padding-right: 8px;
+        .fa {
+          right: 7px;
+        }
+      }
+      &.right {
+        padding-left: 8px;
+        .fa {
+          color: red;
+          right: 14px;
+        }
+      }
+    }
+  }
+}
+// 768px and up
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav>li>a, {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding:10px 12px;
+    &:hover {
+      color: $orange;
+    }
+  }
+  .search-box {
+    .form-group {
+      &.left {
+        padding-right: 8px;
+        .fa {
+          right: 7px;
+        }
+      }
+      &.right {
+        padding-left: 8px;
+        .fa {
+          color: green;
+          right: 14px;
+        }
+      }
+    }
+  }
+  .search-box-n {
+    .form-inline .form-control {
+      display: inline-block;
+      width: 80%;
+      vertical-align: middle;
+    }
+  }
+}
+
+// 992px and up
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav>li>a, {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding:10px 12px;
+      &:hover {
+        color: $orange;
+      }
+    }
+ }
+
+// 1200px and up)
+@media (min-width: 1320px) {
+  .search-box {
+    .form-group {
+      &.left {
+        padding-right: 8px;
+        .fa {
+          right: 7px;
+        }
+      }
+      &.right {
+        padding-left: 8px;
+        .fa {
+          right: 14px;
+        }
+      }
+    }
+  }
+}

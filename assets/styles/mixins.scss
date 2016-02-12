@@ -1,0 +1,21 @@
+@mixin bg-size ($value) {
+  -webkit-background-size: $value;
+  -moz-background-size: $value;
+  -o-background-size: $value;
+  background-size: $value;
+}
+@mixin title ($fs, $fw) {
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin bshadow ($x, $y, $b, $c) {
+  -webkit-box-shadow: $x $y $b $c;
+  -moz-box-shadow: $x $y $b $c;
+  box-shadow: $x $y $b $c;
+}
+@mixin tshadow ($x, $y, $b, $c) {
+  -webkit-text-shadow: $x $y $b $c;
+  -moz-text-shadow: $x $y $b $c;
+  text-shadow: $x $y $b $c;
+}

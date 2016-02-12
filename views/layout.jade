@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/app.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    //
+      [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]
+  body
+    nav.navbar.navbar-default
+      div.container
+        // - Brand and toggle get grouped for better mobile display
+        div.navbar-header.hidden-sm
+          button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#top-nav' aria-expanded='false')
+            span.sr-only Menú
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.hidden-sm(href='/')
+            img(src='images/htl-9-julio-logo.png', alt='')
+          div.container.visible-sm
+            a.text-center.center-block(href='/')
+              img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
+        div.collapse.navbar-collapse#top-nav
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='hotel') hotel
+            li.dropdown
+              a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Habitaciones 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Loft Doble
+                li
+                  a(href='#') Loft Doble Superior
+                li
+                  a(href='#') Loft Triple 
+                li
+                  a(href='#') Loft Triple Superior 
+            li
+              a(href='promociones') Promociones
+            li
+              a(href='promociones') Servicios
+            li
+              a(href='promociones') Imagenes
+            li
+              a(href='contacto') Contacto
+            li.dropdown.fx-flag-nav
+              a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+                img(src='images/sp.svg' alt='Spanish flag' width='20') 
+                span.caret
+              ul.dropdown-menu
+                li.active
+                  a(href='#')
+                    img(src='images/sp.svg' alt='Spanish flag' width='20') 
+                    | &nbsp Español
+                li
+                  a(href='#')
+                    img(src='images/br.svg' alt='Brazilian flag' width='20')
+                    | &nbsp Portugués
+                li
+                  a(href='#')
+                    img(src='images/uk.svg' alt='United Kingdom flag' width='20')
+                    | &nbsp Inglés
+                    
+    block content
