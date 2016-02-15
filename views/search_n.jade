@@ -1,0 +1,24 @@
+div.container-fluid.bg-search-n
+div.container-fluid.search-box-n
+  div.container
+    div.row
+      div.col-xs-3.pl
+        p.title-top Reserve
+          span.bold  Online
+      div.col-xs-3.pl
+        label.col-xs-4(for='date_in') Entrada
+        div.col-xs-8.has-feedback
+          input(type='text' class='form-control' id='date_in' name='date_in' placeholder='17/02/2016')
+          i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+      div.col-xs-3.pl
+        label.col-xs-4(for='date_out') Salida
+        div.col-xs-8.has-feedback
+          input(type='text' class='form-control' id='date_out' name='date_out' placeholder='28/02/2016')
+          i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+      div.col-xs-2.pl
+        div.col-xs-12.has-feedback(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
+          input.form-control#promocode(type='text' name='promocode'  placeholder='Promocode')
+          i.fa.fa-info-circle.fa-lg.form-control-feedback(aria-hidden='true')
+      div.col-xs-1.pl
+        button.btn.btn-lg.btn-info(type='submit') Buscar
+      div.clearfix

@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  
+  //Search N
+  include search_n.jade
+  
+  // Section Description
+  div.container.content.styleb
+    div.row
+      div.col-xs-12
+        p.sTitle Servicios
+        p.description 
+          |El hotel cuenta con una amplia gama de servicios que garantizan la comodidad del pasajero.
+          |Algunos sólo se encuentran disponibles en algunas habitaciones.
+          |Consulte los amenities específicos de su habitacion al momento de realizar la reserva.
+  
+  // ItemList
+  div.container.content
+    div.row
+      div.col-sm-8
+        // Included amenities 
+        p.sSubtitleb Incluidos
+        dl.item-list
+          dt
+            i.fa.fa-wifi.fa-lg.icon 
+            |WiFi
+          dd Conexión Wi Fi sin costo 24 horas en todo el hotel
+          br
+          dt
+            i.fa.fa-television.fa-lg.icon 
+            |TV por Cable
+          dd TV LCD con cable en todas las habitaciones. Incluye canales nacionale e internacionales.
+          br
+          dt
+            i.fa.fa-coffee.fa-lg.icon 
+            |Desayuno
+          dd Tipo americano. Se sirve todos los días de 7:00 a.m a 14:00pm.
+          br
+          dt
+            i.fa.fa-suitcase.fa-lg.icon 
+            |Guardaequipaje
+          dd Servicio de Bellboy las 24 horas tal como lo viste en The Grand Budapest Hotel.
+          br
+        // optional amenities 
+        p.sSubtitleb Opcionales
+        dl.item-list
+          dt
+            i.fa.fa-hand-spock-o.fa-lg.icon 
+            |Personal poliglota
+          dd Interpretes y traductores de todas las lenguas conocidas en la galaxia.
+          br
+          dt
+            i.fa.fa-ambulance.fa-lg.icon 
+            |Ambulancia
+          dd Unidad equipado con <abbr title='La más alta'>lamasalta</abbr> tecnologia y enfermeros 24/7.
+          br
+            
+      div.col-sm-4
+        div.row.gallery
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv1.jpg' alt='Desayuno de campeones')
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv2.jpg' alt='Desayuno de campeones')
+          div.clearfix
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv3.jpg' alt='Desayuno de campeones')
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv4.jpg' alt='Desayuno de campeones')
+          div.clearfix
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv5.jpg' alt='Desayuno de campeones')
+          div.col-sm-6
+            img.img-responsive.imgBox(src='images/service/srv6.jpg' alt='Desayuno de campeones')
+          div.clearfix
+          
+  //Footer include      
+  include footer.jade
+  //JS Files
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')

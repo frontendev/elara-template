@@ -1,0 +1,35 @@
+div.container-fluid.img-cover(style='position:relative;') 
+  div.shape-para.hidden-xs
+  div.container
+    div.row
+      div.col-xs-12.col-sm-6.col-md-4.col-lg-3.search-box
+        img.img-price.pull-right.hidden-xs(src='images/mejor-precio.png' alt='Mejore precio garantizado')
+        div.hidden-xs
+          h1.title-top RESERVE
+          h1.title-sub ONLINE
+        div.visible-xs
+          h1
+            span.title-top Reserve
+            span.title-sub Online
+        div.row
+          div.col-xs-6.form-group.left.has-feedback
+            label(for='date_in') Entrada
+            input.form-control#date_in(type='text' name='date_in' placeholder='17/02/2015')
+            i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+          div.col-xs-6.form-group.right.has-feedback
+            label(for='date_out') Salida
+            input.form-control#date_out(type='text' name='date_out' placeholder='17/02/2015')
+            i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
+          div.clearfix
+          div.col-xs-12.form-group
+            div.checkbox
+              label.label-light
+                input(type='checkbox')  
+                | Tengo un promocode 
+                span(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
+                  i.fa.fa-info-circle
+        div.row
+          div.col-xs-12.form-group.right.hidden-xs.col-sm-6.col-sm-offset-6
+            button.btn.btn-info.btn-lg.btn-block Buscar
+          div.col-xs-12.form-group.visible-xs
+            button.btn.btn-info.btn-lg.btn-block Buscar

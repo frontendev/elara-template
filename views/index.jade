@@ -1,11 +1,215 @@
 extends layout
 
 block content
-  // - Brand and toggle get grouped for better mobile display
-  div.container 
-  p ola ke asé!
-              
+  // Search big
+  //- Search big
+  include search.jade
+  
+  // Banner Mercadopago
+  //- Banner Mercadopago
+  include mercadopago.jade
+  
+  //- Description
+  // Description
+  - var hotel = {name: 'Suíça Hotel & Resort', address: 'Av Felipe Wanscheer 3580 - Jd Sao Paulo, Foz do Iguaçu, Brazil', subtitle: 'Le damos la bienvenida a Suíça Hotel & Resort' }
+  
+  div.container.content.styleb
+    div.row
+      div.col-sm-7
+        p.title #{hotel.name} 
+        p.subtitle #{hotel.subtitle} 
+        p.description
+          span.bold #{hotel.name} 
+          | te sorprende con un estilo vanguardista de motivos geométricos y colores vivos.
+          | Un innovador  uso de madera curvada combinado con elementos de cristal y materiales de última generación, creando un ambiente de relax y distracción.
+        p.description
+          span.bold #{hotel.name} 
+          | se compromete a garantizarte una estancia satisfactoria y confortable en Buenos Aires.
+      div.col-sm-5
+        img.img-responsive(src='images/vista.jpg' alt='imagen de testeo')
+  
+  
+  //- Location y amenities
+  // Location y amenities
+  div.container.content
+    div.row
+      div.col-sm-6.col-md-8
+        p.sTitle Ubicacion
+        p.sSubtitle #{hotel.address}
+        div.embed-responsive.embed-responsive-16by9
+          div#map
+  
+      div.col-sm-6.col-md-4
+        p.sTitle Amenities
+        p.sSubtitle Servicios incluidos
+        div.row.amenities
+          //- First Colum
+          div.col-xs-6
+            ul.list-unstyled
+              li
+                i.fa.fa-wifi.fa-lg.icon
+                span.amt-name
+                  | Wi-Fi
+              li
+                i.fa.fa-futbol-o.fa-lg.icon
+                span.amt-name
+                  | Cancha de Futbol
+              li
+                i.fa.fa-television.fa-lg.icon
+                span.amt-name
+                  | TV por Cable
+          //- Second Colum
+          div.col-xs-6
+            ul.list-unstyled
+              li
+                i.fa.fa-cutlery.fa-lg.icon
+                span.amt-name
+                  | Almuerzo
+              li
+                i.fa.fa-glass.fa-lg.icon
+                span.amt-name
+                  | Bar
+              li
+                i.fa.fa-desktop.fa-lg.icon
+                span.amt-name
+                  | Computadora
+          //- Button More
+          div.col-xs-12 
+            p.amt-more
+              a(href='' data-toggle='modal' data-target='#amenities-inc')
+                i.fa.fa-plus
+                span.amt-name 
+                  | ver todos
+        // Optional amenities
+        p.sSubtitle.last Servicios Opcionales
+        div.row.amenities
+          //- First Colum
+          div.col-xs-6
+            ul.list-unstyled
+              li
+                i.fa.fa-wifi.fa-lg.icon
+                span.amt-name
+                  | Wi-Fi
+              li
+                i.fa.fa-futbol-o.fa-lg.icon
+                span.amt-name
+                  | Cancha de Futbol
+          //- Second Colum
+          div.col-xs-6
+            ul.list-unstyled
+              li
+                i.fa.fa-cutlery.fa-lg.icon
+                span.amt-name
+                  | Almuerzo
+              li
+                i.fa.fa-glass.fa-lg.icon
+                span.amt-name
+                  | Bar
+          //- Button More
+          div.col-xs-12 
+            p.amt-more
+              a(href='' data-toggle='modal' data-target='#amenities-opt')
+                i.fa.fa-plus
+                span.amt-name 
+                  | ver todos
+                  
+  div.container-fluid.promo
+    div.container.pt30
+      // Promos title + line
+      div.col-md-4.line
+      div.col-md-4
+        p.title Promociones
+      div.col-md-4.line
+      div.clearfix
+        
+      // Promos
+      // Promo #1
+      div.col-md-3
+        div.panel.panel-info
+          div.panel-heading
+            | Viajé en Familia
+          div.panel-body
+            img.img-responsive(src='images/promo/family.png' alt='')
+      // Promo #2
+      div.col-md-3
+        div.panel.panel-info
+          div.panel-heading
+            | Promo Romántica
+          div.panel-body
+            img.img-responsive(src='images/promo/romance.png' alt='')
+      // Promo #3
+      div.col-md-3
+        div.panel.panel-info
+          div.panel-heading
+            | Early Booking Bonus
+          div.panel-body
+            img.img-responsive(src='images/promo/early.png' alt='')
+      // Promo #4
+      div.col-md-3
+        div.panel.panel-info
+          div.panel-heading
+            | Pago en 12 cuotas
+          div.panel-body
+            img.img-responsive(src='images/promo/cuotas.png' alt='')
+      div.clearfix
+      div.col-xs-12
+        p.text-center
+          a.btn.btn-promo(href='/promociones') Ver todas las promociones
+          
+  // Habitaciones   
+  div.container.content
+    div.row.pt30
+      div.col-md-12
+        p.sTitle Habitaciones
+      // Room #1  
+      div.col-md-4.media-cont 
+        div.thumbnail
+          img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
+          div.caption
+            p
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+            p
+              a.btn.btn-info(href='#' role='button') Ver más
+      // Room #2  
+      div.col-md-4.media-cont 
+        div.thumbnail
+          img.img-responsive(src='images/room/room2.jpg' alt='Loft Doble')
+          div.caption
+            p
+              span.rm-title Loft Triple 
+              span.rm-size (49m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+            p
+              a.btn.btn-info(href='#' role='button') Ver más
+      // Room #3  
+      div.col-md-4.media-cont 
+        div.thumbnail
+          img.img-responsive(src='images/room/room3.jpg' alt='Loft Doble')
+          div.caption
+            p
+              span.rm-title Loft cuadruple 
+              span.rm-size (62m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+            p
+              a.btn.btn-info(href='#' role='button') Ver más
+  //Footer include   
+  include footer.jade
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
-
-  
+  script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='javascripts/index-map.js')
+  script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
