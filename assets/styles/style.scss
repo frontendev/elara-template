@@ -413,6 +413,7 @@
 
 // Rooms
 .media-cont {
+  margin-bottom: 20px;
   .thumbnail {
     padding: 10px;
     -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
@@ -432,7 +433,7 @@
       }
       .caption {
         padding: 10px;
-        border: 1px solid $thumbnail-border;
+        border: 1px solid transparentize(#0965ff, .4);
         border-top: none;
 
         .title {
@@ -442,7 +443,7 @@
           padding: 5px 10px;
           position: relative;
           margin: -45px -11px 9px;
-          background-color: transparentize($brand-info, .3);
+          background-color: transparentize(#0965ff, .4);
         }
       }
     }
@@ -464,10 +465,73 @@
         letter-spacing: 1px;
       }
       .rm-ocupant {
+        color: $min-grey;
       }
       .rm-description {
         font-weight: 300;
         color: $mid-grey;
+      }
+
+      // Promotions
+      .description {
+        @include title(15px, 300);
+        color: $darkBlue;
+      }
+      .validity {
+        @include title(13px, 300);
+        color: lighten($blue, 15%);
+        text-align: right;
+        margin-bottom: 5px;
+      }
+      .conditions {
+        @include title(13px, 300);
+        color: $green;
+        line-height: 14px;
+        letter-spacing: 0;
+      }
+      .btn-right-single {
+        position: relative;
+        right: -70px;
+        margin-bottom: 0px;
+      }
+      .btn-left-double {
+        position: relative;
+        right: -15px;
+      }
+      .btn-right-double {
+        float: right;
+        position: relative;
+        right: 5px;
+      }
+
+
+      .btn-group.open .dropdown-toggle {
+        box-shadow: none;
+      }
+      .social-menu {
+        .fa-facebook-square {
+          color: #3b5998;
+        }
+        .fa-twitter-square {
+          color:#55acee;
+        }
+        .fa-whatsapp {
+          color: #43d854;
+        }
+        .fa-google-plus-square {
+          color:#dc4e41;
+        }
+      }
+      .btn-share {
+        font-weight: 300;
+        text-decoration: none;
+        color: $mid-grey;
+        background: none;
+        border: none;
+        &.open {
+          background: none;
+          color: red;
+        }
       }
     }
   }
@@ -524,6 +588,12 @@
 }
 .pt30 {
   padding-top: 30px;
+}
+
+
+.ptb10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 // Backgrounds

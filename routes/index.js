@@ -21,5 +21,10 @@ router.get('/contacto', function(req, res, next) {
   res.render('contact', { title: 'Contacto - HTL Suica Hotel & Resort'});
 });
 
+/* Results */
+router.get('/reservas', function(req, res, next) {
+  res.render('results', { title: 'Resultados - HTL Suica Hotel & Resort'});
+});
+
 
 module.exports = router;
