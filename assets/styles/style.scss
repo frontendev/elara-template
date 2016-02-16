@@ -422,9 +422,13 @@
     &.fw-top {
       padding: 0;
       border: none;
-
-      img {
-        z-index: 1;
+      .top-img {
+        height: 230px;
+        overflow: hidden;
+        img {
+          position: relative;
+          top: -40px;
+        }
       }
       .caption {
         padding: 10px;

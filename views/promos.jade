@@ -14,7 +14,8 @@ block content
       // Room #1  
       div.col-md-4.media-cont 
         div.thumbnail.fw-top
-          img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
+          div.top-img
+            img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
           div.caption
             p.title Promo familiar
             p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
@@ -23,31 +24,31 @@ block content
       // Room #2  
       div.col-md-4.media-cont 
         div.thumbnail.fw-top
-          img.img-responsive(src='images/room/room2.jpg' alt='Loft Doble')
+          div.top-img
+            img.img-responsive(src='images/room/room2.jpg' alt='Loft Doble')
           div.caption
             p.title Promo
             p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
-            p
-              a.btn.btn-info(href='#' role='button') Ver más
+            div.row
+              div.col-xs-6
+                p compartir
+              div.col-xs-6
+                a.btn.btn-info(href='#' role='button') Ver más
       // Room #3  
       div.col-md-4.media-cont 
-        div.thumbnail
-          img.img-responsive(src='images/room/room3.jpg' alt='Loft Doble')
-          div.caption
-            p
-              span.rm-title Loft cuadruple 
-              span.rm-size (62m²) 
-              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
-                i.fa.fa-user &nbsp;
-                i.fa.fa-user &nbsp;
-                i.fa.fa-user &nbsp;
-                i.fa.fa-user
-            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
-            p
-              a.btn.btn-info(href='#' role='button') Ver más
-  // Footer include      
+        div.thumbnail.fw-top
+          a(href="#caca")
+            div.top-img
+              img.img-responsive(src='images/room/room3.jpg' alt='Loft Doble')
+            div.caption
+              p.title Promo 3
+              p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+              p
+                a.btn.btn-info(href='#' role='button') Llamar
+                a.btn.btn-info(href='#' role='button') Reservar
+  // Footer
   include footer.jade
-  // JS Files
+  // JS
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')

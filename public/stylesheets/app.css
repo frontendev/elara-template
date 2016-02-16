@@ -6119,8 +6119,12 @@ button.close {
   .media-cont .thumbnail.fw-top {
     padding: 0;
     border: none; }
-    .media-cont .thumbnail.fw-top img {
-      z-index: 1; }
+    .media-cont .thumbnail.fw-top .top-img {
+      height: 230px;
+      overflow: hidden; }
+      .media-cont .thumbnail.fw-top .top-img img {
+        position: relative;
+        top: -40px; }
     .media-cont .thumbnail.fw-top .caption {
       padding: 10px;
       border: 1px solid #ddd;
