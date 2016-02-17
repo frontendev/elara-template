@@ -64,14 +64,27 @@
 .shape-para {
 	width: 50%;
   position: absolute;
-  left: -10%;
 	height: 100%;
+  left: -14%;
   min-height: 100%;
-	-webkit-transform: skew(-20deg);
-	   -moz-transform: skew(-20deg);
-	     -o-transform: skew(-20deg);
-	background: transparentize($skyblue, .2);
+  z-index: 0;
+	-webkit-transform: skew(-12deg);
+	   -moz-transform: skew(-12deg);
+	     -o-transform: skew(-12deg);
+	background: transparentize($skyblue, .3);
 }
+.shape-para-o {
+	width: 50%;
+  position: absolute;
+	height: 100%;
+  left: -15%;
+  min-height: 100%;
+	-webkit-transform: skew(-12deg);
+	   -moz-transform: skew(-12deg);
+	     -o-transform: skew(-12deg);
+	background: $skyblue;
+}
+
 .shape-para-inv {
 	width: 50%;
   position: absolute;
@@ -378,9 +391,11 @@
   }
   .panel-info {
     border: none;
+    background: none;
 
     &>.panel-heading {
-      background-color: $blue;
+      background-color: transparentize(#0965ff, .4);
+
       color: $white;
       padding: 8px 12px;
       font-weight: 400;
@@ -390,6 +405,14 @@
 
     .panel-body {
       padding: 0;
+      .fa-stack {
+        position: absolute;
+      }
+      .fa-stack.fa-lg.icon {
+        top: 150px;
+        right: 20px;
+        color: orange;
+      }
     }
   }
   .btn-promo {
@@ -416,7 +439,7 @@
   margin-bottom: 20px;
   .thumbnail {
     padding: 10px;
-    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
+    -webkit-transition: all .5s;
     transition: all .5s;
 
 
@@ -605,16 +628,10 @@
 }
 .bg-search-n {
   // Set a default value
-  background: red;
-  // Safari 5.1 to 6.0
-  background: -webkit-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
-  // Opera 11.1 to 12.0
-  background: -o-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
-  // Firefox 3.6 to 15
-  background: -moz-repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
-  // Standard syntax
-  background: repeating-linear-gradient(bottom right, $blue 3%, $orangeS 6%, lighten($blue, 20%) 19%);
-  min-height: 175px;
+  background-image: url('../images/cover/bg-search-1.jpg');
+  background-position: center;
+  @include bg-size(cover);
+  min-height: 210px;
   position: relative;
   margin-bottom: -80px;
 }

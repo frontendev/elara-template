@@ -5,8 +5,23 @@ block content
   // Search N
   include search_n.jade
   
-  // Section Description
-  div.container.content.styleb
+  // Habitaciones   
+  div.container.content
+    div.row.pt30
+      // top result 
+      div.col-md-4.media-cont 
+        div.thumbnail
+          img.img-responsive.pull-right(src='images/room/room1.jpg' alt='Loft Doble')
+          div.caption
+            p
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+            p
+              a.btn.btn-info(href='#' role='button') Ver más
   // Footer
   include footer.jade
   // JS
