@@ -5853,13 +5853,25 @@ button.close {
 .shape-para {
   width: 50%;
   position: absolute;
-  left: -10%;
   height: 100%;
+  left: -14%;
   min-height: 100%;
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  -o-transform: skew(-20deg);
-  background: rgba(0, 155, 219, 0.8); }
+  z-index: 0;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  background: rgba(0, 155, 219, 0.7); }
+
+.shape-para-o {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  left: -15%;
+  min-height: 100%;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  background: #009bdb; }
 
 .shape-para-inv {
   width: 50%;
@@ -6087,9 +6099,10 @@ button.close {
     padding-bottom: 15px;
     margin-top: 0; }
   .promo .panel-info {
-    border: none; }
+    border: none;
+    background: none; }
     .promo .panel-info > .panel-heading {
-      background-color: #004ed0;
+      background-color: rgba(9, 101, 255, 0.6);
       color: #fff;
       padding: 8px 12px;
       font-weight: 400;
@@ -6097,6 +6110,12 @@ button.close {
       border: none; }
     .promo .panel-info .panel-body {
       padding: 0; }
+      .promo .panel-info .panel-body .fa-stack {
+        position: absolute; }
+      .promo .panel-info .panel-body .fa-stack.fa-lg.icon {
+        top: 150px;
+        right: 20px;
+        color: orange; }
   .promo .btn-promo {
     background-color: rgba(255, 153, 0, 0.25);
     border: 1px solid #fff;
@@ -6116,7 +6135,6 @@ button.close {
   .media-cont .thumbnail {
     padding: 10px;
     -webkit-transition: all .5s;
-    /* Safari 3.1 to 6.0 */
     transition: all .5s; }
     .media-cont .thumbnail.fw-top {
       padding: 0;
@@ -6261,12 +6279,13 @@ button.close {
   background-size: cover; }
 
 .bg-search-n {
-  background: red;
-  background: -webkit-repeating-linear-gradient(bottom right, #004ed0 3%, #ffaf08 6%, #3782ff 19%);
-  background: -o-repeating-linear-gradient(bottom right, #004ed0 3%, #ffaf08 6%, #3782ff 19%);
-  background: -moz-repeating-linear-gradient(bottom right, #004ed0 3%, #ffaf08 6%, #3782ff 19%);
-  background: repeating-linear-gradient(bottom right, #004ed0 3%, #ffaf08 6%, #3782ff 19%);
-  min-height: 175px;
+  background-image: url("../images/cover/bg-search-1.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 210px;
   position: relative;
   margin-bottom: -80px; }
 
