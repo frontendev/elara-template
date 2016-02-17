@@ -9,6 +9,28 @@ block content
   div.container.content
     div.row.pt30
       // top result 
+      div.media
+        div.box-price
+          p Precio promedio por día
+          p.fPrice
+            span.dsign $
+            span.price 1234
+          a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar ahora
+        div.media-left.media-middle
+          a(href='#')
+            img.media-object(src='images/room/room1.jpg' alt='')
+        div.media-body
+          h4.media-heading 
+            span.rm-title Loft Doble 
+            span.rm-size (38m²) 
+            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user
+          p 
+            |Habitaciones de 2 amplias y modernas plantas generan la mejor privacidad para su estadía. 
+            |Una planta inferior con un living equipado con los mejores sillones de descanso y una planta superior, con la comodidad de una habitación de hotel. 
+            |Además un espacio de trabajo relajado y diferente con la tecnologia necesaria para el nuevo trabajador móvil. 
+      
       div.col-md-4.media-cont 
         div.thumbnail
           img.img-responsive.pull-right(src='images/room/room1.jpg' alt='Loft Doble')

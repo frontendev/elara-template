@@ -7,6 +7,136 @@ block content
   
   //Habitaciones
   div.container.content.styleb
+    div.row
+      div.col-xs-12
+        p.sTitle Loft doble superior
+      div.col-xs-6
+        div.top-img
+          img.img-responsive(src='images/service/srv1.jpg' alt='Desayuno de campeones')
+      div.col-xs-6
+        div.card-b
+          div.box-price.pull-right
+            p Precio promedio por día
+            p.fPrice
+              span.dsign $
+              span.price 1234
+            a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar ahora
+          p.subtitle Capacidad: 
+            span.subtitle2 2 personas
+          p.subtitle Tamaño: 
+            span.subtitle2 49m²
+          p.subtitle 1 baño privado con ducha 
+          p.subtitle 1 cama Queen Size o camas twin
+          br
+          button.btn-360
+            span.txt.fx-t4 Tour virtual
+            img.pull-right(src='images/room/360.png' alt='Tour 360°')
+          span.subtitle2.fx-t4 Conoce la habitacion antes de reservar
+      //Amenities
+      div.col-xs-12
+        p.sSubtitleb.mb Description
+        //included amenities
+        p.sSubtitle(style='margin-bottom:20px;')
+          |Habitaciones de 2 amplias y modernas plantas generan la mejor privacidad para su estadía. 
+          |Una planta inferior con un living equipado con los mejores sillones de descanso y una planta superior, con la comodidad de una habitación de hotel. 
+          |Además un espacio de trabajo relajado y diferente con la tecnologia necesaria para el nuevo trabajador móvil. 
+      //Amenities
+      div.col-xs-12
+        p.sSubtitleb.mb Amenities
+        //included amenities
+        p.sSubtitle Servicios incluidos
+        div.row.amenities
+          //- First Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-wifi.fa-lg.icon
+                span.amt-name
+                  | Wi-Fi
+              li
+                i.fa.fa-futbol-o.fa-lg.icon
+                span.amt-name
+                  | Cancha de Futbol
+          //- Second Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-bicycle.fa-lg.icon
+                span.amt-name
+                  | Bicicletas
+              li
+                i.fa.fa-television.fa-lg.icon
+                span.amt-name
+                  | TV por Cable
+          //- third Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-shopping-basket.fa-lg.icon
+                span.amt-name
+                  | Shoppings
+              li
+                i.fa.fa-glass.fa-lg.icon
+                span.amt-name
+                  | Bar
+          //- fourth Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-ticket.fa-lg.icon
+                span.amt-name
+                  | Eventos
+              li
+                i.fa.fa-wheelchair.fa-lg.icon
+                span.amt-name
+                  | Sillas de ruedas
+          //- Button More
+          div.col-xs-12 
+            p.amt-more
+              a(href='' data-toggle='modal' data-target='#amenities-inc')
+                i.fa.fa-plus
+                span.amt-name 
+                  | ver todos (5)
+        //Optional amenities
+        p.sSubtitle.last Servicios Opcionales
+        div.row.amenities
+          //- First Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-leaf.fa-lg.icon
+                span.amt-name
+                  | Holas secas de Otoño  
+          //- Second Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-gamepad.fa-lg.icon
+                span.amt-name
+                  | Videojuegos
+          //- third Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-eyedropper.fa-lg.icon
+                span.amt-name
+                  | Gotero
+          //- fourth Colum
+          div.col-xs-6.col-sm-3
+            ul.list-unstyled
+              li
+                i.fa.fa-cubes.fa-lg.icon
+                span.amt-name
+                  | Hielo
+          //- Button More
+          div.col-xs-12 
+            p.amt-more
+              a(href='' data-toggle='modal' data-target='#amenities-opt')
+                i.fa.fa-plus
+                span.amt-name 
+                  | ver todos (2)
+        
+      
   //Footer
   include footer.jade
   //JS

@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  
+  // Search N
+  include search_n.jade
+  
+  //Habitaciones
+  div.container.content.styleb
+    div.row
+      div.col-xs-12
+        p.sTitle Imágenes
+        p.sSubtitle 
+          |Conoce el hotel  a traves de las imagenes que te mostramos en esta sección. 
+          |Este es un texto de relleno cuyo contenido son estas mismas palabras. 
+          |La idea del mensaje es justamente lo que quiere decir. Gracias por su atención.
+      div.col-xs-6
+        div.gallery
+          p.sSubtitleb.mb Habitaciones
+          div.row
+            div.col-xs-6
+              div.img-fh
+            div.col-xs-6
+              div.img-rhh-t
+            div.col-xs-6
+              div.img-rhh-b
+                
+      div.col-xs-6
+        div.gallery
+          p.sSubtitleb.mb Arquitectura
+          div.row
+            div.col-xs-6
+              div.img-fh
+            div.col-xs-6
+              div.img-fh
+                
+      div.col-xs-6.mtb20
+        div.gallery
+          p.sSubtitleb.mb Interior del Hotel
+          div.row
+            div.col-xs-6
+              div.img-rhh-t
+            div.col-xs-6
+              div.img-rhh-b
+      div.col-xs-6.mtb20
+        div.gallery
+          p.sSubtitleb.mb papa
+          div.row
+            div.col-xs-6
+              div.img-rhh-t
+            div.col-xs-6
+              div.img-rhh-b
+        
+      
+  //Footer
+  include footer.jade
+  //JS
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  //- Tooltip enabler
+  script(type='text/javascript' src='javascripts/tooltip-e.js')

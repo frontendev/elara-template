@@ -6036,6 +6036,14 @@ button.close {
     padding-top: 0; }
   .content .schedules li span {
     font-weight: 300; }
+.content .top-img {
+  height: 260px;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .content .top-img img {
+    position: relative;
+    top: -40px; }
 .content .item-list {
   margin-bottom: 40px; }
   .content .item-list dt {
@@ -6050,15 +6058,44 @@ button.close {
     color: #666;
     position: relative;
     top: -2px; }
-
-.gallery .imgBox {
-  margin-bottom: 30px;
-  -webkit-transition: all .5s;
-  transition: all .5s; }
-  .gallery .imgBox:hover {
-    -webkit-box-shadow: 0 0 8px #999;
-    -moz-box-shadow: 0 0 8px #999;
-    box-shadow: 0 0 8px #999; }
+.content .gallery {
+  background: rgba(2, 25, 64, 0.12);
+  padding: 15px; }
+  .content .gallery .img-fh {
+    background: rgba(2, 25, 64, 0.12);
+    width: 100%;
+    min-height: 500px; }
+  .content .gallery .img-rhh-t {
+    background: rgba(2, 25, 64, 0.12);
+    width: 100%;
+    min-height: 235px; }
+  .content .gallery .img-rhh-b {
+    margin-top: 30px;
+    background: rgba(2, 25, 64, 0.12);
+    width: 100%;
+    min-height: 235px; }
+.content .media .box-price {
+  float: right;
+  font-size: 15px;
+  font-weight: 300;
+  color: #999;
+  text-align: center; }
+  .content .media .box-price .fPrice {
+    position: relative;
+    bottom: 10px;
+    margin-bottom: -8px; }
+    .content .media .box-price .fPrice .dsign, .content .media .box-price .fPrice .price {
+      color: #f90; }
+    .content .media .box-price .fPrice .dsign {
+      font-size: 21px;
+      font-weight: 400;
+      position: relative;
+      bottom: 3px; }
+    .content .media .box-price .fPrice .price {
+      font-size: 34px;
+      font-weight: 700; }
+.content .media .media-object {
+  width: 250px; }
 
 #map {
   width: 750px;
@@ -6269,6 +6306,17 @@ button.close {
   padding-top: 10px;
   padding-bottom: 10px; }
 
+.ptb20 {
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+.mb {
+  margin-bottom: 0; }
+
+.mtb20 {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
 .img-cover {
   background-image: url("../images/cover/bg-search-1.jpg");
   background-repeat: no-repeat;
@@ -6315,6 +6363,51 @@ button.close {
       width: 30px;
       color: #f90; }
 
+.card-b {
+  background: rgba(2, 25, 64, 0.12);
+  border-left: 4px solid #021940;
+  font-size: 18px;
+  padding: 15px; }
+  .card-b .subtitle, .card-b .content .sSubtitleb, .content .card-b .sSubtitleb, .card-b .media-cont .thumbnail.fw-top .caption .title, .media-cont .thumbnail.fw-top .caption .card-b .title {
+    color: #021940; }
+  .card-b .btn-360 {
+    padding: 6px 12px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
+    .card-b .btn-360 .txt {
+      padding-right: 5px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #021940; }
+    .card-b .btn-360:hover {
+      background-color: rgba(2, 25, 64, 0.24); }
+  .card-b .fx-t4 {
+    position: relative;
+    top: 4px; }
+  .card-b .box-price {
+    font-size: 15px;
+    font-weight: 300;
+    color: #999;
+    text-align: center; }
+    .card-b .box-price .fPrice {
+      position: relative;
+      bottom: 10px;
+      margin-bottom: -8px; }
+      .card-b .box-price .fPrice .dsign, .card-b .box-price .fPrice .price {
+        color: #f90; }
+      .card-b .box-price .fPrice .dsign {
+        font-size: 21px;
+        font-weight: 400;
+        position: relative;
+        bottom: 3px; }
+      .card-b .box-price .fPrice .price {
+        font-size: 34px;
+        font-weight: 700; }
+
 .contact-title-top {
   font-size: 52px;
   font-weight: 700;
@@ -6324,6 +6417,7 @@ button.close {
   bottom: -140px; }
 
 .footer {
+  margin-top: 20px;
   background-color: #021940;
   color: #fff;
   font-size: 16px;
@@ -6411,5 +6505,28 @@ button.close {
     padding-left: 8px; }
     .search-box .form-group.right .fa {
       right: 14px; } }
+@media (min-width: 1420px) {
+  .shape-para {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    left: -11%;
+    min-height: 100%;
+    z-index: 0;
+    -webkit-transform: skew(-12deg);
+    -moz-transform: skew(-12deg);
+    -o-transform: skew(-12deg);
+    background: rgba(0, 155, 219, 0.7); }
+
+  .shape-para-o {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    left: -12%;
+    min-height: 100%;
+    -webkit-transform: skew(-12deg);
+    -moz-transform: skew(-12deg);
+    -o-transform: skew(-12deg);
+    background: #009bdb; } }
 
 /*# sourceMappingURL=app.css.map */

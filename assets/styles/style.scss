@@ -224,7 +224,7 @@
 //  Description
 .content {
 
-  //This ine applies only to divs with class "container"
+  //This one applies only to divs with class "container"
   &.styleb {
     padding-top: 35px;
     padding-bottom: 15px;
@@ -310,7 +310,16 @@
       }
     }
   }
-
+  .top-img {
+    height: 260px;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+      position: relative;
+      top: -40px;
+    }
+  }
   // Made for services
   .item-list {
     margin-bottom: 40px;
@@ -329,15 +338,55 @@
       top: -2px;
     }
   }
-}
+  .gallery {
+    background: transparentize($darkBlue, .88);
+    padding: 15px;
+    //img left full height
+    .img-fh {
+      background: transparentize($darkBlue, .88);
+      width: 100%;
+      min-height: 500px;
+    }
+    //img right height
+    .img-rhh-t {
+      background: transparentize($darkBlue, .88);
+      width: 100%;
+      min-height: 235px;
+    }
+    //img right height
+    .img-rhh-b {
+      margin-top:30px;
+      background: transparentize($darkBlue, .88);
+      width: 100%;
+      min-height: 235px;
+    }
+  }
+  .media {
+    .box-price {
+      float: right;
+      @include title(15px, 300);
+      color: $min-grey;
+      text-align: center;
 
-.gallery {
-  .imgBox {
-    margin-bottom: 30px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    &:hover {
-      @include bshadow(0,0, 8px, $min-grey);
+      .fPrice {
+        position: relative;
+        bottom: 10px;
+        margin-bottom: -8px;
+        .dsign ,  .price {
+          color: $orange;
+        }
+        .dsign  {
+          @include title(21px,400);
+          position: relative;
+          bottom: 3px;
+        }
+        .price {
+          @include title(34px,700);
+        }
+      }
+    }
+    .media-object {
+      width: 250px;
     }
   }
 }
@@ -605,20 +654,37 @@
   font-weight: 900;
 }
 
-// paddings
+// Paddings
+
+//padding-left
 .pl {
   padding-left: 0;
 }
+
+//padding-top
 .pt30 {
   padding-top: 30px;
 }
 
-
+//padding-top-bottom
 .ptb10 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.ptb20 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 
+// margins
+
+.mb {
+  margin-bottom: 0;
+}
+.mtb20 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 // Backgrounds
 .img-cover {
   background-image: url('../images/cover/bg-search-1.jpg');
@@ -664,6 +730,58 @@
     }
   }
 }
+.card-b {
+  background: transparentize($darkBlue, .88);
+  border-left: 4px solid $darkBlue;
+  font-size: 18px;
+  padding: 15px;
+  .subtitle {
+    color: $darkBlue;
+  }
+  .btn-360 {
+    padding: 6px 12px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: none;
+    border: 1px solid;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    .txt {
+      padding-right: 5px;
+      @include title(18px, 700);
+      color: $darkBlue;
+    }
+    &:hover {
+      background-color: transparentize($darkBlue, .76);
+    }
+  }
+  .fx-t4 {
+    position: relative;
+    top: 4px;
+  }
+  .box-price {
+    @include title(15px, 300);
+    color: $min-grey;
+    text-align: center;
+
+    .fPrice {
+      position: relative;
+      bottom: 10px;
+      margin-bottom: -8px;
+      .dsign ,  .price {
+        color: $orange;
+      }
+      .dsign  {
+        @include title(21px,400);
+        position: relative;
+        bottom: 3px;
+      }
+      .price {
+        @include title(34px,700);
+      }
+    }
+  }
+}
 .contact-title-top {
   font-size: 52px;
   font-weight: 700;
@@ -676,6 +794,7 @@
 
 // Footer
 .footer {
+  margin-top: 20px;
   background-color: $darkBlue;
   color: $white;
   font-size: 16px;
@@ -824,5 +943,33 @@
         }
       }
     }
+  }
+}
+// 1200px and up)
+@media (min-width: 1420px) {
+  .shape-para {
+  	width: 50%;
+    position: absolute;
+  	height: 100%;
+    left: -11%;
+    min-height: 100%;
+    z-index: 0;
+  	-webkit-transform: skew(-12deg);
+  	   -moz-transform: skew(-12deg);
+  	     -o-transform: skew(-12deg);
+  	background: transparentize($skyblue, .3);
+  	//background: green;
+  }
+  .shape-para-o {
+  	width: 50%;
+    position: absolute;
+  	height: 100%;
+    left: -12%;
+    min-height: 100%;
+  	-webkit-transform: skew(-12deg);
+  	   -moz-transform: skew(-12deg);
+  	     -o-transform: skew(-12deg);
+  	background: $skyblue;
+  	//background: red;
   }
 }

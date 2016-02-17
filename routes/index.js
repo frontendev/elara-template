@@ -31,5 +31,10 @@ router.get('/habitacion', function(req, res, next) {
   res.render('room', { title: 'Habitacion - HTL Suica Hotel & Resort'});
 });
 
+/* Imagenes */
+router.get('/imagenes', function(req, res, next) {
+  res.render('images', { title: 'Imágenes - HTL Suica Hotel & Resort'});
+});
+
 
 module.exports = router;
