@@ -19,3 +19,8 @@
   -moz-text-shadow: $x $y $b $c;
   text-shadow: $x $y $b $c;
 }
+@mixin border-radius($v,$v2: $v) {
+  -webkit-border-radius: $v $v2;
+  -moz-border-radius: $v $v;
+  border-radius: $v $v;
+}

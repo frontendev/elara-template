@@ -243,6 +243,9 @@
   .description {
     @include title(16px,300);
   }
+  .description-sm {
+    @include title(14px,300);
+  }
 
   //For sections
   .sTitle {
@@ -345,33 +348,97 @@
     .img-fh {
       background: transparentize($darkBlue, .88);
       width: 100%;
-      min-height: 500px;
+      overflow: hidden;
+      height: 500px !important;
+      }
+    .img-gallery {
+      -webkit-transition: all 1s;
+      transition: all 1s;
+      &:hover {
+      }
     }
     //img right height
     .img-rhh-t {
       background: transparentize($darkBlue, .88);
-      width: 100%;
-      min-height: 242.5px;
+      overflow: hidden;
+      height: 242.5px !important;
     }
     //img right height
     .img-rhh-b {
       margin-top:15px;
       background: transparentize($darkBlue, .88);
-      width: 100%;
-      min-height: 242.5px;
+      overflow: hidden;
+      height: 242.5px !important;
       &.mt {
         margin-top: 0 !important;
       }
 
     }
   }
+  //Made for results
+  .total {
+    margin-top: 35px;
+    background: #eee;
+    .title {
+      color: $white;
+      background: $orange;
+      @include title(16px,500);
+      margin: 0 -15px;
+      padding: 8px 15px;
+    }
+  }
   .media {
+    // because i got high, because i got high, because i got high :D
+    &.high {
+      border: 1px solid $green;
+      padding: 15px 15px 0;
+      overflow: visible;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      .media-title {
+        background: $green;
+        margin: -15px -15px 15px;
+        padding: 5px 15px 5px;
+        position: relative;
+        color: $white;
+        @include title(16px, 500);
+        .txt {
+          padding-left: 50px;
+        }
+      }
+      .fa-stack {
+        position: absolute;
+        top: -11px;
+        left: 10px;
+        .fa-stack-2x {
+          color: green;
+          font-size: 2.5em;
+        }
+        .fa-stack-1x {
+          color: $white;
+          top: 3px;
+          left: 2px;
+        }
+      }
+    }
+    &.reg {
+      border: none;
+      border-bottom: 1px solid transparentize($blue, .52);
+      padding: 15px 15px 0;
+      overflow: visible;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .media-left {
+      padding-right: 15px;
+    }
     .box-price {
       float: right;
       @include title(15px, 300);
       color: $min-grey;
       text-align: center;
-
+      padding-left: 15px;
       .fPrice {
         position: relative;
         bottom: 10px;
@@ -390,7 +457,78 @@
       }
     }
     .media-object {
-      width: 250px;
+      width: 258px;
+    }
+    .media-body {
+      .media-heading {
+        @include title(20px, 400);
+        letter-spacing: 1px;
+        .rm-title {
+          color: $darkBlue;
+        }
+        .rm-size {
+          color: $min-grey;
+        }
+      }
+      .old-price {
+        text-decoration: line-through;
+        font-weight: 300;
+      }
+      .new-price {
+        font-weight: 700;
+      }
+      .reg-price {
+        font-weight: 500;
+      }
+      .table tr td {
+        vertical-align: middle;
+        padding: 6px;
+      }
+      .table {
+        margin-top: 13px;
+        margin-bottom: 10px;
+        thead {
+          background-color: transparentize($blue, .52);
+          color: $white;
+          @include title(16px, 400);
+          border-bottom: none;
+        }
+        tr {
+          th {
+            border: none;
+          }
+          td {
+            select.form-control {
+              height: 30px;
+            }
+            &.cancel, .fa-info-circle {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .panel {
+    @include border-radius(0);
+    display: inline-block;
+    display: -webkit-inline-block;
+    &.panel-terms {
+      border: 1px solid $green;
+      background-color: transparentize($green, .82);
+      .panel-body {
+        padding: 0 10px;
+
+        .body-title {
+          color: darken($green, 15%);
+          font-size: 16px;
+          margin: 5px 0 0;
+        }
+        ul {
+          color: darken($green, 10%);
+          font-size: 13px;
+        }
+      }
     }
   }
 }
@@ -579,8 +717,6 @@
         position: relative;
         right: 5px;
       }
-
-
       .btn-group.open .dropdown-toggle {
         box-shadow: none;
       }
@@ -657,7 +793,9 @@
 .black {
   font-weight: 900;
 }
-
+.strike {
+  text-decoration: line-through;
+}
 // Paddings
 
 //padding-left

@@ -5995,6 +5995,9 @@ button.close {
 .content .description, .content .sSubtitle {
   font-size: 16px;
   font-weight: 300; }
+.content .description-sm {
+  font-size: 14px;
+  font-weight: 300; }
 .content .sTitle {
   font-size: 24px;
   font-weight: 400;
@@ -6064,24 +6067,75 @@ button.close {
   .content .gallery .img-fh {
     background: rgba(2, 25, 64, 0.12);
     width: 100%;
-    min-height: 500px; }
+    overflow: hidden;
+    height: 500px !important; }
+  .content .gallery .img-gallery {
+    -webkit-transition: all 1s;
+    transition: all 1s; }
   .content .gallery .img-rhh-t {
     background: rgba(2, 25, 64, 0.12);
-    width: 100%;
-    min-height: 242.5px; }
+    overflow: hidden;
+    height: 242.5px !important; }
   .content .gallery .img-rhh-b {
     margin-top: 15px;
     background: rgba(2, 25, 64, 0.12);
-    width: 100%;
-    min-height: 242.5px; }
+    overflow: hidden;
+    height: 242.5px !important; }
     .content .gallery .img-rhh-b.mt {
       margin-top: 0 !important; }
+.content .total {
+  margin-top: 35px;
+  background: #eee; }
+  .content .total .title {
+    color: #fff;
+    background: #f90;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 -15px;
+    padding: 8px 15px; }
+.content .media.high {
+  border: 1px solid #008b0d;
+  padding: 15px 15px 0;
+  overflow: visible;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  .content .media.high .media-title {
+    background: #008b0d;
+    margin: -15px -15px 15px;
+    padding: 5px 15px 5px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500; }
+    .content .media.high .media-title .txt {
+      padding-left: 50px; }
+  .content .media.high .fa-stack {
+    position: absolute;
+    top: -11px;
+    left: 10px; }
+    .content .media.high .fa-stack .fa-stack-2x {
+      color: green;
+      font-size: 2.5em; }
+    .content .media.high .fa-stack .fa-stack-1x {
+      color: #fff;
+      top: 3px;
+      left: 2px; }
+.content .media.reg {
+  border: none;
+  border-bottom: 1px solid rgba(0, 78, 208, 0.48);
+  padding: 15px 15px 0;
+  overflow: visible;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+.content .media .media-left {
+  padding-right: 15px; }
 .content .media .box-price {
   float: right;
   font-size: 15px;
   font-weight: 300;
   color: #999;
-  text-align: center; }
+  text-align: center;
+  padding-left: 15px; }
   .content .media .box-price .fPrice {
     position: relative;
     bottom: 10px;
@@ -6097,7 +6151,58 @@ button.close {
       font-size: 34px;
       font-weight: 700; }
 .content .media .media-object {
-  width: 250px; }
+  width: 258px; }
+.content .media .media-body .media-heading {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px; }
+  .content .media .media-body .media-heading .rm-title {
+    color: #021940; }
+  .content .media .media-body .media-heading .rm-size {
+    color: #999; }
+.content .media .media-body .old-price {
+  text-decoration: line-through;
+  font-weight: 300; }
+.content .media .media-body .new-price {
+  font-weight: 700; }
+.content .media .media-body .reg-price {
+  font-weight: 500; }
+.content .media .media-body .table tr td {
+  vertical-align: middle;
+  padding: 6px; }
+.content .media .media-body .table {
+  margin-top: 13px;
+  margin-bottom: 10px; }
+  .content .media .media-body .table thead {
+    background-color: rgba(0, 78, 208, 0.48);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: none; }
+  .content .media .media-body .table tr th {
+    border: none; }
+  .content .media .media-body .table tr td select.form-control {
+    height: 30px; }
+  .content .media .media-body .table tr td.cancel, .content .media .media-body .table tr td .fa-info-circle {
+    color: #008b0d; }
+.content .panel {
+  -webkit-border-radius: 0 0;
+  -moz-border-radius: 0 0;
+  border-radius: 0 0;
+  display: inline-block;
+  display: -webkit-inline-block; }
+  .content .panel.panel-terms {
+    border: 1px solid #008b0d;
+    background-color: rgba(0, 139, 13, 0.18); }
+    .content .panel.panel-terms .panel-body {
+      padding: 0 10px; }
+      .content .panel.panel-terms .panel-body .body-title {
+        color: #003f06;
+        font-size: 16px;
+        margin: 5px 0 0; }
+      .content .panel.panel-terms .panel-body ul {
+        color: #005808;
+        font-size: 13px; }
 
 #map {
   width: 750px;
@@ -6297,6 +6402,9 @@ button.close {
 
 .black {
   font-weight: 900; }
+
+.strike {
+  text-decoration: line-through; }
 
 .pl {
   padding-left: 0; }

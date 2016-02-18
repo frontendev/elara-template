@@ -9,44 +9,215 @@ block content
   div.container.content
     div.row.pt30
       // top result 
-      div.media
+      div.media.high
+        div.media-title
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-fire.fa-stack-1x.fa-inverse
+          span.txt Esta es la mejor oferta para tu busqueda
         div.box-price
-          p Precio promedio por día
+          p Subtotal
           p.fPrice
             span.dsign $
             span.price 1234
           a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar ahora
-        div.media-left.media-middle
+        div.media-left.media-top
           a(href='#')
             img.media-object(src='images/room/room1.jpg' alt='')
         div.media-body
-          h4.media-heading 
+          p.media-heading 
             span.rm-title Loft Doble 
             span.rm-size (38m²) 
             span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
               i.fa.fa-user &nbsp;
               i.fa.fa-user
-          p 
+          p.description-sm
             |Habitaciones de 2 amplias y modernas plantas generan la mejor privacidad para su estadía. 
             |Una planta inferior con un living equipado con los mejores sillones de descanso y una planta superior, con la comodidad de una habitación de hotel. 
             |Además un espacio de trabajo relajado y diferente con la tecnologia necesaria para el nuevo trabajador móvil. 
+          div.panel.panel-terms
+            div.panel-body
+              p.body-title Condiciones
+              ul.list-unstyled
+                li - El nombre del titular debe comenzar con la letra D
+                li - Debe reservar durante la noche con luna en fase de cuarto creciente.
+                li - Vigente del 14/04/1912 23:40 hs al 15/04/1912 a las 2:20 hs.
+    div.row
+      //Results
+      div.media.reg.col-sm-9
+        div.media-left.media-top
+          a(href='#')
+            img.media-object(src='images/room/room4.jpg' alt='')
+        div.media-body
+          p.media-heading 
+            span.rm-title Loft Doble superior 
+            span.rm-size (42m²)  
+            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user
+          table.table
+            thead
+              tr
+                th Tarifas
+                th Condiciones
+                th Precio por noche
+                th Habitacion
+            tbody
+              tr
+                td Oferta imbatible
+                td No cancelable
+                td
+                  span.old-price $949.42 &nbsp;
+                  span.new-price &nbsp; $1249.42
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1 
+                    option 2
+                    option 2
+              tr
+                td Tarjetas de crédito
+                td No cancelable
+                td
+                  span.reg-price $1412.97
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2    
+              tr
+                td Tarifa standard
+                td.cancel
+                  span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    i.fa.fa-info-circle
+                    | &nbsp; Cancelación gratuita
+                td
+                  span.reg-price $1931.23
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2
+      div.col-sm-3.total
+        p.title totalizador
+      div.media.reg.col-sm-9
+        div.media-left.media-top
+          a(href='#')
+            img.media-object(src='images/room/room2.jpg' alt='')
+        div.media-body
+          p.media-heading 
+            span.rm-title Loft Triple 
+            span.rm-size (38m²) 
+            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user
+          table.table
+            thead
+              tr
+                th Tarifas
+                th Condiciones
+                th Precio por noche
+                th Habitacion
+            tbody
+              tr
+                td Oferta imbatible
+                td No cancelable
+                td
+                  span.old-price $1087.98 &nbsp;
+                  span.new-price &nbsp; $1311.42
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1 
+                    option 2
+                    option 2
+              tr
+                td Tarjetas de crédito
+                td No cancelable
+                td
+                  span.reg-price $1513.97
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2    
+              tr
+                td Tarifa standard
+                td.cancel
+                  span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    i.fa.fa-info-circle
+                    | &nbsp; Cancelación gratuita
+                td
+                  span.reg-price $2031.23
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2
+      //-result #2
+      div.media.reg.col-sm-9
+        div.media-left.media-top
+          a(href='#')
+            img.media-object(src='images/room/room3.jpg' alt='')
+        div.media-body
+          p.media-heading 
+            span.rm-title Loft Cuadruple 
+            span.rm-size (47m²) 
+            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user &nbsp;
+              i.fa.fa-user
+          table.table
+            thead
+              tr
+                th Tarifas
+                th Condiciones
+                th Precio por noche
+                th Habitacion
+            tbody
+              tr
+                td Oferta imbatible
+                td No cancelable
+                td
+                  span.old-price $1412.73 &nbsp;
+                  span.new-price &nbsp; $1349.42
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1 
+                    option 2
+                    option 2
+              tr
+                td Tarjetas de crédito
+                td No cancelable
+                td
+                  span.reg-price $1891.02
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2    
+              tr
+                td Tarifa standard
+                td.cancel
+                  span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    i.fa.fa-info-circle
+                    | &nbsp; Cancelación gratuita
+                td
+                  span.old-price $2012.19 &nbsp;
+                  span.new-price &nbsp; $2145.18
+                td
+                  select.form-control
+                    option(selected) 0
+                    option 1
+                    option 2
       
-      div.col-md-4.media-cont 
-        div.thumbnail
-          img.img-responsive.pull-right(src='images/room/room1.jpg' alt='Loft Doble')
-          div.caption
-            p
-              span.rm-title Loft Doble 
-              span.rm-size (38m²) 
-              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                i.fa.fa-user &nbsp;
-                i.fa.fa-user
-            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
-            p
-              a.btn.btn-info(href='#' role='button') Ver más
   // Footer
   include footer.jade
   // JS
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')
+    
