@@ -6068,12 +6068,14 @@ button.close {
   .content .gallery .img-rhh-t {
     background: rgba(2, 25, 64, 0.12);
     width: 100%;
-    min-height: 235px; }
+    min-height: 242.5px; }
   .content .gallery .img-rhh-b {
-    margin-top: 30px;
+    margin-top: 15px;
     background: rgba(2, 25, 64, 0.12);
     width: 100%;
-    min-height: 235px; }
+    min-height: 242.5px; }
+    .content .gallery .img-rhh-b.mt {
+      margin-top: 0 !important; }
 .content .media .box-price {
   float: right;
   font-size: 15px;
@@ -6299,6 +6301,15 @@ button.close {
 .pl {
   padding-left: 0; }
 
+.pl7 {
+  padding-left: 7.5px; }
+
+.pr {
+  padding-right: 0; }
+
+.pr7 {
+  padding-right: 7.5px; }
+
 .pt30 {
   padding-top: 30px; }
 
@@ -6312,6 +6323,9 @@ button.close {
 
 .mb {
   margin-bottom: 0; }
+
+.mt15 {
+  margin-top: 15px; }
 
 .mtb20 {
   margin-top: 20px;

@@ -351,14 +351,18 @@
     .img-rhh-t {
       background: transparentize($darkBlue, .88);
       width: 100%;
-      min-height: 235px;
+      min-height: 242.5px;
     }
     //img right height
     .img-rhh-b {
-      margin-top:30px;
+      margin-top:15px;
       background: transparentize($darkBlue, .88);
       width: 100%;
-      min-height: 235px;
+      min-height: 242.5px;
+      &.mt {
+        margin-top: 0 !important;
+      }
+
     }
   }
   .media {
@@ -660,6 +664,18 @@
 .pl {
   padding-left: 0;
 }
+.pl7 {
+  padding-left: 7.5px;
+}
+
+//pr = padding-right
+.pr {
+  padding-right: 0;
+}
+//pr = padding-right
+.pr7 {
+  padding-right: 7.5px;
+}
 
 //padding-top
 .pt30 {
@@ -678,9 +694,15 @@
 
 // margins
 
+//margin-bottom
 .mb {
   margin-bottom: 0;
 }
+//margin-bottom
+.mt15 {
+  margin-top: 15px;
+}
+//margin-top-bottom
 .mtb20 {
   margin-top: 20px;
   margin-bottom: 10px;
