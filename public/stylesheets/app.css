@@ -5944,7 +5944,8 @@ button.close {
     margin-bottom: 5px; }
 
 .search-box-n {
-  background: rgba(255, 175, 8, 0.65);
+  background: rgba(255, 175, 8, 0.77611);
+  background: rgba(2, 25, 64, 0.687);
   margin: 0 0 5px;
   padding: 11px 0 0px;
   color: #fff;
@@ -6064,6 +6065,13 @@ button.close {
 .content .gallery {
   background: rgba(2, 25, 64, 0.12);
   padding: 15px; }
+  .content .gallery .left {
+    padding: 0 7.5px 0 0;
+    margin-bottom: 15px; }
+    .content .gallery .left.last {
+      margin-bottom: 0; }
+  .content .gallery .right {
+    padding: 0 0 0 7.5px; }
   .content .gallery .img-fh {
     background: rgba(2, 25, 64, 0.12);
     width: 100%;
@@ -6122,7 +6130,6 @@ button.close {
       left: 2px; }
 .content .media.reg {
   border: none;
-  border-bottom: 1px solid rgba(0, 78, 208, 0.48);
   padding: 15px 15px 0;
   overflow: visible;
   margin-top: 20px;
@@ -6169,7 +6176,7 @@ button.close {
   font-weight: 500; }
 .content .media .media-body .table tr td {
   vertical-align: middle;
-  padding: 6px; }
+  padding: 5px; }
 .content .media .media-body .table {
   margin-top: 13px;
   margin-bottom: 10px; }
@@ -6182,9 +6189,11 @@ button.close {
   .content .media .media-body .table tr th {
     border: none; }
   .content .media .media-body .table tr td select.form-control {
-    height: 30px; }
+    height: 28px; }
   .content .media .media-body .table tr td.cancel, .content .media .media-body .table tr td .fa-info-circle {
     color: #008b0d; }
+.content .media .divider {
+  border-bottom: 1px solid rgba(0, 78, 208, 0.48); }
 .content .panel {
   -webkit-border-radius: 0 0;
   -moz-border-radius: 0 0;
@@ -6226,6 +6235,8 @@ button.close {
   .amenities .amt-more {
     padding-top: 5px;
     margin-bottom: 0; }
+    .amenities .amt-more .fa-plus {
+      color: #337ab7; }
 
 .promo {
   background-image: url("../images/pt-orange.png");
@@ -6279,7 +6290,14 @@ button.close {
   .media-cont .thumbnail {
     padding: 10px;
     -webkit-transition: all .5s;
-    transition: all .5s; }
+    transition: all .5s;
+    -webkit-border-radius: 0 0;
+    -moz-border-radius: 0 0;
+    border-radius: 0 0; }
+    .media-cont .thumbnail:hover {
+      -webkit-box-shadow: 0 0 8px #666;
+      -moz-box-shadow: 0 0 8px #666;
+      box-shadow: 0 0 8px #666; }
     .media-cont .thumbnail.fw-top {
       padding: 0;
       border: none; }
@@ -6292,7 +6310,8 @@ button.close {
       .media-cont .thumbnail.fw-top .caption {
         padding: 10px;
         border: 1px solid rgba(9, 101, 255, 0.6);
-        border-top: none; }
+        border-top: none;
+        margin-top: -35px; }
         .media-cont .thumbnail.fw-top .caption .title {
           z-index: 2000 !important;
           color: #fff;
@@ -6300,10 +6319,6 @@ button.close {
           position: relative;
           margin: -45px -11px 9px;
           background-color: rgba(9, 101, 255, 0.6); }
-    .media-cont .thumbnail:hover {
-      -webkit-box-shadow: 0 0 8px #666;
-      -moz-box-shadow: 0 0 8px #666;
-      box-shadow: 0 0 8px #666; }
     .media-cont .thumbnail .caption {
       padding: 10px 0 0;
       font-size: 17px;
@@ -6312,13 +6327,18 @@ button.close {
       .media-cont .thumbnail .caption .rm-title {
         margin-top: 0;
         color: #0965ff; }
-      .media-cont .thumbnail .caption .rm-size {
-        letter-spacing: 1px; }
-      .media-cont .thumbnail .caption .rm-ocupant {
-        color: #999; }
-      .media-cont .thumbnail .caption .rm-description {
-        font-weight: 300;
-        color: #666; }
+      .media-cont .thumbnail .caption .ftitle {
+        margin-bottom: 10px;
+        text-decoration: none;
+        display: block; }
+        .media-cont .thumbnail .caption .ftitle .rm-size {
+          letter-spacing: 1px;
+          color: #999; }
+        .media-cont .thumbnail .caption .ftitle .rm-ocupant {
+          color: #999; }
+        .media-cont .thumbnail .caption .ftitle .rm-description {
+          font-weight: 300;
+          color: #666; }
       .media-cont .thumbnail .caption .description, .media-cont .thumbnail .caption .content .sSubtitle, .content .media-cont .thumbnail .caption .sSubtitle {
         font-size: 15px;
         font-weight: 300;

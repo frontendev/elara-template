@@ -181,7 +181,8 @@
 
 // Search (normal)
 .search-box-n {
-  background: transparentize($orangeS, .35);
+  background: transparentize($orangeS, .22389);
+  background: transparentize($darkBlue, .313);
   margin: 0 0 5px;
   padding: 11px 0 0px;
   color: $white;
@@ -344,6 +345,18 @@
   .gallery {
     background: transparentize($darkBlue, .88);
     padding: 15px;
+    .left {
+      padding: 0 7.5px 0 0;
+      margin-bottom: 15px;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+    .right {
+      padding: 0 0 0 7.5px;
+    }
+    .imgBox {
+    }
     //img left full height
     .img-fh {
       background: transparentize($darkBlue, .88);
@@ -372,7 +385,6 @@
       &.mt {
         margin-top: 0 !important;
       }
-
     }
   }
   //Made for results
@@ -424,7 +436,6 @@
     }
     &.reg {
       border: none;
-      border-bottom: 1px solid transparentize($blue, .52);
       padding: 15px 15px 0;
       overflow: visible;
       margin-top: 20px;
@@ -482,7 +493,7 @@
       }
       .table tr td {
         vertical-align: middle;
-        padding: 6px;
+        padding: 5px;
       }
       .table {
         margin-top: 13px;
@@ -499,7 +510,7 @@
           }
           td {
             select.form-control {
-              height: 30px;
+              height: 28px;
             }
             &.cancel, .fa-info-circle {
               color: $green;
@@ -507,6 +518,9 @@
           }
         }
       }
+    }
+    .divider {
+      border-bottom: 1px solid transparentize($blue, .52);
     }
   }
   .panel {
@@ -557,6 +571,9 @@
   .amt-name {
   }
   .amt-more {
+    .fa-plus {
+      color: $brand-primary;
+    }
     padding-top: 5px;
     margin-bottom: 0;
   }
@@ -632,8 +649,13 @@
     padding: 10px;
     -webkit-transition: all .5s;
     transition: all .5s;
+    @include border-radius (0);
 
 
+    &:hover {
+      @include bshadow(0,0, 8px, $mid-grey);
+    }
+    //full-width image top. Used for promotions landing
     &.fw-top {
       padding: 0;
       border: none;
@@ -649,6 +671,7 @@
         padding: 10px;
         border: 1px solid transparentize(#0965ff, .4);
         border-top: none;
+        margin-top: -35px;
 
         .title {
           @extend .subtitle;
@@ -661,10 +684,6 @@
         }
       }
     }
-
-    &:hover {
-      @include bshadow(0,0, 8px, $mid-grey);
-    }
     .caption {
       padding: 10px 0 0;
       font-size: 17px;
@@ -675,15 +694,22 @@
         margin-top: 0;
         color: $brand-info;
       }
-      .rm-size {
-        letter-spacing: 1px;
-      }
-      .rm-ocupant {
-        color: $min-grey;
-      }
-      .rm-description {
-        font-weight: 300;
-        color: $mid-grey;
+      .ftitle {
+        margin-bottom: 10px;
+        text-decoration: none;
+        display: block;
+
+        .rm-size {
+          letter-spacing: 1px;
+          color: $min-grey;
+        }
+        .rm-ocupant {
+          color: $min-grey;
+        }
+        .rm-description {
+          font-weight: 300;
+          color: $mid-grey;
+        }
       }
 
       // Promotions

@@ -3,7 +3,7 @@ extends layout
 block content
   
   // Search N
-  include search_n.jade
+  include search_n_min.jade
   
   // Habitaciones   
   div.container.content
@@ -98,8 +98,9 @@ block content
                     option(selected) 0
                     option 1
                     option 2
+        div.divider
       div.col-sm-3.total
-        p.title totalizador
+        p.title Detalle de seleccion
       div.media.reg.col-sm-9
         div.media-left.media-top
           a(href='#')
@@ -155,6 +156,7 @@ block content
                     option(selected) 0
                     option 1
                     option 2
+        div.divider
       //-result #2
       div.media.reg.col-sm-9
         div.media-left.media-top
@@ -213,7 +215,7 @@ block content
                     option(selected) 0
                     option 1
                     option 2
-      
+        div.divider
   // Footer
   include footer.jade
   // JS
