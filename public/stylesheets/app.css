@@ -5951,6 +5951,8 @@ button.close {
   color: #fff;
   position: relative;
   top: 17px; }
+  .search-box-n.ftt {
+    margin-top: -17px !important; }
   .search-box-n .title-top {
     text-shadow: 1px 1px 0 #000;
     white-space: nowrap;
@@ -6093,7 +6095,8 @@ button.close {
       margin-top: 0 !important; }
 .content .total {
   margin-top: 35px;
-  background: #eee; }
+  background: #fff;
+  border: 1px solid #f90; }
   .content .total .title {
     color: #fff;
     background: #f90;
@@ -6101,6 +6104,33 @@ button.close {
     font-weight: 500;
     margin: 0 -15px;
     padding: 8px 15px; }
+  .content .total .item, .content .total .date .title, .content .total .date .dName {
+    color: #666; }
+  .content .total .item {
+    padding-top: 15px; }
+  .content .total .date {
+    margin-top: -10px; }
+    .content .total .date .title {
+      background: none;
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: -10px; }
+    .content .total .date .dName, .content .total .date .dNum, .content .total .date .dHour {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 500;
+      color: #666; }
+    .content .total .date .dName, .content .total .date .dHour {
+      color: #666; }
+    .content .total .date .dNum {
+      color: #999; }
+    .content .total .date .dHour {
+      position: relative;
+      top: -5px; }
+  .content .total .section {
+    border-top: 1px solid #f90; }
+    .content .total .section .title {
+      color: #f90; }
 .content .media.high {
   border: 1px solid #008b0d;
   padding: 15px 15px 0;
@@ -6610,6 +6640,11 @@ button.close {
       color: red;
       right: 14px; } }
 @media (min-width: 768px) {
+  .navbar {
+    -webkit-border-radius: 0 0;
+    -moz-border-radius: 0 0;
+    border-radius: 0 0; }
+
   .navbar-default .navbar-nav > li > a {
     text-transform: uppercase;
     font-weight: 300;

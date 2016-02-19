@@ -44,6 +44,8 @@ block content
                 li - Vigente del 14/04/1912 23:40 hs al 15/04/1912 a las 2:20 hs.
     div.row
       //Results
+      div.col-sm-12(style='margin-bottom: -15px;')
+        h3 Otras ofertas que tambien te pueden interesar o no. Fijate que la de arriba es la mas piola :)
       div.media.reg.col-sm-9
         div.media-left.media-top
           a(href='#')
@@ -99,8 +101,42 @@ block content
                     option 1
                     option 2
         div.divider
+          
+      //- -------------------------------------------    
+      //-TOTALIZATOR    
+      //-ToDo: Mejorar la ubicacion del totalizador fuera del flujo de resultados    
+      //- -------------------------------------------    
+      
       div.col-sm-3.total
-        p.title Detalle de seleccion
+        div.row
+          div.col-xs-12
+            p.title Detalle de seleccion
+            //- Cantidad de noches
+            p.item 
+              span.bold 12 
+              | noches
+            
+          //- Fechas de entrada y salida
+          div.col-xs-6.date
+            p.title Entrada
+            p.in 
+              span.dName MAR 
+              span.dNum 19/12
+              br
+              span.dHour 14:43 hs
+          div.col-xs-6.date
+            p.title Salida
+            p.out 
+              span.dName DOM 
+              span.dNum 28/02
+              br
+              span.dHour 23:18 hs
+          div.clearfix
+          div.col-xs-12.section
+            p.title-r Loft Triple Superior
+          
+          
+          
       div.media.reg.col-sm-9
         div.media-left.media-top
           a(href='#')
@@ -216,9 +252,9 @@ block content
                     option 1
                     option 2
         div.divider
-  // Footer
+  //Footer
   include footer.jade
-  // JS
+  //JS
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')

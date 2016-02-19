@@ -188,7 +188,10 @@
   color: $white;
   position: relative;
   top: 17px;
-
+  //#Note: fix to top
+  &.ftt {
+    margin-top: -17px !important;
+  }
   .title-top {
     text-shadow: 1px 1px 0 #000;
     white-space: nowrap;
@@ -390,13 +393,49 @@
   //Made for results
   .total {
     margin-top: 35px;
-    background: #eee;
+    background: $white;
+    border: 1px solid $orange;
     .title {
       color: $white;
       background: $orange;
       @include title(16px,500);
       margin: 0 -15px;
       padding: 8px 15px;
+    }
+    .item, .date .title, .date .dName {
+      color: $mid-grey;
+    }
+    .item {
+      padding-top: 15px;
+    }
+    .date {
+      margin-top: -10px;
+      .title {
+        background: none;
+        @include title(14px, 300);
+        margin-bottom: -10px;
+      }
+      .dName, .dNum, .dHour {
+        text-transform: uppercase;
+        @include title(20px, 500);
+        color: $mid-grey;
+      }
+      .dName, .dHour {
+        color: $mid-grey;
+      }
+      .dNum {
+        color: $min-grey;
+      }
+      .dHour {
+        position: relative;
+        top: -5px;
+      }
+    }
+    .section {
+      border-top: 1px solid $orange;
+      .title {
+        color:$orange;
+      }
     }
   }
   .media {
@@ -1066,6 +1105,9 @@
 }
 // 768px and up
 @media (min-width: 768px) {
+  .navbar {
+    @include border-radius (0,0);
+  }
   .navbar-default .navbar-nav>li>a, {
     text-transform: uppercase;
     font-weight: 300;
