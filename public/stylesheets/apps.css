@@ -6077,42 +6077,19 @@ button.close {
   .content .gallery .img-fh {
     background: rgba(2, 25, 64, 0.12);
     width: 100%;
-    display: block;
     overflow: hidden;
-    height: 500px !important;
-    background-position: 0% 0%;
-    background-repeat: no-repeat;
-    -webkit-transition: all 2.5s linear 0.4s;
-    -moz-transition: all 2.5s linear 0.4s;
-    -o-transition: all 2.5s linear 0.4s;
-    transition: all 2.5s linear 0.4s; }
-    .content .gallery .img-fh:hover {
-      -webkit-box-shadow: 0 0 8px #666;
-      -moz-box-shadow: 0 0 8px #666;
-      box-shadow: 0 0 8px #666;
-      background-position: 50% 0%; }
+    height: 500px !important; }
+  .content .gallery .img-gallery {
+    -webkit-transition: all 1s;
+    transition: all 1s; }
   .content .gallery .img-rhh-t {
     background: rgba(2, 25, 64, 0.12);
     overflow: hidden;
-    display: block;
-    height: 242.5px !important;
-    background-size: 135%;
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
-    -webkit-transition: all 1s linear 0.2s;
-    -moz-transition: all 1s linear 0.2s;
-    -o-transition: all 1s linear 0.2s;
-    transition: all 1s linear 0.2s; }
-    .content .gallery .img-rhh-t:hover {
-      -webkit-box-shadow: 0 0 8px #666;
-      -moz-box-shadow: 0 0 8px #666;
-      box-shadow: 0 0 8px #666;
-      background-position: 50% 0%; }
+    height: 242.5px !important; }
   .content .gallery .img-rhh-b {
-    display: block;
-    overflow: hidden;
     margin-top: 15px;
     background: rgba(2, 25, 64, 0.12);
+    overflow: hidden;
     height: 242.5px !important; }
     .content .gallery .img-rhh-b.mt {
       margin-top: 0 !important; }
@@ -6328,7 +6305,7 @@ button.close {
   .promo .btn-promo {
     background-color: rgba(255, 153, 0, 0.25);
     border: 1px solid #fff;
-    color: #fff;
+    color: red;
     font-weight: 500;
     font-size: 16px;
     padding: 10px 24px 8px;
@@ -6733,4 +6710,4 @@ button.close {
     -o-transform: skew(-12deg);
     background: #009bdb; } }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=apps.css.map */

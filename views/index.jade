@@ -23,7 +23,7 @@ block content
           | te sorprende con un estilo vanguardista de motivos geométricos y colores vivos.
           | Un innovador  uso de madera curvada combinado con elementos de cristal y materiales de última generación, creando un ambiente de relax y distracción.
         p.description
-          span.bold #{hotel.name} 
+          span.bold #{hotel.name}
           | se compromete a garantizarte una estancia satisfactoria y confortable en Buenos Aires.
       div.col-sm-5
         img.img-responsive(src='images/vista.jpg' alt='imagen de testeo')
@@ -136,34 +136,37 @@ block content
               
       // Promo #2
       div.col-md-3
-        div.panel.panel-info
-          div.panel-heading
-            | Promo Romántica
-          div.panel-body
-            img.img-responsive(src='images/promo/romance.png' alt='')
-            span.fa-stack.fa-lg.icon
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-flag.fa-stack-1x.fa-inverse
+        a(href='/promociones')
+          div.panel.panel-info
+            div.panel-heading
+              | Promo Romántica
+            div.panel-body
+              img.img-responsive(src='images/promo/romance.png' alt='')
+              span.fa-stack.fa-lg.icon
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #3
       div.col-md-3
-        div.panel.panel-info
-          div.panel-heading
-            | Early Booking Bonus
-          div.panel-body
-            img.img-responsive(src='images/promo/early.png' alt='')
-            span.fa-stack.fa-lg.icon
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-flag.fa-stack-1x.fa-inverse
+        a(href='/promocion')
+          div.panel.panel-info
+            div.panel-heading
+              | Early Booking Bonus
+            div.panel-body
+              img.img-responsive(src='images/promo/early.png' alt='')
+              span.fa-stack.fa-lg.icon
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #4
       div.col-md-3
-        div.panel.panel-info
-          div.panel-heading
-            | Pago en 12 cuotas
-          div.panel-body
-            img.img-responsive(src='images/promo/cuotas.png' alt='')
-            span.fa-stack.fa-lg.icon
-              i.fa.fa-circle.fa-stack-2x
-              i.fa.fa-flag.fa-stack-1x.fa-inverse
+        a(href='/promocion')
+          div.panel.panel-info
+            div.panel-heading
+              | Pago en 12 cuotas
+            div.panel-body
+              img.img-responsive(src='images/promo/cuotas.png' alt='')
+              span.fa-stack.fa-lg.icon
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-flag.fa-stack-1x.fa-inverse
       div.clearfix
       div.col-xs-12
         p.text-center
@@ -224,6 +227,7 @@ block content
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/bootstrap-datepicker.js')
+  script(type='text/javascript' src='javascripts/datepicker-e.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')
   script(type='text/javascript' src='javascripts/index-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)

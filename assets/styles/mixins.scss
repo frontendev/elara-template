@@ -24,3 +24,10 @@
   -moz-border-radius: $v $v;
   border-radius: $v $v;
 }
+//p = property | d = durartion | f = function | dl = delay
+@mixin transition($p , $d , $f, $dl) {
+  -webkit-transition: $p $d $f $dl;
+  -moz-transition: $p $d $f $dl;
+  -o-transition: $p $d $f $dl;
+  transition: $p $d $f $dl;
+}

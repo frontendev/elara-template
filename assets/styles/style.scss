@@ -358,32 +358,42 @@
     .right {
       padding: 0 0 0 7.5px;
     }
-    .imgBox {
-    }
     //img left full height
     .img-fh {
       background: transparentize($darkBlue, .88);
       width: 100%;
+      display: block;
       overflow: hidden;
       height: 500px !important;
-      }
-    .img-gallery {
-      -webkit-transition: all 1s;
-      transition: all 1s;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      @include transition (all, 2.5s, linear, 0.4s);
       &:hover {
+        @include bshadow(0,0, 8px, $mid-grey);
+      background-position: 50% 0%;
       }
     }
     //img right height
     .img-rhh-t {
       background: transparentize($darkBlue, .88);
       overflow: hidden;
+      display: block;
       height: 242.5px !important;
+      background-size: 135%;
+      background-repeat: no-repeat;
+      background-position: 0% 0%;
+      @include transition (all, 1s, linear, 0.2s);
+      &:hover {
+        @include bshadow(0,0, 8px, $mid-grey);
+        background-position: 50% 0%;
+      }
     }
     //img right height
     .img-rhh-b {
+      display: block;
+      overflow: hidden;
       margin-top:15px;
       background: transparentize($darkBlue, .88);
-      overflow: hidden;
       height: 242.5px !important;
       &.mt {
         margin-top: 0 !important;
@@ -642,7 +652,7 @@
 
     &>.panel-heading {
       background-color: transparentize(#0965ff, .4);
-
+      text-decoration: none;
       color: $white;
       padding: 8px 12px;
       font-weight: 400;
@@ -673,9 +683,11 @@
     letter-spacing: 1px;
     margin-top: 15px;
     margin-bottom: 30px;
-
+    -webkit-transition: all .5s;
+    transition: all .5s;
     &:hover {
-      background-color: transparentize($orange, .35);
+      color:$orange;
+      background-color: $white;
     }
   }
 }
