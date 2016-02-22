@@ -20,7 +20,11 @@
 //   - Backgrounds
 
 // 1 - Global
-
+.clean {
+  &:hover {
+    text-decoration: none;
+  }
+}
 // 2 Top Nav
 .navbar {
   min-height: 81px;
@@ -369,7 +373,7 @@
       background-repeat: no-repeat;
       @include transition (all, 2.5s, linear, 0.4s);
       &:hover {
-        @include bshadow(0,0, 8px, $mid-grey);
+        @include bshadow(0,0, 8px, $blue);
       background-position: 50% 0%;
       }
     }
@@ -384,7 +388,7 @@
       background-position: 0% 0%;
       @include transition (all, 1s, linear, 0.2s);
       &:hover {
-        @include bshadow(0,0, 8px, $mid-grey);
+        @include bshadow(0,0, 8px, $blue);
         background-position: 50% 0%;
       }
     }
@@ -395,8 +399,16 @@
       margin-top:15px;
       background: transparentize($darkBlue, .88);
       height: 242.5px !important;
+      background-size: 135%;
+      background-repeat: no-repeat;
+      background-position: 0% 0%;
+      @include transition (all, 1s, linear, 0.2s);
       &.mt {
         margin-top: 0 !important;
+      }
+      &:hover {
+        @include bshadow(0,0, 8px, $blue);
+        background-position: 50% 0%;
       }
     }
   }
@@ -630,8 +642,6 @@
 .promo {
   background-image: url('../images/pt-orange.png');
   background-repeat: repeat;
-
-
   .line {
     background-color: $white;
     top: 20px;
@@ -649,15 +659,19 @@
   .panel-info {
     border: none;
     background: none;
-
+    @include transition(all, .4s, ease-in, 0s);
+    &:hover {
+      @include bshadow(0, 0, 10px, $white);
+    }
     &>.panel-heading {
       background-color: transparentize(#0965ff, .4);
-      text-decoration: none;
-      color: $white;
-      padding: 8px 12px;
-      font-weight: 400;
-      font-size: 14px;
       border: none;
+      padding: 8px 12px;
+      span {
+        color: $white;
+        font-weight: 400;
+        font-size: 14px;
+      }
     }
 
     .panel-body {
@@ -695,7 +709,6 @@
 
 // Rooms
 .media-cont {
-  margin-bottom: 20px;
   .thumbnail {
     padding: 10px;
     -webkit-transition: all .5s;
@@ -745,14 +758,17 @@
         margin-top: 0;
         color: $brand-info;
       }
+      .rm-size {
+        letter-spacing: 1px;
+        color: $min-grey;
+      }
       .ftitle {
         margin-bottom: 10px;
         text-decoration: none;
         display: block;
 
         .rm-size {
-          letter-spacing: 1px;
-          color: $min-grey;
+          @extend .rm-size;
         }
         .rm-ocupant {
           color: $min-grey;
@@ -891,6 +907,9 @@
 .pr7 {
   padding-right: 7.5px;
 }
+.pr15 {
+  padding-right: 15px;
+}
 
 //padding-top
 .pt30 {
@@ -1028,7 +1047,6 @@
   bottom: -140px;
 }
 
-
 // Footer
 .footer {
   margin-top: 20px;
@@ -1042,7 +1060,7 @@
     margin-top: 40px !important;
     color: $white;
   }
-  ul , .ft-icon {
+  ul {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 15px;
@@ -1058,6 +1076,14 @@
   }
   a {
     color: $white;
+  }
+  .social {
+    padding-right: 15px;
+    padding-top: 15px;
+    @include filter-grayscale;
+    &:hover {
+      @include filter-grayscale-h;
+    }
   }
 }
 

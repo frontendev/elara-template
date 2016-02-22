@@ -18,49 +18,67 @@ block content
         div.gallery
           //-galler for 3 images
           p.sSubtitleb.mb Interior del Hotel
-          div.row
+          div.row#links
             div.col-xs-6.pr7
-              a.img-fh(style='background-image: url(images/images/hab1.jpg);' href='#')
+              a.img-fh(style='background-image: url(images/images/hab1.jpg);' href='/images/images/hab1.jpg' title="Banana" data-gallery)
             div.col-xs-6.pl7 
-              a.img-rhh-t(style='background-image: url(images/images/hab2.jpg);' href='#')
+              a.img-rhh-t(style='background-image: url(images/images/hab2.jpg);' href='/images/images/hab1.jpg' title="Banana" data-gallery)
             div.col-xs-6.pl7
-              a.img-rhh-b(style='background-image: url(images/images/hab3.jpg);' href='#')
+              a.img-rhh-b(style='background-image: url(images/images/hab3.jpg);' href='/images/images/hab3.jpg' title="Banana" data-gallery)
       div.col-xs-6
         div.gallery
           //-galler for 2 images
           p.sSubtitleb.mb Arquitectura
           div.row
             div.col-xs-6.pr7
-              a.img-fh(style='background-image: url(images/images/arq1.jpg);' href='#')
+              a.img-fh(style='background-image: url(images/images/arq1.jpg);' href='/images/images/arq1.jpg' title="Banana" data-gallery)
             div.col-xs-6.pl7
-              a.img-fh(style='background-image: url(images/images/arq2.jpg);' href='#')
+              a.img-fh(style='background-image: url(images/images/arq2.jpg);' href='/images/images/arq2.jpg' title="Banana" data-gallery)
                 
       div.col-xs-6.mtb20
         div.gallery
           p.sSubtitleb.mb Habitaciones
           div.row
             div.col-xs-6.pr7
-              div.img-rhh-t
-                img.img-gallery(src='images/images/hab4.jpg' alt='')
+              a.img-rhh-t(style='background-image: url(images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Banana" data-gallery)
             div.col-xs-6.pl7
-              div.img-rhh-b.mt
-                img.img-gallery(src='images/images/hab5.jpg' alt='')
+              a.img-rhh-b.mt(style='background-image: url(images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Banana" data-gallery)
             div.col-xs-6.pr7.mt15
-              div.img-rhh-t
-                img.img-gallery(src='images/images/hab6.jpg' alt='')
+              a.img-rhh-t(style='background-image: url(images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Banana" data-gallery)
             div.col-xs-6.pl7.mt15
-              div.img-rhh-b.mt
-                img.img-gallery(src='images/images/hab7.jpg' alt='')
+              div.img-rhh-b.mt(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Banana" data-gallery)
       div.col-xs-6.mtb20
         div.gallery
           p.sSubtitleb.mb papa
           div.row
             div.col-xs-6
-              div.img-rhh-t
+              a.img-rhh-t(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab7.jpg' title="Banana" data-gallery)
             div.col-xs-6
-              div.img-rhh-b.mt
+              a.img-rhh-b.mt(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab7.jpg' title="Banana" data-gallery)
         
-      
+
+  div.blueimp-gallery.blueimp-gallery-controls#blueimp-gallery
+    div.slides
+    h3.title
+    a.prev <
+    a.next >
+    a.close x
+    a.play-pause
+    ol.indicator
+    div.modal.fade
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            button.close(type='button' aria-hidden='true')&times;
+            h4.modal-title
+          div.modal-body.next
+          div.modal-footer
+            button.btn.btn-default.pull-left.prev(type='button')
+              i.fa.fa-chevron-left 
+              | Anterior 
+            button.btn.btn-primary.next(type='button')
+              | Siguiente 
+              i.fa.fa-chevron-right
   //Footer
   include footer.jade
   //JS
@@ -68,3 +86,5 @@ block content
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   //- Tooltip enabler
   script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')

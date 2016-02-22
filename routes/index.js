@@ -35,7 +35,7 @@ router.get('/habitacion', function(req, res, next) {
 
 /* Imagenes */
 router.get('/imagenes', function(req, res, next) {
-  res.render('images', { title: 'Imágenes - HTL Suica Hotel & Resort'});
+  res.render('images', { title: 'Imágenes - HTL Suica Hotel & Resort', url : "/imagenes"});
 });
 
 

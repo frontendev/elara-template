@@ -31,3 +31,18 @@
   -o-transition: $p $d $f $dl;
   transition: $p $d $f $dl;
 }
+@mixin filter-grayscale {
+  -webkit-filter: grayscale(1);
+	-webkit-filter: grayscale(100%);
+	filter: gray;
+	filter: grayscale(100%);
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+@mixin filter-grayscale-h {
+  -webkit-filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}

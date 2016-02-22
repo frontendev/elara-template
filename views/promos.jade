@@ -7,12 +7,12 @@ block content
   
   // Section Description
   div.container.content.styleb
-    div.row
+    div.row.grid
       div.col-xs-12
         p.sTitle Promociones
       
       // Room #1  
-      div.col-md-4.media-cont 
+      div.col-md-4.media-cont.grid-item
         div.thumbnail.fw-top
           div.top-img
             a(href='/promo' style='text-decoration: none;')
@@ -43,10 +43,9 @@ block content
                           i.fa.fa-google-plus-square.fa-2x.fa-fw
               div.col-xs-7
                 a.btn.btn-warning.btn-left-double(href='/reservas' role='button') Llamar 
-                a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar
-            
+                a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar      
       // Room #2  
-      div.col-md-4.media-cont 
+      div.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
           div.top-img
             a(href='/promo' style='text-decoration: none;')
@@ -76,9 +75,9 @@ block content
                         a(href='#')
                           i.fa.fa-google-plus-square.fa-2x.fa-fw
               div.col-xs-6
-                a.btn.btn-info.btn-right-single(href='/reservar' role='button') Reservar
+                a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
       // Room #3  
-      div.col-md-4.media-cont 
+      div.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
           div.top-img
             a(href='/promo' style='text-decoration: none;')
@@ -108,10 +107,9 @@ block content
                         a(href='#')
                           i.fa.fa-google-plus-square.fa-2x.fa-fw
               div.col-xs-6
-                a.btn.btn-warning.btn-right-single(href='/reservar' role='button') Llamar
-      div.clearfix
+                a.btn.btn-warning.btn-right-single(href='/reservas' role='button') Llamar
       // Room #4  
-      div.col-md-4.media-cont 
+      div.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
           div.top-img
             a(href='/promo' style='text-decoration: none;')
@@ -145,7 +143,7 @@ block content
                 a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar
             
       // Room #5  
-      div.col-md-4.media-cont 
+      div.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
           div.top-img
             a(href='/promo' style='text-decoration: none;')
@@ -176,6 +174,40 @@ block content
                           i.fa.fa-google-plus-square.fa-2x.fa-fw
               div.col-xs-6
                 a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
+      div.col-md-4.media-cont.grid-item 
+      // Room #5  
+      div.col-md-4.media-cont.grid-item 
+        div.thumbnail.fw-top
+          div.top-img
+            a(href='/promo' style='text-decoration: none;')
+              img.img-responsive(src='images/promo/family.png' alt='Loft Doble')
+          div.caption
+            a(href='/promo' style='text-decoration: none;')
+              p.title 12 Cuotas sin interés
+              p.validity Del 30 de Febrero al 17 de Marzo
+              p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
+              p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
+            //footer with 1 button
+            div.row.ptb10
+              div.col-xs-6
+                div.btn-group
+                  button.dropdown-toggle.btn-share(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    i.fa.fa-share-alt.fa-fw
+                    | Compartir
+                  ul.dropdown-menu.social-menu
+                    li
+                      p(style='padding: 5px 5px 2px; margin-bottom: 0;')
+                        a(href='#')
+                          i.fa.fa-twitter-square.fa-2x.fa-fw
+                        a(href='#')
+                          i.fa.fa-facebook-square.fa-2x.fa-fw
+                        a(href='#')
+                          i.fa.fa-whatsapp.fa-2x.fa-fw
+                        a(href='#')
+                          i.fa.fa-google-plus-square.fa-2x.fa-fw
+              div.col-xs-6
+                a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
+      div.col-md-4.media-cont.grid-item 
                 
   // Footer
   include footer.jade
@@ -183,3 +215,5 @@ block content
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='javascripts/masonry.pkgd.min.js')
+  script(type='text/javascript' src='javascripts/masonry.js')
