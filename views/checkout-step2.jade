@@ -1,0 +1,206 @@
+extends layout
+
+block content
+  // Reservas
+  div.container.content.styleb
+    div.row
+      div.col-sm-12
+        p.sTitle Ultimo paso...
+      div.col-sm-9
+        div.panel.panel-elara
+          div.panel-heading
+            p.panel-title 2 - Metodos de pago
+          div.panel-body
+            p.rate
+              span Elija un método de pago
+            div.panel.panel-elara
+              div.panel-heading
+                p.panel-title Titular de la reserva
+              div.panel-body
+                div.row
+                  div.col-xs-3
+                    label(for='hotel-titular') Tarjeta
+                    select.form-control
+                      option(disabled selected) Mes
+                      option Visa
+                      option Mastercard
+                  div.col-xs-3
+                    label(for='hotel-address') N° de Tarjeta
+                    input.form-control#hotel-address(type='text' placeholder='i.e: 5521695066949351')  
+                  div.col-xs-3
+                    label(for='titular-lname') Vencimiento
+                    div.row
+                      div.col-xs-6
+                        select.form-control.fx-pr
+                          option(disabled selected) Mes
+                          option Enero
+                          option Febrero
+                          option Marzo
+                          option Abril
+                          option Mayo
+                          option Junio
+                          option Julio
+                          option Agosto
+                          option Septiembre
+                          option Octubre
+                          option Noviembre
+                          option Diciembre 
+                      div.col-xs-6
+                        select.form-control.fx-pr
+                          option(disabled selected) Año
+                          option 2016
+                          option 2017
+                          option 2019
+                          option 2019
+                  div.col-xs-3
+                    label(for='titular-lname') Codigo de seguridad
+                    input.form-control#hotel-address(type='text' placeholder='i.e: 741')  
+                  div.clearfix
+                  br
+                  div.col-xs-4
+                    label(for='hotel-titular') Titular
+                    input.form-control#hotel-titular(type='text' placeholder='i.e: Cosme Fulanito')  
+                  div.col-xs-4
+                    label(for='hotel-address') Direccion
+                    input.form-control#hotel-address(type='text' placeholder='i.e: Calle Falsa 123')  
+                  div.col-xs-4
+                    label(for='titular-lname') Ciudad
+                    input.form-control#titular-lname(type='text' placeholder='i.e: Springfield')
+                  div.clearfix
+                  br
+                  div.col-xs-3
+                    label(for='titular-email') Email
+                    input.form-control#titular-email(type='text' placeholder='direccion@ejemplo.com') 
+                  div.col-xs-3
+                    label(for='titular-country') País
+                    select.form-control#titular-country
+                      option(selected disable) País
+                      option Argentina
+                      option Brasil
+                      option Paraguay
+                      option Uruguay  
+            div.divider
+            p.sSubtitleb.pt15.pb  Tipo de ocupacion
+            p Máximo 2 persona/s. Se aceptan menores de hasta 0 años compartiendo cama y/o infante en cuna (servicio con costo adicional)
+            div.form-inline
+              div.form-group.pr30
+                img.pr15(src="images/icons/adult.png", alt="adulto")
+                label.pr15(for='titular-country') Adulto
+                select.form-control
+                  option(selected) 1
+                  option 2
+                br
+                span.help-block &nbsp;
+              div.form-group.pr30
+                img.pr15(src="images/icons/child.png", alt="menor")
+                label.pr15(for='titular-country') Menores
+                select.form-control
+                  option(selected) 0
+                  option 1
+                br
+                span.help-block De 2 a 14 años.
+              div.form-group.pr30
+                img.pr15(src="images/icons/infant.png", alt="infantes")
+                label.pr15(for='titular-country') Infantes
+                select.form-control
+                  option(selected) 0
+                  option 1
+                br
+                span.help-block De 0 a 2 años.
+              div.form-group.pull-right
+                label.pr15(for='titular-country') Tipo de cama
+                select.form-control
+                  option(selected disabled) Escoja una opcion
+                  option Cama King size
+                  option camas twin
+                br
+                span.help-block Sujeto a disponibilidad
+            br
+            div.divider
+            p.sSubtitleb.pt15.pb  Requerimientos especiales
+            p Los requerimientos especiales están sujetos a confirmación al momento de realizar la conformacion de la reserva.
+            div.row
+              div.col-xs-3
+                select.form-control
+                  option(selected disabled) Escoja opcion
+                  option Cama King size
+                  option camas twin
+            span.help-block.l Sujeto a disponibilidad. Puede seleccionar varias opciones presionanado la teclad 
+              code ctrl
+              | + click
+            div.clearfix
+            br
+            div.divider
+            a.btn.btn-success.btn-lg.pull-right.mt15(href='/checkout-s2')
+              | Finalizar  
+              i.fa.fa-check.
+      //- -------------------------------------------    
+      //-TOTALIZATOR    
+      //-ToDo: Mejorar la ubicacion del totalizador fuera del flujo de resultados    
+      //- -------------------------------------------    
+      
+      div.col-sm-3.pull-right.total
+        div.row
+          div.col-xs-12
+            p.title Detalle de seleccion
+            //- Cantidad de noches
+            p.stay 
+              span.bold 12 
+              | noches
+          //- Fechas de entrada y salida
+          div.col-xs-6.date.in
+            p.title Entrada
+            p.mb
+              span.dName MAR 
+              span.dNum 19/12
+            p.mb
+              span.dHour 14:43 hs
+          div.col-xs-6.date.out
+            p.title Salida
+            p.mb
+              span.dName DOM 
+              span.dNum 28/02
+            p.mb
+              span.dHour 23:18 hs
+          div.clearfix
+          //-Seleccion #1
+          div.col-xs-12.section-o
+            p.title-r Loft Triple Superior
+            ul.list-unstyled.rate-list
+              li 1 oferta especial
+                span.pull-right $1.198
+              li 1 Promo tarjeta de credito 
+                span.pull-right $1.528
+              li.pull-right.res  
+                |subtotal  
+                span.sub $2.726
+          //-Seleccion #2
+          div.col-xs-12.section-o
+            p.title-r Loft Doble comun
+            ul.list-unstyled.rate-list
+              li 1 oferta imbatitle
+                span.pull-right $1.321
+              li 2 tarjeta de credito 
+                span.pull-right $2.923
+              li 2 Tarifa regular
+                span.pull-right $4.332
+              li.pull-right.res  
+                |subtotal  
+                span.sub $8.606
+          //-Resultado Final
+          div.col-xs-12.section-g
+            p.title-r Resumen
+            ul.list-unstyled.exp-list
+              li 2 Loft Triple Superior
+                span.pull-right $2.726
+              li 2 Loft Doble Comunn
+                span.pull-right $8.606
+                li.pull-right.res  
+                  |total  
+                  span.res-total $11.332
+  //Footer
+  include footer.jade
+  //JS
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  script(type='text/javascript' src='javascripts/tooltip-e.js')

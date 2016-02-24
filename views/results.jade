@@ -20,7 +20,7 @@ block content
           p.fPrice
             span.dsign $
             span.price 1234
-          a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar ahora
+          a.btn.btn-info.btn-right-double(href='/checkout-s1' role='button') Reservar ahora
         div.media-left.media-top
           a(href='#')
             img.media-object(src='images/room/room1.jpg' alt='')
@@ -107,32 +107,72 @@ block content
       //-ToDo: Mejorar la ubicacion del totalizador fuera del flujo de resultados    
       //- -------------------------------------------    
       
-      div.col-sm-3.total
+      div.col-sm-3.pull-right.total
         div.row
           div.col-xs-12
             p.title Detalle de seleccion
             //- Cantidad de noches
-            p.item 
+            p.stay 
               span.bold 12 
               | noches
           //- Fechas de entrada y salida
-          div.col-xs-6.date
+          div.col-xs-6.date.in
             p.title Entrada
-            p.in 
+            p.mb
               span.dName MAR 
               span.dNum 19/12
-              br
+            p.mb
               span.dHour 14:43 hs
-          div.col-xs-6.date
+          div.col-xs-6.date.out
             p.title Salida
-            p.out 
+            p.mb
               span.dName DOM 
               span.dNum 28/02
-              br
+            p.mb
               span.dHour 23:18 hs
           div.clearfix
-          div.col-xs-12.section
+          //-Seleccion #1
+          div.col-xs-12.section-o
             p.title-r Loft Triple Superior
+            ul.list-unstyled.rate-list
+              li 1 oferta especial
+                span.pull-right $1.198
+              li 1 Promo tarjeta de credito 
+                span.pull-right $1.528
+              li.pull-right.res  
+                |subtotal  
+                span.sub $2.726
+          //-Seleccion #2
+          div.col-xs-12.section-o
+            p.title-r Loft Doble comun
+            ul.list-unstyled.rate-list
+              li 1 oferta imbatitle
+                span.pull-right $1.321
+              li 2 tarjeta de credito 
+                span.pull-right $2.923
+              li 2 Tarifa regular
+                span.pull-right $4.332
+              li.pull-right.res  
+                |subtotal  
+                span.sub $8.606
+          //-Resultado Final
+          div.col-xs-12.section-g
+            p.title-r Resumen
+            ul.list-unstyled.exp-list
+              li 2 Loft Triple Superior
+                span.pull-right $2.726
+              li 2 Loft Doble Comunn
+                span.pull-right $8.606
+                li.pull-right.res  
+                  |total  
+                  span.res-total $11.332
+            div.clearfix
+            a.btn.btn-info.pull-right(href='/checkout-s1' role='button') Reservar ahora
+            div.clearfix
+            p.equiv  
+              | &nbsp; Correponde a 
+              span USD 1923  
+              i.fa.fa-info-circle.ptb10(data-toggle='tooltip' data-placement='top' title='El pago se realiza en la moneda que trabaja el hotel') 
       div.media.reg.col-sm-9
         div.media-left.media-top
           a(href='#')
@@ -247,7 +287,6 @@ block content
                     option(selected) 0
                     option 1
                     option 2
-        div.divider
   //Footer
   include footer.jade
   //JS

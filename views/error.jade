@@ -1,6 +1,12 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}aa
+  .container
+    h1= message
+    h2= error.status
+    h2 la pagina que estas buscando no existe. 
+    |Puede que nunca hay sido creada o el contenido haya sido movido a otra parte
+    
+    pre #{error.stack}aa
+
+include footer.jade

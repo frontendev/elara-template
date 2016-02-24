@@ -37,6 +37,14 @@ router.get('/habitacion', function(req, res, next) {
 router.get('/imagenes', function(req, res, next) {
   res.render('images', { title: 'Imágenes - HTL Suica Hotel & Resort', url : "/imagenes"});
 });
+/* checkout s1*/
+router.get('/checkout-s1', function(req, res, next) {
+  res.render('checkout-step1', { title: 'Complete sus datos - HTL Suica Hotel & Resort', url : "/imagenes"});
+});
+/* checkout s2*/
+router.get('/checkout-s2', function(req, res, next) {
+  res.render('checkout-step2', { title: 'Elija un metodos de pago - HTL Suica Hotel & Resort', url : "/imagenes"});
+});
 
 
 module.exports = router;

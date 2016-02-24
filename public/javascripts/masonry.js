@@ -3,4 +3,3 @@ $('.grid').masonry({
   percentPosition: true,
   gutter: 0
 });
-console.log("masonry ha iniciado....")

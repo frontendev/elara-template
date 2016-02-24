@@ -1,13 +1,29 @@
+//================================
+//  Main color theme: blue
+//================================
+$main: #004ed0;
+//main dark
+$main-dark: desaturate(adjust_hue(darken($main, 28), 0), 5);
+//main light
+$main-light: adjust_hue(lighten($main, 9), 341);
+//Table head
+$thead: transparentize($main, .52);
+//transparent
+$main-bg-trans: transparentize($main, .52);
+$main-bg-dark-trans: transparentize($main-dark, .88);
 
+//================================
+//  Secondary color theme: Orange
+//================================
 $orange: #f90;
 $orangeS: #ffaf08;
-$blue: #004ed0;
-$skyblue: #009bdb;
-$darkBlue: #021940;
 
 $green: #008b0d;
 
-$white: #fff;
+//grayscale
+$black: #000;
+$grey: #333;
 $mid-grey: #666;
 $min-grey: #999;
 $gallery: #ededed;
+$white: #fff;
