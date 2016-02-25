@@ -39,11 +39,15 @@ router.get('/imagenes', function(req, res, next) {
 });
 /* checkout s1*/
 router.get('/checkout-s1', function(req, res, next) {
-  res.render('checkout-step1', { title: 'Complete sus datos - HTL Suica Hotel & Resort', url : "/imagenes"});
+  res.render('checkout-step1', { title: 'Complete sus datos - HTL Suica Hotel & Resort', url : "/checkout-s1"});
 });
 /* checkout s2*/
 router.get('/checkout-s2', function(req, res, next) {
-  res.render('checkout-step2', { title: 'Elija un metodos de pago - HTL Suica Hotel & Resort', url : "/imagenes"});
+  res.render('checkout-step2', { title: 'Elija un metodos de pago - HTL Suica Hotel & Resort', url : "/checkout-s2"});
+});
+/* checkout s2*/
+router.get('/voucher', function(req, res, next) {
+  res.render('voucher', { title: 'Voucher de compra - HTL Suica Hotel & Resort', url : "/voucher"});
 });
 
 

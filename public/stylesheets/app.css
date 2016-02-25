@@ -5821,6 +5821,10 @@ button.close {
 .exp-list li {
   padding-bottom: 5px; }
 
+.tx-cond {
+  font-size: 12px;
+  color: #008b0d; }
+
 .navbar {
   min-height: 81px;
   background-color: #fff;
@@ -6298,37 +6302,50 @@ button.close {
     color: #008b0d; }
 .content .divider {
   border-bottom: 1px solid rgba(0, 78, 208, 0.48); }
+.content .panel-group {
+  margin-bottom: -5px; }
 .content .panel {
   -webkit-border-radius: 0 0;
   -moz-border-radius: 0 0;
   border-radius: 0 0; }
-  .content .panel.panel-elara .panel-heading {
-    -webkit-border-radius: 0 0;
-    -moz-border-radius: 0 0;
-    border-radius: 0 0;
-    border: 1px solid rgba(0, 78, 208, 0.48);
-    background-color: rgba(0, 78, 208, 0.48); }
-    .content .panel.panel-elara .panel-heading .panel-title {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 1px; }
-  .content .panel.panel-elara .panel-body {
-    border: 1px solid rgba(0, 78, 208, 0.48);
-    border-top: none;
-    background-color: #fff; }
-    .content .panel.panel-elara .panel-body .rate {
-      font-size: 16px; }
-    .content .panel.panel-elara .panel-body label {
-      font-weight: 300 !important; }
-    .content .panel.panel-elara .panel-body .fx-pr {
-      padding: 6px 2px 6px 12px; }
-    .content .panel.panel-elara .panel-body .help-block {
-      font-size: 12px;
-      float: right;
-      color: #021940; }
-      .content .panel.panel-elara .panel-body .help-block.l {
-        float: left !important; }
+  .content .panel.panel-elara {
+    padding-bottom: 10px; }
+    .content .panel.panel-elara .panel-heading {
+      -webkit-border-radius: 0 0;
+      -moz-border-radius: 0 0;
+      border-radius: 0 0;
+      border: 1px solid rgba(0, 78, 208, 0.48);
+      background-color: rgba(0, 78, 208, 0.48); }
+      .content .panel.panel-elara .panel-heading .panel-title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 1px; }
+        .content .panel.panel-elara .panel-heading .panel-title a:hover:active {
+          text-decoration: none; }
+      .content .panel.panel-elara .panel-heading .img-icon {
+        padding-right: 8px;
+        margin-top: -3px;
+        margin-left: -8px;
+        float: left; }
+      .content .panel.panel-elara .panel-heading .fa {
+        color: #fff !important; }
+    .content .panel.panel-elara .panel-body {
+      border: 1px solid rgba(0, 78, 208, 0.48);
+      border-top: none;
+      background-color: #fff; }
+      .content .panel.panel-elara .panel-body .rate {
+        font-size: 16px; }
+      .content .panel.panel-elara .panel-body label {
+        font-weight: 300 !important; }
+      .content .panel.panel-elara .panel-body .fx-pr {
+        padding: 6px 2px 6px 12px; }
+      .content .panel.panel-elara .panel-body .help-block {
+        font-size: 12px;
+        float: right;
+        color: #021940; }
+        .content .panel.panel-elara .panel-body .help-block.l {
+          float: left !important; }
   .content .panel.panel-terms {
     display: -webkit-inline-block;
     display: inline-block;

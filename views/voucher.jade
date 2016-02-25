@@ -1,0 +1,50 @@
+extends layout-checkout
+
+block content
+  // Reservas
+  div.container.content.styleb
+    div.row
+      div.col-sm-12
+        p.sTitle Ultimo paso...
+      div.col-sm-12
+        div.panel.panel-elara
+          div.panel-heading
+            p.panel-title Detalle de tu reserva
+          div.panel-body
+            div.row
+              div.col-sm-9
+                div.row
+                  div.col-xs-6
+                    ul.exp-list.list-unstyled
+                      li.medium Habitacion:&nbsp;
+                        span.light  Loft triple Doble
+                      li.medium Regimen de comidas:&nbsp;
+                        span.light Sin desayuno
+                      li.medium Pasajero:&nbsp;
+                        span.light Cosme Fulanito
+                      li.medium Ocupación:&nbsp;
+                        span.light 1 adulto | 1 infante
+                      li.medium Requerimientos especiales:&nbsp;
+                        span.light Ninguno
+                      li.medium Observaciones:&nbsp;
+                        span.light Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  div.col-xs-6
+                    ul.exp-list.list-unstyled
+                      li.medium Entrada
+                      li.light Martes 8 de diciembre de 2015 - 11:00 hs
+                      li.medium Salida
+                      li.light lunes 31 de Marzo de 2029 - 11:00 hs
+                p.subtitle Datos personales
+                div.divider
+                
+                p.subtitle Datos personales
+                div.divider
+              div.col-sm-3
+
+  //Footer
+  include footer.jade
+  //JS
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='javascripts/toggle-icon.js')

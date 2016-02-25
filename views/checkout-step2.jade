@@ -13,125 +13,191 @@ block content
           div.panel-body
             p.rate
               span Elija un método de pago
-            div.panel.panel-elara
-              div.panel-heading
-                p.panel-title Titular de la reserva
-              div.panel-body
-                div.row
-                  div.col-xs-3
-                    label(for='hotel-titular') Tarjeta
-                    select.form-control
-                      option(disabled selected) Mes
-                      option Visa
-                      option Mastercard
-                  div.col-xs-3
-                    label(for='hotel-address') N° de Tarjeta
-                    input.form-control#hotel-address(type='text' placeholder='i.e: 5521695066949351')  
-                  div.col-xs-3
-                    label(for='titular-lname') Vencimiento
-                    div.row
-                      div.col-xs-6
-                        select.form-control.fx-pr
-                          option(disabled selected) Mes
-                          option Enero
-                          option Febrero
-                          option Marzo
-                          option Abril
-                          option Mayo
-                          option Junio
-                          option Julio
-                          option Agosto
-                          option Septiembre
-                          option Octubre
-                          option Noviembre
-                          option Diciembre 
-                      div.col-xs-6
-                        select.form-control.fx-pr
-                          option(disabled selected) Año
-                          option 2016
-                          option 2017
-                          option 2019
-                          option 2019
-                  div.col-xs-3
-                    label(for='titular-lname') Codigo de seguridad
-                    input.form-control#hotel-address(type='text' placeholder='i.e: 741')  
-                  div.clearfix
-                  br
-                  div.col-xs-4
-                    label(for='hotel-titular') Titular
-                    input.form-control#hotel-titular(type='text' placeholder='i.e: Cosme Fulanito')  
-                  div.col-xs-4
-                    label(for='hotel-address') Direccion
-                    input.form-control#hotel-address(type='text' placeholder='i.e: Calle Falsa 123')  
-                  div.col-xs-4
-                    label(for='titular-lname') Ciudad
-                    input.form-control#titular-lname(type='text' placeholder='i.e: Springfield')
-                  div.clearfix
-                  br
-                  div.col-xs-3
-                    label(for='titular-email') Email
-                    input.form-control#titular-email(type='text' placeholder='direccion@ejemplo.com') 
-                  div.col-xs-3
-                    label(for='titular-country') País
-                    select.form-control#titular-country
-                      option(selected disable) País
-                      option Argentina
-                      option Brasil
-                      option Paraguay
-                      option Uruguay  
+            
+              div.panel-group#accordion(role='tablist' aria-multiselectable='true')
+                //======== Pago en el hotel
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/hotel.png", alt="Hotel")
+                    h4.panel-title
+                      a(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Pago en el hotel
+                        i.fa.fa-caret-up.pull-right
+                  div.panel-collapse.collapse.in#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      div.row
+                        div.col-xs-3
+                          label(for='hotel-titular') Tarjeta
+                          select.form-control
+                            option(disabled selected) Mes
+                            option Visa
+                            option Mastercard
+                        div.col-xs-3
+                          label(for='hotel-address') N° de Tarjeta
+                          input.form-control#hotel-address(type='text' placeholder='i.e: 5521695066949351')  
+                        div.col-xs-3
+                          label(for='titular-lname') Vencimiento
+                          div.row
+                            div.col-xs-6
+                              select.form-control.fx-pr
+                                option(disabled selected) Mes
+                                option Enero
+                                option Febrero
+                                option Marzo
+                                option Abril
+                                option Mayo
+                                option Junio
+                                option Julio
+                                option Agosto
+                                option Septiembre
+                                option Octubre
+                                option Noviembre
+                                option Diciembre 
+                            div.col-xs-6
+                              select.form-control.fx-pr
+                                option(disabled selected) Año
+                                option 2016
+                                option 2017
+                                option 2019
+                                option 2019
+                        div.col-xs-3
+                          label(for='titular-lname') Codigo de seguridad
+                          input.form-control#hotel-address(type='text' placeholder='i.e: 741')  
+                        div.clearfix
+                        br
+                        div.col-xs-4
+                          label(for='hotel-titular') Titular
+                          input.form-control#hotel-titular(type='text' placeholder='i.e: Cosme Fulanito')  
+                        div.col-xs-4
+                          label(for='hotel-address') Direccion
+                          input.form-control#hotel-address(type='text' placeholder='i.e: Calle Falsa 123')  
+                        div.col-xs-4
+                          label(for='titular-lname') Ciudad
+                          input.form-control#titular-lname(type='text' placeholder='i.e: Springfield')
+                        div.clearfix
+                        br
+                        div.col-xs-4
+                          label(for='titular-email') Telefono
+                          input.form-control#titular-email(type='text' placeholder='direccion@ejemplo.com') 
+                        div.col-xs-2
+                          label(for='titular-country') Código postal
+                          input.form-control#titular-email(type='text' placeholder='i.e: 1442') 
+                      p.pt15 El pago total de la reserva se realizara en el hotel, con excepción de aquellas 
+                        |promociones que indiquen lo contrario en donde se debitará el importe de su reserva 
+                        |al momento de la compra. En caso de aplicar politicas de cobro adelantado o no show 
+                        |se cobrara de esta misma tarjeta.
+                      p.tx-cond.mb El pago de la estadía se realizará en la moneda del hotel. El valor final establecido 
+                        |en la reserva puede sufrir modificaciones según el tipo de cambio vigente al día del pago.  
+                        
+                //========  Mercadopago
+                div.panel.panel-elara
+                  div.panel-heading#h-mercadopago(role='tab')
+                    img.img-icon(src="images/icons/mercadopago.png", alt="Marcadopago")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-mercadopago' aria-expanded='false' aria-controls='c-mercadopago')
+                        | Mercadopago
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#c-mercadopago(role='tabpanel' aria-labelledby='h-mercadopago')
+                    div.panel-body
+                      p Podes pagar en 12 cuotas con tu tarjeta de credito.
+                      a(href='https://www.mercadopago.com.ar/promociones' target='_blank')
+                        |Ver tarifas vigentes
+                      img.center-block.img-responsive(src="images/cards.png", alt="")
+                      br
+                      |El pago de la reserva se realizara online en el siguiente paso. De no concretarse el pago la reserva se quedara pendiente por un plazo de 3 horas. De no concretarse en ese plazo se 
+                      span.bold cancelará la reserva.
+                      
+                //========Business
+                div.panel.panel-elara
+                  div.panel-heading#h-business(role='tab')
+                    img.img-icon(src="images/icons/bank.png", alt="Business")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-business' aria-expanded='false' aria-controls='c-business')
+                        | Business
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#c-business(role='tabpanel' aria-labelledby='h-business')
+                    div.panel-body
+                      | Seleccione la cuenta de cuenta con el que desea operar. 
+                      div.row
+                        div.col-xs-3
+                          label(for='hotel-titular')
+                          select.form-control
+                            option(disabled selected) Escoja una opcion
+                            option Visa
+                            option Mastercard
+
+                //======== Paypal
+                div.panel.panel-elara
+                  div.panel-heading#h-paypal(role='tab')
+                    img.img-icon(src="images/icons/paypal.png", alt="Paypal")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-paypal' aria-expanded='false' aria-controls='c-paypal')
+                        | Paypal
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#c-paypal(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+                      
+                //======== Bitpagos
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/bitcoin.png", alt="Bitpagos")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Bitpagos
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+                      
+                //======== Smile Payments
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/smile.png", alt="Smile Payments")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Smile payments
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+                      
+                //======== Efectivo
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/cash.png", alt="Efectivo")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Efectivo
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+                      
+                //======== Tarjeta de credito
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/card.png", alt="Tarjeta de Crédito")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Tarjeta de Crédito
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+                //
+                div.panel.panel-elara
+                  div.panel-heading#headingOne(role='tab')
+                    img.img-icon(src="images/icons/bank.png", alt="Transferencia bancaria")
+                    h4.panel-title
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                        | Transferencia Bancaria
+                        i.fa.fa-caret-down.pull-right
+                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                    div.panel-body
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
             div.divider
-            p.sSubtitleb.pt15.pb  Tipo de ocupacion
-            p Máximo 2 persona/s. Se aceptan menores de hasta 0 años compartiendo cama y/o infante en cuna (servicio con costo adicional)
-            div.form-inline
-              div.form-group.pr30
-                img.pr15(src="images/icons/adult.png", alt="adulto")
-                label.pr15(for='titular-country') Adulto
-                select.form-control
-                  option(selected) 1
-                  option 2
-                br
-                span.help-block &nbsp;
-              div.form-group.pr30
-                img.pr15(src="images/icons/child.png", alt="menor")
-                label.pr15(for='titular-country') Menores
-                select.form-control
-                  option(selected) 0
-                  option 1
-                br
-                span.help-block De 2 a 14 años.
-              div.form-group.pr30
-                img.pr15(src="images/icons/infant.png", alt="infantes")
-                label.pr15(for='titular-country') Infantes
-                select.form-control
-                  option(selected) 0
-                  option 1
-                br
-                span.help-block De 0 a 2 años.
-              div.form-group.pull-right
-                label.pr15(for='titular-country') Tipo de cama
-                select.form-control
-                  option(selected disabled) Escoja una opcion
-                  option Cama King size
-                  option camas twin
-                br
-                span.help-block Sujeto a disponibilidad
-            br
-            div.divider
-            p.sSubtitleb.pt15.pb  Requerimientos especiales
-            p Los requerimientos especiales están sujetos a confirmación al momento de realizar la conformacion de la reserva.
-            div.row
-              div.col-xs-3
-                select.form-control
-                  option(selected disabled) Escoja opcion
-                  option Cama King size
-                  option camas twin
-            span.help-block.l Sujeto a disponibilidad. Puede seleccionar varias opciones presionanado la teclad 
-              code ctrl
-              | + click
-            div.clearfix
-            br
-            div.divider
-            a.btn.btn-success.btn-lg.pull-right.mt15(href='/checkout-s2')
+            a.btn.btn-success.btn-lg.pull-right.mt15(href='/voucher')
               | Finalizar  
               i.fa.fa-check.
       //- -------------------------------------------    
@@ -204,3 +270,4 @@ block content
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='javascripts/toggle-icon.js')
