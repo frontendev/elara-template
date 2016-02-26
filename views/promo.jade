@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  
+  // Search N
+  include search_n.jade
+  
+  //Habitaciones
+  div.container.content.styleb
+    div.row
+      div.col-xs-8
+        p.sTitle Promo individual
+        p.sSubtitle(style='margin-bottom:20px;')
+          | Pagando tu estadía con tarjeta de crédito obtén un 20% de descuento en tu estadia y hasta 12 cuotas sin interes. 
+        p.sSubtitle(style='margin-bottom:20px;')
+          |Contacta a nuestro departamento de reservas para solicitar esta promoción. Sujeto a disponibilidad. No acumulable con otras promociones.
+        div.row
+          div.col-xs-3
+            a.btn.btn-warning.btn-block(href='/contacto' role='button') Llamar 
+          div.col-xs-3
+            a.btn.btn-info.btn-block(href='/reservas' role='button') Reservar     
+        br
+        a(href='/promociones')
+          |ver otras promociones vigentes
+      div.col-xs-4
+        //-ToDo: buscar algo para poner en este espacio
+        div.row.gallery
+          div.col-sm-6.left
+            img.img-responsive.imgBox(src='images/service/srv1.jpg' alt='Desayuno de campeones')
+          div.col-sm-6.right
+            img.img-responsive.imgBox(src='images/service/srv2.jpg' alt='Desayuno de campeones')
+          div.clearfix
+          div.col-sm-6.left.last
+            img.img-responsive.imgBox(src='images/service/srv3.jpg' alt='Desayuno de campeones')
+          div.col-sm-6.right
+            img.img-responsive.imgBox(src='images/service/srv4.jpg' alt='Desayuno de campeones')
+
+  
+  //-Footer
+  include footer.jade
+  //-JS(allways below footer)
+  script(type='text/javascript' src='javascripts/jquery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  //- Tooltip enabler
+  script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type="text/javascript", src="/javascripts/drop-on-hover.js")

@@ -6,9 +6,10 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title= title
     link(rel='stylesheet', href='/stylesheets/app.css')
+    
     if url !== "/contacto" 
       link(rel='stylesheet', href='/stylesheets/datepicker.css')
-    if url == "/imagenes" 
+    if url == "/imagenes" || "/servicios" || "/promocion"  || "/habitacion" || "/index"
       link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
       link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
@@ -37,7 +38,7 @@ html
             li
               a(href='/') hotel
             li.dropdown
-              a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Habitaciones 
+              a.drop-fix#promos(href='/habitacion' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitacion') Habitaciones 
                 span.caret
               ul.dropdown-menu
                 li
@@ -48,17 +49,30 @@ html
                   a(href='/habitacion') Loft Triple 
                 li
                   a(href='/habitacion') Loft Triple Superior 
+            li.dropdown
+              a.drop-fix#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/promocion') 12 cuotas
+                li
+                  a(href='/promocion') Early booking
+                li
+                  a(href='/promocion') Promo Familia 
+                li
+                  a(href='/promocion') Promo romantica
             li
-              a(href='promociones') Promociones
+              a(href='/servicios') Servicios
             li
-              a(href='servicios') Servicios
-            li
-              a(href='imagenes') Imagenes
+              a(href='/imagenes') Imagenes
             li
               a(href='contacto') Contacto
+            li
+              a.highlight(href='/reservas') Reserve online
             li.dropdown.fx-flag-nav
               a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
-                img(src='images/sp.svg' alt='Spanish flag' width='20') 
+                img(src='images/sp.svg' alt='Spanish flag' width='20')
+                | &nbsp;
                 span.caret
               ul.dropdown-menu
                 li.active

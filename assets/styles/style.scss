@@ -49,6 +49,9 @@
   color: $mid-grey;
   text-transform: uppercase;
   font-weight: 300;
+  &.highlight {
+    color: $orange !important;
+  }
   &:hover {
     color: $orange;
   }
@@ -101,19 +104,6 @@
 	   -moz-transform: skew(-12deg);
 	     -o-transform: skew(-12deg);
 	background: $main-light;
-}
-
-.shape-para-inv {
-	width: 50%;
-  position: absolute;
-  top: 0;
-  right: -45%;
-	height: 100%;
-  min-height: 100%;
-	-webkit-transform: skew(-20deg);
-	   -moz-transform: skew(-20deg);
-	     -o-transform: skew(-20deg);
-	background: transparentize($main-light, .2);
 }
 //=================================================
 // Search (large)
@@ -365,6 +355,10 @@
     }
   }
   .gallery {
+    &.o {
+      background: none;
+      padding: 0;
+    }
     background: $main-bg-dark-trans;
     padding: 15px;
     .left {
@@ -386,6 +380,7 @@
       height: 500px !important;
       background-position: 0% 0%;
       background-repeat: no-repeat;
+      cursor: zoom-in;
       @include transition (all, 2.5s, linear, 0.4s);
       &:hover {
         @include bshadow(0,0, 8px, $main);
@@ -398,6 +393,12 @@
       &:hover {
         @include bshadow(0,0, 8px, $main);
         background-position: 50% 0%;
+      }
+    }
+    .img-rhh-t2 {
+      @include img-box-square;
+      &:hover {
+        @include bshadow(0,0, 8px, $main);
       }
     }
     //img right half height bottotm
@@ -417,7 +418,17 @@
       margin-top: -257px;
       float: right;
       .img-rhh-b {
-          background-color: transparentize($main-dark, .5);
+        cursor: zoom-in;
+        background-color: transparentize($main-dark, .5);
+        &:hover {
+          text-decoration: none;
+        }
+        .num {
+          color: white;
+          text-align: center;
+          font-size: 36px;
+          padding-top: 85px;
+        }
       }
     }
   }
@@ -1262,6 +1273,20 @@
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+		display: block;
+	}
+	.dropdown-menu{
+		margin-top: 0;
+	}
+	.dropdown-toggle{
+		margin-bottom: 2px;
+	}
+	.navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{
+		margin-bottom: 0;
+	}
+}
 // 768px and up
 @media (min-width: 768px) {
   .navbar {
@@ -1338,7 +1363,7 @@
   	width: 50%;
     position: absolute;
   	height: 100%;
-    left: -11%;
+    left: -8%;
     min-height: 100%;
     z-index: 0;
   	-webkit-transform: skew(-12deg);
@@ -1351,7 +1376,7 @@
   	width: 50%;
     position: absolute;
   	height: 100%;
-    left: -12%;
+    left: -9%;
     min-height: 100%;
   	-webkit-transform: skew(-12deg);
   	   -moz-transform: skew(-12deg);

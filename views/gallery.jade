@@ -1,0 +1,24 @@
+div.blueimp-gallery.blueimp-gallery-controls#blueimp-gallery(data-use-bootstrap-modal='false')
+  div.slides
+  h3.title
+  a.prev 
+      i.fa.fa-chevron-left
+  a.next
+    i.fa.fa-chevron-right
+  a.close x
+  a.play-pause
+  ol.indicator
+  div.modal.fade
+    div.modal-dialog
+      div.modal-content
+        div.modal-header
+          button.close(type='button' aria-hidden='true')&times;
+          h4.modal-title
+        div.modal-body.next
+        div.modal-footer
+          button.btn.btn-default.pull-left.prev(type='button')
+            i.fa.fa-caret-left 
+            | Anterior 
+          button.btn.btn-primary.next(type='button')
+            | Siguiente 
+            i.fa.fa-caret-right

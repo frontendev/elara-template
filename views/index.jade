@@ -10,7 +10,6 @@ block content
   include mercadopago.jade
   
   //- Description
-  // Description
   - var hotel = {name: 'Suíça Hotel & Resort', address: 'Av Felipe Wanscheer 3580 - Jd Sao Paulo, Foz do Iguaçu, Brazil', subtitle: 'Le damos la bienvenida a Suíça Hotel & Resort' }
   
   div.container.content.styleb
@@ -25,11 +24,9 @@ block content
         p.description
           span.bold #{hotel.name} 
           | se compromete a garantizarte una estancia satisfactoria y confortable en Buenos Aires.
-      div.col-sm-5
-        img.img-responsive(src='images/vista.jpg' alt='imagen de testeo')
-  
-  
-  //- Location y amenities
+      div.col-sm-5.mtb20
+        div.gallery.o
+          a.img-rhh-t2(style='background-image: url(images/vista.jpg);' href='/images/vista.jpg' title="Vista de habitacion" data-gallery)
   // Location y amenities
   div.container.content
     div.row
@@ -125,7 +122,7 @@ block content
       // Promos
       // Promo #1
       div.col-md-3
-        a.clean(href='/promociones')
+        a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
               span Viajé en Familia
@@ -136,7 +133,7 @@ block content
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #2
       div.col-md-3
-        a.clean(href='/promociones')
+        a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
               span Promo Romántica
@@ -225,12 +222,17 @@ block content
               p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
               p
                 a.btn.btn-info(href='/habitacion' role='button') Ver más
+  
+  include gallery.jade
   //Footer include   
   include footer.jade
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
   script(type='text/javascript' src='javascripts/bootstrap-datepicker.js')
   script(type='text/javascript' src='javascripts/datepicker-e.js')
   script(type='text/javascript' src='javascripts/tooltip-e.js')
   script(type='text/javascript' src='javascripts/index-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
+  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')

@@ -18,7 +18,7 @@ block content
   // ItemList
   div.container.content
     div.row
-      div.col-sm-8
+      div.col-sm-6
         // Included amenities 
         p.sSubtitleb Incluidos
         br
@@ -58,26 +58,29 @@ block content
           dd Unidad equipado con <abbr title='La más alta'>lamasalta</abbr> tecnologia y enfermeros 24/7.
           br
             
-      div.col-sm-4
-        div.row.gallery
-          div.col-sm-6.left
-            img.img-responsive.imgBox(src='images/service/srv1.jpg' alt='Desayuno de campeones')
-          div.col-sm-6.right
-            img.img-responsive.imgBox(src='images/service/srv2.jpg' alt='Desayuno de campeones')
-          div.clearfix
-          div.col-sm-6.left
-            img.img-responsive.imgBox(src='images/service/srv3.jpg' alt='Desayuno de campeones')
-          div.col-sm-6.right
-            img.img-responsive.imgBox(src='images/service/srv4.jpg' alt='Desayuno de campeones')
-          div.clearfix
-          div.col-sm-6.left.last
-            img.img-responsive.imgBox(src='images/service/srv5.jpg' alt='Desayuno de campeones')
-          div.col-sm-6.right
-            img.img-responsive.imgBox(src='images/service/srv6.jpg' alt='Desayuno de campeones')
-          div.clearfix
-          
-  //Footer include      
+      div.col-xs-6.mtb20
+        div.gallery
+          div.row
+            div.col-xs-6.pr7
+              a.img-rhh-t(style='background-image: url(images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)
+            div.col-xs-6.pl7
+              a.img-rhh-b.mt(style='background-image: url(images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+            div.col-xs-6.pr7.mt15
+              a.img-rhh-t(style='background-image: url(images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+            div.col-xs-6.pl7.mt15
+              a.img-rhh-b.mt(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
+            div.col-xs-6.pl7.more
+              a.img-rhh-b(href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
+                p.num 5+
+
+  include gallery.jade
+  //Footer
   include footer.jade
-  //JS Files
+  //JS
   script(type='text/javascript' src='javascripts/jquery.min.js')
   script(type='text/javascript' src='javascripts/bootstrap.min.js')
+  //- Tooltip enabler
+  script(type='text/javascript' src='javascripts/tooltip-e.js')
+  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
+  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
