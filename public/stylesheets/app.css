@@ -6142,8 +6142,12 @@ button.close {
       -moz-box-shadow: 0 0 8px #004ed0;
       box-shadow: 0 0 8px #004ed0;
       background-position: 50% 0%; }
-  .content .gallery .more-img:hover {
-    box-shadow: 2px 2px 2px red; }
+  .content .gallery .more {
+    position: relative;
+    margin-top: -257px;
+    float: right; }
+    .content .gallery .more .img-rhh-b {
+      background-color: rgba(2, 25, 64, 0.5); }
 .content .total {
   background: #fff;
   border: 1px solid #f90; }
@@ -6413,7 +6417,7 @@ button.close {
       -moz-box-shadow: 0 0 10px #fff;
       box-shadow: 0 0 10px #fff; }
     .promo .panel-info > .panel-heading {
-      background-color: rgba(0, 78, 208, 0.48);
+      background-color: rgba(0, 78, 208, 0.68);
       border: none;
       padding: 8px 12px; }
       .promo .panel-info > .panel-heading span {
@@ -6633,6 +6637,11 @@ button.close {
 .mtb20 {
   margin-top: 20px;
   margin-bottom: 10px; }
+
+#blueimp-gallery .fa {
+  font-size: 18px !important;
+  position: relative;
+  top: -7px; }
 
 .img-cover {
   background-image: url("../images/cover/bg-search-1.jpg");

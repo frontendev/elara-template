@@ -8,6 +8,7 @@ $main-dark: desaturate(adjust_hue(darken($main, 28), 0), 5);
 $main-light: adjust_hue(lighten($main, 9), 341);
 //Table head
 $thead: transparentize($main, .52);
+$thead2: transparentize($main, .32);
 //transparent
 $main-bg-trans: transparentize($main, .52);
 $main-bg-dark-trans: transparentize($main-dark, .88);

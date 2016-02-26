@@ -412,9 +412,12 @@
         background-position: 50% 0%;
       }
     }
-    .more-img {
-      &:hover {
-        box-shadow: 2px 2px 2px red;
+    .more {
+      position: relative;
+      margin-top: -257px;
+      float: right;
+      .img-rhh-b {
+          background-color: transparentize($main-dark, .5);
       }
     }
   }
@@ -763,7 +766,7 @@
       @include bshadow(0, 0, 10px, $white);
     }
     &>.panel-heading {
-      background-color: $thead;
+      background-color: $thead2;
       border: none;
       padding: 8px 12px;
       span {
@@ -1052,6 +1055,13 @@
 .mtb20 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+#blueimp-gallery {
+  .fa {
+    font-size: 18px !important;
+    position: relative;
+    top: -7px;
+  }
 }
 // Backgrounds
 .img-cover {
