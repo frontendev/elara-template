@@ -1,5 +1,10 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Método de pago - HTL Suica Hotel & Resort 
+
+  
 block content
   // Reservas
   div.container.content.styleb
@@ -100,8 +105,8 @@ block content
                   div.panel-collapse.collapse#c-mercadopago(role='tabpanel' aria-labelledby='h-mercadopago')
                     div.panel-body
                       p Podes pagar en 12 cuotas con tu tarjeta de credito.
-                      a(href='https://www.mercadopago.com.ar/promociones' target='_blank')
-                        |Ver tarifas vigentes
+                        a(href='https://www.mercadopago.com.ar/promociones' target='_blank')
+                          |Ver promociones vigentes
                       img.center-block.img-responsive(src="images/cards.png", alt="")
                       br
                       |El pago de la reserva se realizara online en el siguiente paso. De no concretarse el pago la reserva se quedara pendiente por un plazo de 3 horas. De no concretarse en ese plazo se 
@@ -117,14 +122,14 @@ block content
                         i.fa.fa-caret-down.pull-right
                   div.panel-collapse.collapse#c-business(role='tabpanel' aria-labelledby='h-business')
                     div.panel-body
-                      | Seleccione la cuenta de cuenta con el que desea operar. 
+                      | Seleccione la cuenta con la que desea operar. 
                       div.row
                         div.col-xs-3
                           label(for='hotel-titular')
                           select.form-control
                             option(disabled selected) Escoja una opcion
-                            option Visa
-                            option Mastercard
+                            option Cuenta principal
+                            option Cuenta secundaria
 
                 //======== Paypal
                 div.panel.panel-elara
@@ -134,66 +139,66 @@ block content
                       a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-paypal' aria-expanded='false' aria-controls='c-paypal')
                         | Paypal
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#c-paypal(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-paypal(role='tabpanel' aria-labelledby='h-paypal')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
                 //======== Bitpagos
                 div.panel.panel-elara
-                  div.panel-heading#headingOne(role='tab')
+                  div.panel-heading#h-bitpagos(role='tab')
                     img.img-icon(src="images/icons/bitcoin.png", alt="Bitpagos")
                     h4.panel-title
-                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-bitpagos' aria-expanded='false' aria-controls='c-bitpagos')
                         | Bitpagos
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-bitpagos(role='tabpanel' aria-labelledby='h-bitpagos')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
                 //======== Smile Payments
                 div.panel.panel-elara
-                  div.panel-heading#headingOne(role='tab')
+                  div.panel-heading#h-smile(role='tab')
                     img.img-icon(src="images/icons/smile.png", alt="Smile Payments")
                     h4.panel-title
-                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-smile' aria-expanded='false' aria-controls='c-smile')
                         | Smile payments
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-smile(role='tabpanel' aria-labelledby='h-smile')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
                 //======== Efectivo
                 div.panel.panel-elara
-                  div.panel-heading#headingOne(role='tab')
+                  div.panel-heading#h-efectivo(role='tab')
                     img.img-icon(src="images/icons/cash.png", alt="Efectivo")
                     h4.panel-title
-                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-efectivo' aria-expanded='false' aria-controls='c-efectivo')
                         | Efectivo
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-efectivo(role='tabpanel' aria-labelledby='h-efectivo')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
                 //======== Tarjeta de credito
                 div.panel.panel-elara
-                  div.panel-heading#headingOne(role='tab')
+                  div.panel-heading#h-tarjeta(role='tab')
                     img.img-icon(src="images/icons/card.png", alt="Tarjeta de Crédito")
                     h4.panel-title
-                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-tarjeta' aria-expanded='false' aria-controls='c-tarjeta')
                         | Tarjeta de Crédito
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-tarjeta(role='tabpanel' aria-labelledby='h-tarjeta')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                 //
                 div.panel.panel-elara
-                  div.panel-heading#headingOne(role='tab')
+                  div.panel-heading#h-banco(role='tab')
                     img.img-icon(src="images/icons/bank.png", alt="Transferencia bancaria")
                     h4.panel-title
-                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+                      a.collapsed(role='button' data-toggle='collapse' data-parent='#accordion' href='#c-banco' aria-expanded='false' aria-controls='c-banco')
                         | Transferencia Bancaria
                         i.fa.fa-caret-down.pull-right
-                  div.panel-collapse.collapse#collapseOne(role='tabpanel' aria-labelledby='headingOne')
+                  div.panel-collapse.collapse#c-banco(role='tabpanel' aria-labelledby='h-banco')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
             div.divider
@@ -264,10 +269,5 @@ block content
                 li.pull-right.res  
                   |total  
                   span.res-total $11.332
-  //Footer
-  include footer.jade
-  //JS
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
+block scripts
   script(type='text/javascript' src='javascripts/toggle-icon.js')

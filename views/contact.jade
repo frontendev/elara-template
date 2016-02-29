@@ -1,5 +1,10 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Contacto - HTL Suica Hotel & Resort
+
 block content
   //Top container
   div.container-fluid.img-contact(style='position: relative; overflow-x: hidden;')
@@ -9,23 +14,25 @@ block content
     //- div.shape-para-inv.hidden-xs
     div.container
       div.row
-        div.col-xs-12.col-sm-6.col-md-4.col-lg-4.card
-          ul.list-unstyled
-            li
-              i.fa.fa-phone.fa-lg.icon
-              span.bold Central de Reservas:
-              span.thin +54 (11) 5032-2558
-            li
-              i.fa.fa-bell.fa-lg.icon
-              span.bold FrontDesk:
-              span.thin +55 (22) 2623-2554
-            li
-              i.fa.fa-whatsapp.fa-lg.icon
-              span.bold WhatsApp:
-              span.thin +54 9 (11) 6522 7365
-            li
-              i.fa.fa-envelope.fa-lg.icon
-              span.thin reservas.9dejulio@htlhoteles.com
+        div.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          div.panel.panel-default.card
+            div.panel-body
+              ul.list-unstyled
+                li
+                  i.fa.fa-phone.fa-lg.icon
+                  span.bold Central de Reservas:
+                  span.thin +54 (11) 5032-2558
+                li
+                  i.fa.fa-bell.fa-lg.icon
+                  span.bold FrontDesk:
+                  span.thin +55 (22) 2623-2554
+                li
+                  i.fa.fa-whatsapp.fa-lg.icon
+                  span.bold WhatsApp:
+                  span.thin +54 9 (11) 6522 7365
+                li
+                  i.fa.fa-envelope.fa-lg.icon
+                  span.thin reservas.9dejulio@htlhoteles.com
         div.col-lg-offset-5.col-lg-3
           h1.contact-title-top Contacto
     //End Top container
@@ -44,16 +51,16 @@ block content
           div#c-map
         p.subtitle Horarios de atención
         ul.list-unstyled.schedules
-          li Central de Reservas:
+          li Central de Reservas: 
             span Lunes a Sábado de 8:00 a 22:00 hs
-          li FrontDesk:
-            span Lunes a Viernes de 9:00 a 18:00 hs
-          li WhatsApp:
-            span Todos los días las 24 hs
+          li FrontDesk: 
+            span  Lunes a Viernes de 9:00 a 18:00 hs
+          li WhatsApp: 
+            span  Todos los días las 24 hs
           
       div.col-sm-6
         p.subtitle2 Envie su consulta y le responderemos a la brevedad
-        form.form-horizontal
+        form.form-horizontal.contact-form
           div.form-group
             div.col-sm-6
               input.form-control#inputName(type='text' placeholder='Nombre Completo')
@@ -68,7 +75,7 @@ block content
               i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
             div.col-sm-6
               select.form-control
-                option(selected disable) País
+                option(selected='selected', default disable hidden) País
                 option Argentina
                 option Brasil
                 option Paraguay
@@ -79,7 +86,6 @@ block content
           div.form-group
             div.col-sm-12
               button.btn.btn-warning(type='submit') Enviar Mensaje
-  block scripts
-    script(type='text/javascript' src='javascripts/contact-map.js')
-    script(type='text/javascript' src='javascripts/tooltip-e.js')
-    script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
+block scripts
+  script(type='text/javascript' src='javascripts/contact-map.js')
+  script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)

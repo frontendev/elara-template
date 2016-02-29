@@ -1,0 +1,70 @@
+// 2 Top Nav
+.navbar {
+  min-height: 81px;
+  background-color: $white;
+  border-bottom: 1px solid $min-grey;
+  margin-bottom: 0;
+}
+.logo-sm {
+  padding-top: 20px;
+}
+.navbar-default .navbar-nav>li>a, {
+  color: $mid-grey;
+  text-transform: uppercase;
+  font-weight: 300;
+  &.highlight {
+    color: $orange !important;
+  }
+  &:hover {
+    color: $orange;
+  }
+}
+.navbar-right {
+  padding-top: 20px;
+  .dropdown-menu>li>a {
+    color: $min-grey;
+    font-weight: 300;
+  }
+  .dropdown-menu>.active>a,
+  .dropdown-menu>.active>a:focus,
+  .dropdown-menu>.active>a:hover {
+    background-color: $white;
+    color: $orange;
+  }
+}
+.navbar-toggle {
+  margin-top: 23px;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: $white;
+}
+.fx-flag-nav {
+  position: relative;
+  top: -2px;
+}
+
+.shape-para {
+	width: 50%;
+  position: absolute;
+	height: 100%;
+  left: -14%;
+  min-height: 100%;
+  z-index: 0;
+	-webkit-transform: skew(-12deg);
+	   -moz-transform: skew(-12deg);
+	     -o-transform: skew(-12deg);
+	background: transparentize($main-light, .3);
+}
+.shape-para-o {
+	width: 50%;
+  position: absolute;
+	height: 100%;
+  left: -15%;
+  min-height: 100%;
+	-webkit-transform: skew(-12deg);
+	   -moz-transform: skew(-12deg);
+	     -o-transform: skew(-12deg);
+	background: $main-light;
+}

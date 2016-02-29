@@ -7,13 +7,10 @@ block head
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
   title HTL Suica Hotel & Resort - Home
   
-
 block content
-  // Search big
   //- Search big
   include search.jade
   
-  // Banner Mercadopago
   //- Banner Mercadopago
   include mercadopago.jade
   
@@ -35,7 +32,7 @@ block content
       div.col-sm-5.mtb20
         div.gallery.o
           a.img-rhh-t2(style='background-image: url(images/vista.jpg);' href='/images/vista.jpg' title="Vista de habitacion" data-gallery)
-  // Location y amenities
+  //- Location y amenities
   div.container.content
     div.row
       div.col-sm-6.col-md-8
@@ -116,8 +113,7 @@ block content
               a(href='' data-toggle='modal' data-target='#amenities-opt')
                 i.fa.fa-plus
                 span.amt-name 
-                  | ver todos
-                  
+                  | ver todos              
   div.container-fluid.promo
     div.container.pt30
       // Promos title + line
@@ -229,12 +225,13 @@ block content
                   i.fa.fa-user
               p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
               p
-                a.btn.btn-info(href='/habitacion' role='button') Ver más
-  
+                a.btn.btn-info(href='/habitacion' role='button') Ver más  
   include gallery.jade
   
 block scripts   
-  script(type='text/javascript' src='javascripts/bootstrap-datepicker.js')
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='javascripts/datepicker-e.js')
   script(type='text/javascript' src='javascripts/index-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
   script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')

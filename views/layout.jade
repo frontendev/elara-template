@@ -7,16 +7,15 @@ html
     link(rel='stylesheet', href='/stylesheets/app.css')
     
     block head
-    
-    
+      
     //-anterior forma de ruteo de librerias usando el parametro 'url'
-    //-if url !== "/contacto" 
+    //-if url !== '/contacto' 
     //- link(rel='stylesheet', href='/stylesheets/datepicker.css')
 
     //
       [if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
+      <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
       <![endif]
   body
   
@@ -25,13 +24,12 @@ html
                         
     block content
     
-    
     block footer
       include footer.jade
     
-    script(type='text/javascript' src='javascripts/jquery.min.js')
-    script(type='text/javascript' src='javascripts/bootstrap.min.js')
-    script(type="text/javascript", src="/javascripts/drop-on-hover.js")
-    script(type='text/javascript' src='javascripts/tooltip-e.js')
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+    script(type='text/javascript', src='/javascripts/drop-on-hover.js')
+    script(type='text/javascript', src='/javascripts/tooltip-e.js')
     
     block scripts

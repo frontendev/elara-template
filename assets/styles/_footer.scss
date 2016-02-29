@@ -1,0 +1,39 @@
+// Footer
+.footer {
+  margin-top: 20px;
+  background-color: $main-dark;
+  color: $white;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  h3.title {
+    margin-top: 40px !important;
+    color: $white;
+  }
+  ul {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+
+    li {
+      padding-bottom: 8px;
+    }
+  }
+  .copyright {
+    border-top: 1px dashed;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  a {
+    color: $white;
+  }
+  .social {
+    padding-right: 15px;
+    padding-top: 15px;
+    @include filter-grayscale;
+    &:hover {
+      @include filter-grayscale-h;
+    }
+  }
+}
