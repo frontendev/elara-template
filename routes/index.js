@@ -3,13 +3,11 @@ var router = express.Router();
 
 /* Home. */
 router.get('/', function(req, res, next) {
-  res.locals.urls = '/';
   res.render('index', { title: 'HTL Suica Hotel & Resort - Home', url : "/" });
 });
 
 /* Service */
 router.get('/servicios', function(req, res, next) {
-  res.locals.urls = '/servicios';
   res.render('service', { title: 'Servicios - HTL Suica Hotel & Resort', url : "/servicios"});
 });
 
@@ -35,7 +33,7 @@ router.get('/reservas', function(req, res, next) {
 
 /* Habitacion */
 router.get('/habitaciones', function(req, res, next) {
-  res.render('room', { title: 'Habitaciones - HTL Suica Hotel & Resort', url : "/habitaciones"});
+  res.render('rooms', { title: 'Habitaciones - HTL Suica Hotel & Resort', url : "/habitaciones"});
 });
 
 /* Habitacion */
