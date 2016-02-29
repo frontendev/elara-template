@@ -1,5 +1,13 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
+  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title HTL Suica Hotel & Resort - Home
+  
+
 block content
   // Search big
   //- Search big
@@ -224,14 +232,9 @@ block content
                 a.btn.btn-info(href='/habitacion' role='button') Ver más
   
   include gallery.jade
-  //Footer include   
-  include footer.jade
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
+  
+block scripts   
   script(type='text/javascript' src='javascripts/bootstrap-datepicker.js')
-  script(type='text/javascript' src='javascripts/datepicker-e.js')
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
   script(type='text/javascript' src='javascripts/index-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
   script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')

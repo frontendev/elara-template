@@ -79,10 +79,7 @@ block content
           div.form-group
             div.col-sm-12
               button.btn.btn-warning(type='submit') Enviar Mensaje
-  include footer.jade
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
-  script(type='text/javascript' src='javascripts/contact-map.js')
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
-  script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
+  block scripts
+    script(type='text/javascript' src='javascripts/contact-map.js')
+    script(type='text/javascript' src='javascripts/tooltip-e.js')
+    script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)

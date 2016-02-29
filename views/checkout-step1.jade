@@ -1,5 +1,9 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Contacto
+
 block content
   // Reservas
   div.container.content.styleb
@@ -158,9 +162,5 @@ block content
                 li.pull-right.res  
                   |total  
                   span.res-total $11.332
-  //Footer
-  include footer.jade
-  //JS
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
+  block scripts
+    script(type='text/javascript' src='javascripts/tooltip-e.js')

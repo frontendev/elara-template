@@ -1,5 +1,10 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Habitaciones - HTL Suica Hotel & Resort 
+
 block content
   
   // Search N
@@ -208,12 +213,6 @@ block content
                 a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
       div.col-md-4.media-cont.grid-item 
                 
-  // Footer
-  include footer.jade
-  // JS
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
-  script(type='text/javascript' src='javascripts/masonry.pkgd.min.js')
-  script(type='text/javascript' src='javascripts/masonry.js')
-  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
+    block scripts 
+      script(type='text/javascript' src='javascripts/masonry.pkgd.min.js')
+      script(type='text/javascript' src='javascripts/masonry.js')

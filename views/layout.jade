@@ -4,88 +4,34 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title= title
     link(rel='stylesheet', href='/stylesheets/app.css')
     
-    if url !== "/contacto" 
-      link(rel='stylesheet', href='/stylesheets/datepicker.css')
-    if url == "/imagenes" || "/servicios" || "/promocion"  || "/habitacion" || "/index"
-      link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
-      link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    block head
+    
+    
+    //-anterior forma de ruteo de librerias usando el parametro 'url'
+    //-if url !== "/contacto" 
+    //- link(rel='stylesheet', href='/stylesheets/datepicker.css')
+
     //
       [if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]
   body
-    nav.navbar.navbar-default
-      div.container
-        // - Brand and toggle get grouped for better mobile display
-        div.navbar-header.hidden-sm
-          button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#top-nav' aria-expanded='false')
-            span.sr-only Menú
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand.hidden-sm(href='/')
-            img(src='images/htl-9-julio-logo.png', alt='')
-          div.container.visible-sm
-            a.text-center.center-block(href='/')
-              img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
-        div.collapse.navbar-collapse#top-nav
-          ul.nav.navbar-nav.navbar-right
-            li
-              a(href='/') hotel
-            li.dropdown
-              a.drop-fix#promos(href='/habitacion' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitacion') Habitaciones 
-                span.caret
-              ul.dropdown-menu
-                li
-                  a(href='/habitacion') Loft Doble
-                li
-                  a(href='/habitacion') Loft Doble Superior
-                li
-                  a(href='/habitacion') Loft Triple 
-                li
-                  a(href='/habitacion') Loft Triple Superior 
-            li.dropdown
-              a.drop-fix#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
-                span.caret
-              ul.dropdown-menu
-                li
-                  a(href='/promocion') 12 cuotas
-                li
-                  a(href='/promocion') Early booking
-                li
-                  a(href='/promocion') Promo Familia 
-                li
-                  a(href='/promocion') Promo romantica
-            li
-              a(href='/servicios') Servicios
-            li
-              a(href='/imagenes') Imagenes
-            li
-              a(href='contacto') Contacto
-            li
-              a.highlight(href='/reservas') Reserve online
-            li.dropdown.fx-flag-nav
-              a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
-                img(src='images/sp.svg' alt='Spanish flag' width='20')
-                | &nbsp;
-                span.caret
-              ul.dropdown-menu
-                li.active
-                  a(href='#')
-                    img(src='images/sp.svg' alt='Spanish flag' width='20') 
-                    | &nbsp Español
-                li
-                  a(href='#')
-                    img(src='images/br.svg' alt='Brazilian flag' width='20')
-                    | &nbsp Portugués
-                li
-                  a(href='#')
-                    img(src='images/uk.svg' alt='United Kingdom flag' width='20')
-                    | &nbsp Inglés
-                    
+  
+    block nav
+      include nav.jade
+                        
     block content
+    
+    
+    block footer
+      include footer.jade
+    
+    script(type='text/javascript' src='javascripts/jquery.min.js')
+    script(type='text/javascript' src='javascripts/bootstrap.min.js')
+    script(type="text/javascript", src="/javascripts/drop-on-hover.js")
+    script(type='text/javascript' src='javascripts/tooltip-e.js')
+    
+    block scripts

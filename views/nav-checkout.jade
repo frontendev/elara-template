@@ -1,0 +1,20 @@
+nav.navbar.navbar-default
+  div.container
+    // - Brand and toggle get grouped for better mobile display
+    div.navbar-header.hidden-sm
+      button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#top-nav' aria-expanded='false')
+        span.sr-only Menú
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.hidden-sm(href='/')
+        img(src='images/htl-9-julio-logo.png', alt='')
+      div.container.visible-sm
+        a.text-center.center-block(href='/')
+          img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
+    div.collapse.navbar-collapse#top-nav
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='/') 
+          span.bold Front desk del hotel:
+          span.light +54 (11) 5032-2558

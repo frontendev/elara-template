@@ -1,5 +1,12 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
+  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Imágenes - HTL Suica Hotel & Resort
+
 block content
   
   // Search N
@@ -89,12 +96,7 @@ block content
                 i.fa.fa-caret-right
   include gallery.jade
   //Footer
-  include footer.jade
-  //JS
-  script(type='text/javascript' src='javascripts/jquery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap.min.js')
-  //- Tooltip enabler
-  script(type='text/javascript' src='javascripts/tooltip-e.js')
-  script(type="text/javascript", src="/javascripts/drop-on-hover.js")
-  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
+  block scripts
+    script(type='text/javascript' src='javascripts/tooltip-e.js')
+    script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+    script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
