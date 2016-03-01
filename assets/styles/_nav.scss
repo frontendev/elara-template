@@ -18,6 +18,13 @@
   &:hover {
     color: $orange;
   }
+  &.front-desk {
+    color: $main-dark;
+    &:hover {
+      color: $main-dark;
+      text-decoration: none;
+    }
+  }
 }
 .navbar-right {
   padding-top: 20px;

@@ -3,8 +3,10 @@ extends layout
 block head
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
   title Método de pago - HTL Suica Hotel & Resort 
-
   
+block nav
+  include nav-checkout.jade
+
 block content
   // Reservas
   div.container.content.styleb
@@ -20,7 +22,9 @@ block content
               span Elija un método de pago
             
               div.panel-group#accordion(role='tablist' aria-multiselectable='true')
-                //======== Pago en el hotel
+                //- ================================
+                //- ======== Pago en el hotel
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#headingOne(role='tab')
                     img.img-icon(src="images/icons/hotel.png", alt="Hotel")
@@ -34,7 +38,7 @@ block content
                         div.col-xs-3
                           label(for='hotel-titular') Tarjeta
                           select.form-control
-                            option(disabled selected) Mes
+                            option(selected='selected', default disable hidden) Elija una opcion
                             option Visa
                             option Mastercard
                         div.col-xs-3
@@ -45,7 +49,7 @@ block content
                           div.row
                             div.col-xs-6
                               select.form-control.fx-pr
-                                option(disabled selected) Mes
+                                option(selected='selected', default disable hidden) Mes
                                 option Enero
                                 option Febrero
                                 option Marzo
@@ -60,7 +64,7 @@ block content
                                 option Diciembre 
                             div.col-xs-6
                               select.form-control.fx-pr
-                                option(disabled selected) Año
+                                option(selected='selected', default disable hidden) Año
                                 option 2016
                                 option 2017
                                 option 2019
@@ -93,8 +97,10 @@ block content
                         |se cobrara de esta misma tarjeta.
                       p.tx-cond.mb El pago de la estadía se realizará en la moneda del hotel. El valor final establecido 
                         |en la reserva puede sufrir modificaciones según el tipo de cambio vigente al día del pago.  
-                        
-                //========  Mercadopago
+                
+                //- ================================
+                //- ======== Mercadopago 
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-mercadopago(role='tab')
                     img.img-icon(src="images/icons/mercadopago.png", alt="Marcadopago")
@@ -111,8 +117,10 @@ block content
                       br
                       |El pago de la reserva se realizara online en el siguiente paso. De no concretarse el pago la reserva se quedara pendiente por un plazo de 3 horas. De no concretarse en ese plazo se 
                       span.bold cancelará la reserva.
-                      
-                //========Business
+                
+                //- ================================
+                //- ======== Business
+                //- ================================ 
                 div.panel.panel-elara
                   div.panel-heading#h-business(role='tab')
                     img.img-icon(src="images/icons/bank.png", alt="Business")
@@ -127,11 +135,14 @@ block content
                         div.col-xs-3
                           label(for='hotel-titular')
                           select.form-control
-                            option(disabled selected) Escoja una opcion
+                            option(selected='selected', default disable hidden) Escoja una opcion
+                            option Ninguna de la anteriores
                             option Cuenta principal
                             option Cuenta secundaria
-
-                //======== Paypal
+                
+                //- ================================
+                //- ======== Paypal
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-paypal(role='tab')
                     img.img-icon(src="images/icons/paypal.png", alt="Paypal")
@@ -143,7 +154,9 @@ block content
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
-                //======== Bitpagos
+                //- ================================
+                //- ======== Bitpagos
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-bitpagos(role='tab')
                     img.img-icon(src="images/icons/bitcoin.png", alt="Bitpagos")
@@ -155,7 +168,9 @@ block content
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
-                //======== Smile Payments
+                //- ================================
+                //- ======== Smile Payments
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-smile(role='tab')
                     img.img-icon(src="images/icons/smile.png", alt="Smile Payments")
@@ -167,7 +182,9 @@ block content
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
-                //======== Efectivo
+                //- ================================
+                //- ======== Efectivo
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-efectivo(role='tab')
                     img.img-icon(src="images/icons/cash.png", alt="Efectivo")
@@ -179,7 +196,9 @@ block content
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
                       
-                //======== Tarjeta de credito
+                //- ================================
+                //- ======== Tarjeta de Crédito
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-tarjeta(role='tab')
                     img.img-icon(src="images/icons/card.png", alt="Tarjeta de Crédito")
@@ -190,7 +209,10 @@ block content
                   div.panel-collapse.collapse#c-tarjeta(role='tabpanel' aria-labelledby='h-tarjeta')
                     div.panel-body
                       |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
-                //
+                      
+                //- ================================
+                //- ======== Transferencia bancaria
+                //- ================================
                 div.panel.panel-elara
                   div.panel-heading#h-banco(role='tab')
                     img.img-icon(src="images/icons/bank.png", alt="Transferencia bancaria")
@@ -205,11 +227,10 @@ block content
             a.btn.btn-success.btn-lg.pull-right.mt15(href='/voucher')
               | Finalizar  
               i.fa.fa-check.
-      //- -------------------------------------------    
-      //-TOTALIZATOR    
-      //-ToDo: Mejorar la ubicacion del totalizador fuera del flujo de resultados    
-      //- -------------------------------------------    
-      
+                
+      //- ================================
+      //- ======== Transferencia bancaria
+      //- ================================
       div.col-sm-3.pull-right.total
         div.row
           div.col-xs-12

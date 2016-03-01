@@ -9,19 +9,12 @@
 @import "_bootstrap.scss";
 @import "mixins";
 @import "nav";
-@import "media-queries";
+@import "paddings";
+@import "margins";
+@import "buttons";
 @import "footer";
+@import "media-queries";
 
-//  Elara Settings
-//  -----------------
-//
-//  Table of Contents:
-//
-//   - Global
-//   - Top Nav
-//   - Search
-//   - HTL Description
-//   - Backgrounds
 
 // 1 - Global
 .clean {
@@ -40,6 +33,13 @@
   color: $green;
 }
 
+.fa-white {
+  color: $white !important;
+}
+.fa-main-dark {
+  color: $main-dark !important;
+}
+
 select {
   color: $min-grey !important;
   &:disabled {
@@ -49,6 +49,46 @@ select {
     //color: red !important;
   }
 }
+.nowrap {
+  white-space: nowrap;
+}
+.p-fix {
+  position: relative;
+  top: 7px;
+}
+.speech {
+  position: relative;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	box-shadow: 2px 2px 4px #888;
+}
+.speech:before{
+  	content: ' ';
+  	width: 0;
+    position: absolute;
+  	height: 0;
+  	left: 30px;
+  	top: 100px;
+  	border: 25px solid;
+  	border-color: #666 transparent transparent #666;
+  }
+.speech:after {
+  	content: ' ';
+  	position: absolute;
+  	width: 0;
+  	height: 0;
+  	left: 38px;
+  	top: 100px;
+  	border: 15px solid;
+  	border-color: #fff transparent transparent #fff;
+  }
 //=================================================
 // Search (large)
 //=================================================
@@ -379,7 +419,31 @@ select {
       }
     }
   }
-  // Made for results
+  // Made for results | checkout-s1 | checkout-s2
+  .total-voucher {
+    background: $main-bg-dark-trans;
+    padding: 15px;
+    .exp-list {
+      font-size: 18px;
+      .last {
+        font-size: 13px;
+        padding-bottom: 0;
+        margin-bottom: -10px;
+      }
+    }
+    .res {
+      padding-bottom: 0;
+      margin-bottom: -5px;
+      .res-total {
+        font-size: 34px;
+        color: $orange;
+        font-weight: bold;
+      }
+    }
+    &.conditions {
+      font-size: 12px;
+    }
+  }
   .total {
     //margin-top: 35px;
     background: $white;
@@ -592,6 +656,7 @@ select {
   }
   .panel {
     @include border-radius(0);
+    box-shadow: none;
     //For Top Result Conditions in results.jade
     &.panel-elara {
       padding-bottom: 10px;
@@ -615,6 +680,23 @@ select {
         }
         .fa {
           color: $white !important;
+        }
+        .reserv-code {
+          line-height: 15px;
+          float: right;
+          font-weight: 500;
+          position: relative;
+          top: -5px;
+          .code {
+            display: inline;
+            position: relative;
+            color: $main-dark;
+            background: $white;
+            margin-left: 20px;
+            padding: 4px 6px 3px;
+            top: -4px;
+            font-size: 25px;
+          }
         }
       }
       .panel-body {
@@ -949,71 +1031,7 @@ select {
 .strike {
   text-decoration: line-through;
 }
-// Paddings
 
-//padding-left
-.pl {
-  padding-left: 0;
-}
-.pl7 {
-  padding-left: 7.5px;
-}
-
-//pr = padding-right
-.pr {
-  padding-right: 0;
-}
-//pb = padding-bottom
-.pb20 {
-  padding-bottom: 20px;
-}
-//pr = padding-right
-.pr7 {
-  padding-right: 7.5px;
-}
-.pr15 {
-  padding-right: 15px;
-}
-.pr30 {
-  padding-right: 30px;
-}
-
-//padding-top
-.pt24 {
-  padding-top: 24px;
-}
-.pt15 {
-  padding-top: 15px;
-}
-.pt30 {
-  padding-top: 30px;
-}
-
-//padding-top-bottom
-.ptb10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.ptb20 {
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-// margins
-
-//margin-bottom
-.mb {
-  margin-bottom: 0;
-}
-//margin-bottom
-.mt15 {
-  margin-top: 15px;
-}
-//margin-top-bottom
-.mtb20 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 #blueimp-gallery {
   .fa {
     font-size: 18px !important;

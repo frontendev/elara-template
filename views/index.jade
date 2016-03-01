@@ -6,6 +6,9 @@ block head
   link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
   title HTL Suica Hotel & Resort - Home
+
+block nav
+  include nav.jade  
   
 block content
   //- Search big
@@ -177,7 +180,8 @@ block content
   div.container.content
     div.row.pt30
       div.col-md-12
-        p.sTitle Habitaciones
+        a.sTitle.clean.mb15b(href='/promociones')
+          |Habitaciones
       // Room #1  
       div.col-md-4.media-cont 
         div.thumbnail

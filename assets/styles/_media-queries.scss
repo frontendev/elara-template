@@ -1,6 +1,6 @@
-
-//  Media Queries
-//  375px or less
+//- ================================
+//- ======== 375px and less
+//- ================================
 @media (max-width: 375px) {
   .search-box {
     .title-top {
@@ -12,8 +12,10 @@
     }
   }
 }
-//  Media Queries
-//  400px or less
+
+//- ================================
+//- ======== 400px and less
+//- ================================
 @media (max-width: 400px) {
   .search-box {
     .title-top {
@@ -25,8 +27,10 @@
     }
   }
 }
-//  Media Queries
-//  768px or less
+
+//- ================================
+//- ======== 768px and less
+//- ================================
 @media (max-width: 768px) {
   .navbar-collapse {
     margin-top: 15px;
@@ -52,21 +56,10 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
-  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
-		display: block;
-	}
-	.dropdown-menu{
-		margin-top: 0;
-	}
-	.dropdown-toggle{
-		margin-bottom: 2px;
-	}
-	.navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{
-		margin-bottom: 0;
-	}
-}
-// 768px and up
+
+//- ================================
+//- ======== 768px and up
+//- ================================
 @media (min-width: 768px) {
   .navbar {
     @include border-radius (0,0);
@@ -78,6 +71,18 @@
     &:hover {
       color: $orange;
     }
+  }
+  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+    display: block;
+  }
+  .dropdown-menu{
+    margin-top: 0;
+  }
+  .dropdown-toggle{
+    margin-bottom: 2px;
+  }
+  .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{
+    margin-bottom: 0;
   }
   .search-box {
     .form-group {
@@ -104,7 +109,9 @@
   }
 }
 
-// 992px and up
+//- ================================
+//- ======== 992px and up
+//- ================================
 @media (min-width: 992px) {
   .navbar-default .navbar-nav>li>a, {
     text-transform: uppercase;
@@ -116,7 +123,9 @@
     }
  }
 
-// 1200px and up)
+ //- ================================
+ //- ======== 1320px and up
+ //- ================================
 @media (min-width: 1320px) {
   .search-box {
     .form-group {
@@ -135,31 +144,32 @@
     }
   }
 }
-// 1200px and up)
+
+//- ================================
+//- ======== 1420px and up
+//- ================================
 @media (min-width: 1420px) {
   .shape-para {
   	width: 50%;
     position: absolute;
   	height: 100%;
-    left: -8%;
+    left: -9%;
     min-height: 100%;
     z-index: 0;
   	-webkit-transform: skew(-12deg);
   	   -moz-transform: skew(-12deg);
   	     -o-transform: skew(-12deg);
   	background: transparentize($main-light, .3);
-  	//background: green;
   }
   .shape-para-o {
   	width: 50%;
     position: absolute;
   	height: 100%;
-    left: -9%;
+    left: -10%;
     min-height: 100%;
   	-webkit-transform: skew(-12deg);
   	   -moz-transform: skew(-12deg);
   	     -o-transform: skew(-12deg);
   	background: $main-light;
-  	//background: red;
   }
 }

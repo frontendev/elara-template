@@ -1,0 +1,18 @@
+.btn-default {
+  color: $main-dark;
+  background-color: #fff;
+  border-color: $main-dark;
+  &:hover {
+    background-color: #fff;
+    border-color: $main-dark;
+    .fa {
+      color: red;
+    }
+  }
+  .fa {
+    color: $main-dark;
+    &:hover {
+      color: red;
+    }
+  }
+}

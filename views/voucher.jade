@@ -1,18 +1,32 @@
-extends layout-checkout
+extends layout
+
+block head
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  title Voucher de compra - HTL Suica Hotel & Resort 
+
+block nav
+  include nav-checkout.jade
 
 block content
   // Reservas
   div.container.content.styleb
     div.row
       div.col-sm-12
-        p.sTitle Ultimo paso...
-      div.col-sm-12
+        div.speech
+          p tu compra salio bien toga
+      div.col-sm-12(style='display: none;')
         div.panel.panel-elara
           div.panel-heading
             p.panel-title Detalle de tu reserva
+              span.reserv-code
+                |Codigo de
+                br
+                |reserva:
+                span.code 618e05643b
           div.panel-body
             div.row
               div.col-sm-9
+                //- ==== DETALLES
                 div.row
                   div.col-xs-6
                     ul.exp-list.list-unstyled
@@ -33,15 +47,82 @@ block content
                       li.medium Entrada
                       li.light Martes 8 de diciembre de 2015 - 11:00 hs
                       li.medium Salida
-                      li.light lunes 31 de Marzo de 2029 - 11:00 hs
+                      li.light Lunes 31 de Marzo de 2029 - 11:00 hs
+                      
+                //- ==== DATOS PERSONALES
                 p.subtitle Datos personales
                 div.divider
-                div.row
+                div.row.pt15.mb15
                   div.col-xs-3
-                p.subtitle Datos personales
+                    p.bold Nombre/s y Apellidos/s
+                    p.light Cosme Fulanito
+                  div.col-xs-4
+                    p.bold Email
+                    p.light cosme_fulanito@div-it.com.ar
+                  div.col-xs-3
+                    p.bold País
+                    p.light Argentina
+                //- ==== DATOS DE PAGO
+                p.subtitle Datos de pago
                 div.divider
                   
-              //totalizador + mapa
+                div.row.pt15
+                  //- == Row #1
+                  div.col-xs-3
+                    p.bold Tarjeta
+                    p.light Visa
+                  div.col-xs-3
+                    p.bold N° de Tarjeta
+                    p.light XXXX-XXXX-XXXX-5881
+                  div.col-xs-3
+                    p.bold Titular
+                    p.light Cosme Fulanito
+                  div.col-xs-3
+                    p.bold Vencimiento
+                    p.light 02/2018
+                    
+                //- == Row #2
+                div.row.pt15.mb15
+                  div.col-xs-3
+                    p.bold Dirección
+                    p.light Av. Cerrito 225
+                  div.col-xs-3
+                    p.bold Ciudad
+                    p.light CABA, Bs As
+                  div.col-xs-3
+                    p.bold Código Postal
+                    p.light 1428
+                  div.col-xs-3
+                    p.bold Teléfono
+                    p.light 11 03 03 456
+                div.divider
+                div.row.pt15
+                  div.col-sm-2
+                    a.btn.btn-default(href='/')
+                      i.fa.fa-home.fa-main-dark  
+                      |  Ir al home
+                  div.col-sm-2
+                    btn.btn.btn-info(href='/' onclick='window.print();')
+                      i.fa.fa-print.fa-white
+                      |  Imprimir
+                  div.col-sm-8
+                    p.p-fix Te hemos enviado una copia de este voucher a tu email
+                    
+              //- totalizador + mapa
               div.col-sm-3
-
+                div.total-voucher
+                  ul.list-unstyled.exp-list
+                    li.bold Subtotal
+                      span.pull-right.light $2.726
+                    li.bold Impuestos
+                      span.pull-right.light $8.606
+                    li.text-right.res  
+                      span.bold Total  &nbsp;
+                      span.res-total $11.332
+                    li.text-right.last Equivale a USD 50
+                div.total-voucher.mt5.conditions
+                  |El pago de la estadía se realizará en la moneda del hotel. 
+                  |El valor final establecido en la reserva puede sufrir modificaciones 
+                  |según el tipo de cambio vigente al día del pago.
+                iframe.mt5(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.2392314300873!2d-58.3812962646863!3d-34.60664787747049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe3a4cede9ca734f7!2sNH+Buenos+Aires+9+de+Julio!5e0!3m2!1ses!2sar!4v1456860184370' width='254' height='254' frameborder='0' style='border:0' allowfullscreen)
 block scripts

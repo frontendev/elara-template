@@ -2,7 +2,10 @@ extends layout
 
 block head
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
-  title Contacto
+  title Datos personales - HTL Suica Hotel & Resort 
+
+block nav
+  include nav-checkout.jade
 
 block content
   // Reservas
@@ -38,7 +41,7 @@ block content
                   div.col-xs-3.pt24
                     label(for='titular-country') País
                     select.form-control#titular-country
-                      option(selected disable) País
+                      option(selected='selected', default disable hidden) País
                       option Argentina
                       option Brasil
                       option Paraguay
@@ -49,32 +52,33 @@ block content
             div.form-inline
               div.form-group.pr30
                 img.pr15(src="images/icons/adult.png", alt="adulto")
-                label.pr15(for='titular-country') Adulto
-                select.form-control
+                label.pr15(for='oc-adult') Adulto
+                select.form-control#oc-adult
                   option(selected) 1
                   option 2
                 br
                 span.help-block &nbsp;
               div.form-group.pr30
                 img.pr15(src="images/icons/child.png", alt="menor")
-                label.pr15(for='titular-country') Menores
-                select.form-control
+                label.pr15(for='oc-child') Menores
+                select.form-control#oc-child
                   option(selected) 0
                   option 1
                 br
                 span.help-block De 2 a 14 años.
               div.form-group.pr30
                 img.pr15(src="images/icons/infant.png", alt="infantes")
-                label.pr15(for='titular-country') Infantes
-                select.form-control
+                label.pr15(for='oc-infant') Infantes
+                select.form-control#oc-infant
                   option(selected) 0
                   option 1
                 br
                 span.help-block De 0 a 2 años.
               div.form-group.pull-right
-                label.pr15(for='titular-country') Tipo de cama
-                select.form-control
-                  option(selected disabled) Escoja una opcion
+                label.pr15(for='oc-bed') Tipo de cama
+                select.form-control#oc-bed
+                  option(selected='selected', default disable hidden) Escoja una opcion
+                  option Indistinto
                   option Cama King size
                   option camas twin
                 br
@@ -86,7 +90,8 @@ block content
             div.row
               div.col-xs-3
                 select.form-control
-                  option(selected disabled) Escoja opcion
+                  option(selected='selected', default disable hidden) Escoja opcion
+                  option Ninguno
                   option Cama King size
                   option camas twin
             span.help-block.l Sujeto a disponibilidad. Puede seleccionar varias opciones presionanado la tecla 
@@ -96,7 +101,7 @@ block content
             br
             div.divider
             a.btn.btn-info.pull-right.mt15(href='/checkout-s2')
-              | Siguiente  
+              | Elija un metodo de pago  
               i.fa.fa-arrow-right
       //- -------------------------------------------    
       //-TOTALIZATOR    
@@ -162,5 +167,5 @@ block content
                 li.pull-right.res  
                   |total  
                   span.res-total $11.332
-  block scripts
-    script(type='text/javascript' src='javascripts/tooltip-e.js')
+block scripts
+  script(type='text/javascript' src='javascripts/tooltip-e.js')
