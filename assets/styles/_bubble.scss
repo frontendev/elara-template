@@ -1,0 +1,57 @@
+.bubble {
+  position: relative;
+  top: -15px;
+	width: 50px;
+	height: 50px;
+  padding-top: 15px;
+	text-align: center;
+  z-index: 10;
+	//background-color: transparentize($green, .82);
+	background-color: $green-dark;
+	border: 2px solid $green-dark;
+	-webkit-border-radius: 5px 0 0 5px;
+	   -moz-border-radius: 5px 0 0 5px;
+	        border-radius: 5px 0 0 5px;
+  .fa {
+    color: $white !important;
+  }
+}
+.bubble:before{
+  	content: ' ';
+  	width: 0;
+    position: absolute;
+  	height: 0;
+  	left: 15px;
+  	top: 46px;
+  	border: 10px solid;
+    border-color: $green-dark transparent transparent transparent;
+  }
+// For bordered div
+.bubble:after {
+  	content: ' ';
+  	position: absolute;
+  	width: 0;
+  	height: 0;
+  	left: 15px;
+  	top: 43px;
+  	border: 10px solid;
+    // For bordered div
+  	//border-color: rgb(209, 234, 211) transparent transparent transparent;
+  	border-color: $green-dark transparent transparent transparent;
+  }
+.bubble-a {
+  min-width: 100%;
+  z-index: 1;
+  height: 50px;
+  background: #008b0d;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px 15px 10px 65px;
+  top: -65px;
+  margin-bottom: -50px;
+  display: block;
+  font-size: 20px;
+}

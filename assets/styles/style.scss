@@ -8,9 +8,11 @@
 @import "color";
 @import "_bootstrap.scss";
 @import "mixins";
+@import "fonts";
 @import "nav";
 @import "paddings";
 @import "margins";
+@import "bubble";
 @import "buttons";
 @import "footer";
 @import "media-queries";
@@ -25,6 +27,11 @@
 .exp-list {
   li {
     padding-bottom: 5px;
+  }
+}
+.exp-list-l {
+  li {
+    padding-bottom: 10px;
   }
 }
 // For text coodition
@@ -56,39 +63,6 @@ select {
   position: relative;
   top: 7px;
 }
-.speech {
-  position: relative;
-	width: 100%;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-	background-color: #fff;
-	border: 8px solid #666;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	box-shadow: 2px 2px 4px #888;
-}
-.speech:before{
-  	content: ' ';
-  	width: 0;
-    position: absolute;
-  	height: 0;
-  	left: 30px;
-  	top: 100px;
-  	border: 25px solid;
-  	border-color: #666 transparent transparent #666;
-  }
-.speech:after {
-  	content: ' ';
-  	position: absolute;
-  	width: 0;
-  	height: 0;
-  	left: 38px;
-  	top: 100px;
-  	border: 15px solid;
-  	border-color: #fff transparent transparent #fff;
-  }
 //=================================================
 // Search (large)
 //=================================================
@@ -683,6 +657,7 @@ select {
         }
         .reserv-code {
           line-height: 15px;
+          font-size: 15px;
           float: right;
           font-weight: 500;
           position: relative;
@@ -920,7 +895,6 @@ select {
           color: $mid-grey;
         }
       }
-
       // Promotions
       .description {
         @include title(15px, 300);
@@ -984,7 +958,6 @@ select {
   }
 }
 
-
 // Suscribe
 .suscribe {
   padding-top: 30px;
@@ -1007,29 +980,6 @@ select {
   .input-lg {
     margin-right: 10px;
   }
-}
-// Fonts
-
-.thin {
-  font-weight: 100;
-}
-.light {
-  font-weight: 300;
-}
-.regular {
-  font-weight: 400;
-}
-.medium {
-  font-weight: 500;
-}
-.bold {
-  font-weight: 700;
-}
-.black {
-  font-weight: 900;
-}
-.strike {
-  text-decoration: line-through;
 }
 
 #blueimp-gallery {
@@ -1141,4 +1091,30 @@ select {
   color: white;
   position: relative;
   bottom: -140px;
+}
+
+//términos y condiciones de servicio
+.tos {
+  background-color: $gallery;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+  color: $mid-grey !important;
+  a h4 {
+    border-top: 1px solid $min-grey;
+    border-bottom: 1px solid $min-grey;
+    padding-top: 15px;
+    color: $mid-grey;
+    padding-bottom: 15px;
+    &:hover {
+      color: $mid-grey;
+      text-decoration: none;
+    }
+  }
+  h4, h5 {
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+  }
 }

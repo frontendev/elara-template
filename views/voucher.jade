@@ -12,9 +12,14 @@ block content
   div.container.content.styleb
     div.row
       div.col-sm-12
-        div.speech
-          p tu compra salio bien toga
-      div.col-sm-12(style='display: none;')
+        div.bubble
+          i.fa.fa-check.fa-lg
+        div.bubble-a
+          p
+            span.bold Felicitaciones! 
+            span.light  Su compra se ha realizado con éxito 
+            
+      div.col-sm-12
         div.panel.panel-elara
           div.panel-heading
             p.panel-title Detalle de tu reserva
@@ -29,7 +34,7 @@ block content
                 //- ==== DETALLES
                 div.row
                   div.col-xs-6
-                    ul.exp-list.list-unstyled
+                    ul.exp-list-l.list-unstyled
                       li.medium Habitacion:&nbsp;
                         span.light  Loft triple Doble
                       li.medium Regimen de comidas:&nbsp;
@@ -43,7 +48,7 @@ block content
                       li.medium Observaciones:&nbsp;
                         span.light Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   div.col-xs-6
-                    ul.exp-list.list-unstyled
+                    ul.exp-list-l.list-unstyled
                       li.medium Entrada
                       li.light Martes 8 de diciembre de 2015 - 11:00 hs
                       li.medium Salida
@@ -125,4 +130,78 @@ block content
                   |El valor final establecido en la reserva puede sufrir modificaciones 
                   |según el tipo de cambio vigente al día del pago.
                 iframe.mt5(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.2392314300873!2d-58.3812962646863!3d-34.60664787747049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe3a4cede9ca734f7!2sNH+Buenos+Aires+9+de+Julio!5e0!3m2!1ses!2sar!4v1456860184370' width='254' height='254' frameborder='0' style='border:0' allowfullscreen)
+  div.container-fluid.tos
+    div.container
+      div.row
+        div.col-xs-6
+          h4 Términos y condiciones
+          h5 Políticas generales
+          p La política de cancelación y sanción aplicada a esta reserva no tendrá excepción alguna. 
+            |Los datos de la tarjeta de crédito asignados deberán ser válidos para confirmar su reserva, 
+            |caso contrario la misma podrá ser dada de baja sin previo aviso. El horario de ingreso es a 
+            |las 14:00 hs y el horario de salida 10:00 hs, pasado este horario sufrirá un recargo en su cuenta. 
+          p En caso de conflicto entre políticas se aplicará la más restrictiva. Las operaciones realizadas a 
+            |través de Mercado Pago no son reembolsables.
+          p.text-center Check in 14:00 Hs - Check out 10:00 Hs
+
+          p Tarjetas de crédito aceptadas:
+          p.text-center Visa - Mastercard - American Express
+            
+          p Los datos de la tarjeta se utilizan como garantía de reserva o en caso que se aplique un costo de cancelación
+          p Cantidad de pasajeros admitidos por habitación:
+          p Loft Doble pasajeros.max.habs.22112
+          
+        div.col-xs-6
+          h4 Políticas de cancelación
+          h5 Cancelaciones
+          p Para cancelar una reserva, deberá hacer click aquí. Para confirmar esta solicitud de anulación, recibirá un correo electrónico que le confirmará la cancelación una vez que esta se haya concretado.
+          p Loft Doble Sin costos de cancelacion hasta 48 horas antes del Check-In. Con la cancelacion menor a 48 horas de anticipacion se cobrara una noche como penalidad. Las operaciones realizadas a través de Mercado Pago no son reembolsables.
+          h5 Conversión de moneda / Forma de pago
+          p El pago de la estadía se realizará en la moneda del hotel.
+          p El valor final establecido en la reserva puede sufrir modificaciones según el tipo de cambio vigente al día del pago.
+        div.clearfix
+        div.col-xs-12
+          a.clean(role='button' data-toggle='collapse' href='#tos' aria-expanded='false' aria-controls='collapseExample')
+            h4 Condiciones generales del servicio
+              i.fa.fa-caret-down.pull-right.pr15
+          div.collapse#tos
+            //-h4 Condiciones generales del servicio
+            p Las siguientes disposiciones establecen las condiciones generales a las que se ve sometido el Sistema de reservas online de Div-it.
+            h5 Nuestros servicios
+            p Div-it les brinda a los hoteles su Sistema de reservas online. Es importante que lea y entienda estos términos antes de utilizar nuestros servicios. Al acceder o hacer uso de nuestros servicios, acepta quedar legalmente vinculado a las presentes condiciones y a las posibles modificaciones que puedan realizarse con el tiempo. Nos reservamos el derecho de cambiar estos términos en cualquier momento, teniendo efecto dichas enmiendas una vez publicadas en la página web. Nuestra empresa actúa como un mero intermediario entre los usuarios de nuestro sistema de reservas online y los hoteles asociados, razón por la cual no mantiene ni tiene intención de mantener en el futuro una relación contractual en relación con su reserva. Al hacer uso de nuestros servicios para realizar una reserva, el contrato tiene lugar de manera directa entre usted y el hotel en cuestión. 
+              |La información contenida en nuestra página web es facilitada y actualizada cada cierto tiempo por los hoteles y, aunque ponemos el mayor empeño para que la información sea veraz, no podemos garantizar su precisión o veracidad ni otorgar garantía alguna de que el acceso a nuestra página web se desarrolle sin incidencias o interrupciones.
+            h5 Reserva
+            p Las tarifas indicadas a través del Sistema de reservas online son provistas por cada hotel respectivo. 
+              |Una vez confirmada la reserva por el hotel en cuestión y facilitados y validados sus datos bancarios para el pago, quedará irrevocablemente vinculado a ella al pulsar “Confirmar” en nuestra página web. Nosotros le remitiremos la confirmación de la reserva a su correo electrónico, razón por la cual debe asegurarse de que la dirección facilitada sea correcta. 
+              |La divisa en la cual los precios están expresados está definida por cada hotel. En caso de que el hotel permita mostrar la tarifa en más de una moneda, estos precios en divisas extranjeras están convertidos según el tipo de cambio diario definido por cada hotel, y solo deben ser considerados estimativos ya que los precios reales puedan variar al momento de efectuar el pago de la reserva. 
+              |Por ello, los precios base, que deben prevalecer siempre, son aquellos que se muestran en la moneda local del país del hotel involucrado. 
+              |El voucher de reserva y el correo electrónico de confirmación enviado atestiguan la validez de la reserva y contienen información relevante sobre ella, así como aspectos particulares del hotel en cuestión. Se ruega que lea y compruebe atentamente toda la información contenida en nuestro correo electrónico de confirmación con el fin de asegurar que se ajusta a su reserva. A su llegada al hotel, le será solicitada la presentación de dicho correo electrónico de confirmación así como un documento de identificación o pasaporte válido.
+
+            h5 Pago y datos de tarjeta de crédito
+            p En el momento de realizar una reserva en línea, le pediremos que nos facilite los datos relativos a su tarjeta de crédito, como el número y la fecha de caducidad. Estos datos solo se utilizarán como garantía de su reserva y no se aplicarán cargos en dicha tarjeta, salvo en caso de no presentarse (No Show) o cancelaciones, según lo establecido en las Políticas de cancelación presentes en los términos y las condiciones que debe aceptar antes de confirmar su reserva. 
+              |El Sistema de reservas online acepta tarjetas de crédito tales como VISA, MasterCard, American Express y otras que puedan especificarse en nuestro sitio web. Bajo ninguna circunstancia Div-it se hace responsable de ningún tipo de comisiones que el banco pueda cobrar al cliente. 
+              |La tarifa completa de la habitación reservada, así como los cargos adicionales en los cuales el cliente pueda haber incurrido durante su estancia en el hotel, serán pagados por el cliente en la moneda local al momento de hacer el check-out del hotel. Para todas las reservas confirmadas, los detalles de la tarjeta de crédito serán entregados de forma segura al hotel, el cual a su vez podrá preautorizar la tarjeta o cobrar la cantidad de acuerdo con la política de reserva expuesta en el Sistema de reservas online. Por último, en el caso de que haya una reserva con una tarifa no reembolsable con uno de los hoteles colaboradores, el hotel involucrado cobrará la tarifa completa de la reserva a la tarjeta de crédito en la moneda local. 
+              |Es importante que recuerde que al hacer la reserva a través de nuestra página web, se considera que autoriza y consiente incondicional e irrevocablemente la cesión de los datos de su tarjeta bancaria al hotel en cuestión para este fin.
+
+            h5 Cancelación de la reserva 
+            p Cada uno de los hoteles cuenta con sus propias condiciones de cancelación de reservas. Le recomendamos vehementemente que lea con atención estos términos y condiciones antes de realizar la reserva. Una vez confirmada, usted quedará sujeto a dichos términos y condiciones. En caso de cancelación, le aconsejamos que se ponga en contacto directamente con el hotel, con el fin de minimizar las posibles sanciones o cargos a abonar. 
+              |En los casos en los que se aplique una penalización de cancelación, de acuerdo con los términos y las condiciones del hotel indicados en el momento de la reserva, el hotel cargará en la cuenta de su tarjeta de crédito las sanciones o los cargos de los que usted es responsable de pago debido a la cancelación. 
+              |De cualquier modo, esto no se aplica en el caso de tarifas no reembolsables que no pueden ser canceladas ni reembolsadas. 
+              |Los posibles problemas que puedan surgir en relación con la cancelación de la reserva, deberán ser tratados entre usted y el hotel, quedando Div-it eximido de toda responsabilidad, a excepción de nuestro deber de proporcionar la información necesaria para el cálculo de las sanciones aplicables y facilitar los datos de su tarjeta de crédito al hotel en cuestión. En caso de que desee realizar una reclamación con respecto a la sanción o al cargo impuestos por el hotel en cuestión para la cancelación de su reserva, deberá dirigirla directamente al mencionado hotel y en ningún caso a nosotros. 
+              |Si desea cancelar una reserva, deberá enviar una solicitud por escrito a través del correo electrónico a la dirección provista por el hotel o llamar al número provisto por el hotel en los términos y las condiciones indicados al momento de la reserva. Una vez que su reserva haya sido cancelada, usted recibirá un correo electrónico de confirmación de la cancelación a la dirección de correo electrónico desde la que solicitó la cancelación. También puede cancelar su reserva de forma online haciendo clic aquí.
+
+            h5 Seguridad 
+            p Hemos adoptado el protocolo SSL para codificar y proteger los datos relativos a su tarjeta de crédito. Sin embargo, toda pérdida ocasionada en el momento de la transmisión de la información correrá única y exclusivamente a su propio cargo. Si utiliza un ordenador público para acceder a nuestro Sistema de reservas online, le recomendamos que cierre debidamente la aplicación tras su uso.
+
+            h5 Políticas de privacidad 
+            p Concedemos una especial importancia a las cuestiones relativas a la privacidad o confidencialidad. Nuestra política de privacidad actual especifica cómo y para qué utilizamos la información que usted nos facilita. Como compañía internacional, nos esforzamos por brindarle el mejor nivel de servicio y ofrecerle día a día las mejores herramientas y soluciones. Para brindar estos servicios, es posible que compartamos su información personal con otras áreas de nuestra empresa o socios comerciales para ofrecerle productos o servicios que consideramos que pueden ser de su interés. Al utilizar nuestros servicios, da su consentimiento y acepta quedar vinculado a los términos de nuestra política de privacidad.
+
+            h5 Exención de la responsabilidad
+            p Al hacer uso de nuestro Sistema de reservas online, acepta respetar y cumplir todos los estatutos, las regulaciones y las leyes aplicables relativas a la utilización de nuestro Sistema de reservas online, eximiéndonos de toda responsabilidad. 
+              |Nuestra actuación se limita a una mera intermediación entre usted y los hoteles, por lo que no mantenemos ningún tipo de control sobre la calidad de los servicios o las obligaciones de los hoteles. Asimismo, no nos hacemos responsables bajo ninguna circunstancia de las posibles disputas que puedan surgir entre usted y el hotel en cuestión, relativas a sus obligaciones, la calidad de sus servicios, instalaciones y demás. El contrato es establecido entre usted y el hotel; por consiguiente, deberá dirigir sus quejas o reclamaciones directamente al hotel mencionado. Una vez finalizada su estancia en el establecimiento, es posible que le solicitemos que rellene nuestro formulario estándar de preguntas, que le permitirá realizar cualquier tipo de comentario acerca del hotel y de nuestro Sistema de reservas online, con el fin de utilizarlo como una futura referencia para mejorar nuestro Sistema de reservas online. 
+              |Asimismo, es su responsabilidad conseguir un visado legal (si fuese necesario) y estar en regla con todas las formalidades de salud y aduanas exigidas para el lugar escogido como su próximo destino. 
+              |Sin perjuicio de la globalidad de los asuntos antes mencionados, en el supuesto de que un tribunal o una jurisdicción competentes nos exijan, ya sea a nosotros o a los hoteles, el pago de una cantidad por daños o compensación a usted, consiente y acepta que la cantidad que se indemnizará por dichos daños o compensación no excederá en ningún caso el importe total que usted abonó al hotel en cuestión para la reserva o una cantidad máxima de 300 dólares (trescientos dólares), el importe que sea más bajo.
+
+            h5 Ley aplicable
+            p El contenido de nuestra página web y de todas las reservas realizadas a través de nuestro Sistema de reservas online se regirá de acuerdo con las leyes de la República Argentina, así como los presentes términos y condiciones, y toda disputa, controversia, demanda o reclamación de naturaleza alguna que pueda surgir en relación con ellos. Cualquier conflicto o diferencia relativa a nuestro Sistema de reservas online, a los presentes términos y condiciones y/o a nuestra página web, será sometido a arbitraje bajo la jurisdicción de los tribunales competentes en lo comercial de la Ciudad de Buenos Aires, con renuncia expresa a cualquier otro fuero o jurisdicción.
 block scripts
