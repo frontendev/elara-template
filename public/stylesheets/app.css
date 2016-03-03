@@ -6032,6 +6032,26 @@ button.close {
     .btn-default .fa:hover {
       color: red; }
 
+.btn-img-more {
+  position: absolute;
+  bottom: 14px; }
+
+.btn-line {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  border-left: none;
+  border-bottom: none;
+  -webkit-transition: all 1s linear 0.2s;
+  -moz-transition: all 1s linear 0.2s;
+  -o-transition: all 1s linear 0.2s;
+  transition: all 1s linear 0.2s; }
+  .btn-line .fa {
+    color: #fff !important; }
+  .btn-line:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8); }
+
 .footer {
   margin-top: 20px;
   background-color: #021940;

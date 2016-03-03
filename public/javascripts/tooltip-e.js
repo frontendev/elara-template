@@ -1,12 +1,6 @@
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({container:'body'});
   console.log("tooltip enabled");
-});
-$(function(){
-    var path = window.location.pathname;
-    if (path === "/contacto") {
-      console.log("dale que va");
-    }
 });
 //blueimp.Gallery(
 //    document.getElementById('links').getElementsByTagName('a'),

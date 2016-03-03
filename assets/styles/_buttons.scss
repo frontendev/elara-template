@@ -16,3 +16,23 @@
     }
   }
 }
+
+.btn-img-more {
+  position: absolute;
+  bottom: 14px;
+}
+.btn-line {
+  background: transparentize($black, .5);
+  color: $white;
+  border: 1px solid $white;
+  border-left: none;
+  border-bottom: none;
+  @include transition (all, 1s, linear, 0.2s);
+  .fa {
+    color: $white !important;
+  }
+  &:hover {
+    color: $white;
+    background: transparentize($black, .2);
+  }
+}

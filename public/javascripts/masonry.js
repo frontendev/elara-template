@@ -1,5 +1,7 @@
-$('.grid').masonry({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  gutter: 0
-});
+$(document).ready(function(){  
+  $('.grid').masonry({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    gutter: 0
+  });
+})

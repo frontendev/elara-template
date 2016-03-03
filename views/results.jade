@@ -2,6 +2,8 @@ extends layout
 
 block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
+  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
   link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
   title Resultados - HTL Suica Hotel & Resort 
 
@@ -30,15 +32,16 @@ block content
             span.price 1234
           a.btn.btn-info.btn-right-double(href='/checkout-s1' role='button') Reservar ahora
         div.media-left.media-top
-          a(href='#')
+          a(href='images/room/room1.jpg' title="Vista de habitacion" data-gallery)
             img.media-object(src='images/room/room1.jpg' alt='')
         div.media-body
-          p.media-heading 
-            span.rm-title Loft Doble 
-            span.rm-size (38m²) 
-            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user
+          p.media-heading
+            a.clean(href='/habitacion' target='_blank')
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
           p.description-sm
             |Habitaciones de 2 amplias y modernas plantas generan la mejor privacidad para su estadía. 
             |Una planta inferior con un living equipado con los mejores sillones de descanso y una planta superior, con la comodidad de una habitación de hotel. 
@@ -56,15 +59,19 @@ block content
         h3 Otras ofertas que tambien te pueden interesar
       div.media.reg.col-sm-9
         div.media-left.media-top
-          a(href='#')
-            img.media-object(src='images/room/room4.jpg' alt='')
+          a(href='/images/room/room4.jpg' style='position: relative;' title="Vista de habitacion" data-gallery)
+            img.media-object(src='/images/room/room4.jpg' alt='')
+            a.btn.btn-line.btn-img-more(role='button' href='/habitacion' target='_blank')
+              |ver habitacion       
+              i.fa.fa-search
         div.media-body
-          p.media-heading 
-            span.rm-title Loft Doble superior 
-            span.rm-size (42m²)  
-            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user
+          p.media-heading
+            a.clean(href='/habitacion' target='_blank')
+              span.rm-title Loft Doble superior 
+              span.rm-size (42m²)  
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
           table.table
             thead
               tr
@@ -96,7 +103,7 @@ block content
                     option 1
                     option 2    
               tr
-                td Tarifa standard
+                td(data-toggle='tooltip' data-placement='bottom' title='Lorem ipsim para papa') Tarifa standard
                 td.cancel
                   span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
                     i.fa.fa-info-circle
@@ -183,16 +190,20 @@ block content
               i.fa.fa-info-circle.ptb10(data-toggle='tooltip' data-placement='top' title='El pago se realiza en la moneda que trabaja el hotel') 
       div.media.reg.col-sm-9
         div.media-left.media-top
-          a(href='#')
-            img.media-object(src='images/room/room2.jpg' alt='')
+          a(href='/images/room/room2.jpg' style='position: relative;')
+            img.media-object(src='/images/room/room2.jpg' alt='')
+            a.btn.btn-line.btn-img-more(role='button' target='_blank'  href='/habitacion')
+              |ver habitacion       
+              i.fa.fa-search
         div.media-body
           p.media-heading 
-            span.rm-title Loft Triple 
-            span.rm-size (38m²) 
-            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user
+            a.clean(href='/habitacion' target='_blank')
+              span.rm-title Loft Triple 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
           table.table
             thead
               tr
@@ -240,17 +251,21 @@ block content
       //-result #2
       div.media.reg.col-sm-9
         div.media-left.media-top
-          a(href='#')
+          a(href='/images/room/room3.jpg' style='position: relative;')
             img.media-object(src='images/room/room3.jpg' alt='')
+            a.btn.btn-line.btn-img-more(role='button' href='/habitacion' target='_blank')
+              |ver habitacion       
+              i.fa.fa-search
         div.media-body
-          p.media-heading 
-            span.rm-title Loft Cuadruple 
-            span.rm-size (47m²) 
-            span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user &nbsp;
-              i.fa.fa-user
+          p.media-heading
+            a.clean(href='/habitacion' target='_blank')
+              span.rm-title Loft Cuadruple 
+              span.rm-size (47m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
           table.table
             thead
               tr
@@ -296,5 +311,9 @@ block content
                     option 1
                     option 2
                     
+  include gallery.jade
+  //Footer
   block scripts
+    script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+    script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
     
