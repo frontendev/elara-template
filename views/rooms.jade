@@ -2,7 +2,7 @@ extends layout
 
 block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
   title Habitaciones - HTL Suica Hotel & Resort 
 
 block nav
@@ -22,81 +22,79 @@ block content
       // Room #1  
       div.col-md-4.media-cont.grid-item
         div.thumbnail
-          a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room3.jpg' alt='Loft Doble')
-            div.caption
-              p
-                span.rm-title Loft cuadruple 
-                span.rm-size (62m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
-              p
-                a.btn.btn-info(href='/habitacion' role='button') Ver más
+          img.img-responsive(src='images/room/room3.jpg' alt='Loft Doble'  style='min-height: 253px;')
+          div.caption
+            p
+              span.rm-title Loft cuadruple 
+              span.rm-size (62m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='4 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
+            p
+              a.btn.btn-info(href='/habitacion' role='button') Ver más
       // Room #2  
       div.col-md-4.media-cont.grid-item 
         div.thumbnail
-          a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room2.jpg' alt='Loft Doble')
-            div.caption
-              a.ftitle(href='/habitacion' role='button')
-                span.rm-title Loft Triple 
-                span.rm-size (49m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris . 
-              p
-                a.btn.btn-info(href='/habitacion' role='button') Ver más
+          img.img-responsive(src='images/room/room2.jpg' alt='Loft Doble' style='min-height: 253px;')
+          div.caption
+            a.ftitle(href='/habitacion' role='button')
+              span.rm-title Loft Triple 
+              span.rm-size (49m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris . 
+            p
+              a.btn.btn-info(href='/habitacion' role='button') Ver más
       // Room #3  
       div.col-md-4.media-cont.grid-item 
         div.thumbnail
-          a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
-            div.caption
-              p
-                span.rm-title Loft Doble 
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p 
-                a.btn.btn-info(href='/habitacion' role='button') Ver más
+          img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble' style='min-height: 253px;')
+          div.caption
+            p
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            p 
+              a.btn.btn-info(href='/habitacion' role='button') Ver más
       // Room #4  
       div.col-md-4.media-cont.grid-item 
         div.thumbnail
-          a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
-            div.caption
-              p
-                span.rm-title Loft Doble 
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              p 
-                a.btn.btn-info(href='/habitacion' role='button') Ver más
+          img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble' style='min-height: 253px;')
+          div.caption
+            p
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            p 
+              a.btn.btn-info(href='/habitacion' role='button') Ver más
       // Room #5  
       div.col-md-4.media-cont.grid-item 
         div.thumbnail
-          a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble')
-            div.caption
-              p
-                span.rm-title Loft Doble 
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p 
-                a.btn.btn-info(href='/habitacion' role='button') Ver más     
-block scripts 
+          img.img-responsive(src='images/room/room1.jpg' alt='Loft Doble' style='min-height: 253px;')
+          div.caption
+            p
+              span.rm-title Loft Doble 
+              span.rm-size (38m²) 
+              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
+                i.fa.fa-user &nbsp;
+                i.fa.fa-user
+            p.description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            p 
+              a.btn.btn-info(href='/habitacion' role='button') Ver más     
+block scripts
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')
   script(type='text/javascript' src='/javascripts/masonry.pkgd.min.js')
   script(type='text/javascript' src='/javascripts/masonry.js')

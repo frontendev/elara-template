@@ -3,7 +3,6 @@
  * v0.0.1
  * for Div It
 */
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
 @import "color";
 @import "_bootstrap.scss";
@@ -13,10 +12,11 @@
 @import "paddings";
 @import "margins";
 @import "bubble";
-@import "buttons";  
+@import "buttons";
 @import "footer";
 @import "media-queries";
 
+$img_path : '../images/';
 
 // 1 - Global
 .clean {
@@ -146,13 +146,12 @@ select {
 
 // Search (normal)
 .search-box-n {
-  background: transparentize($orangeS, .22389);
   background: transparentize($main-dark, .313);
   margin: 0 0 5px;
   padding: 11px 0 0px;
   color: $white;
   position: relative;
-  top: 17px;
+  top: 0;
   //#Note: fix to top
   &.ftt {
     margin-top: -17px !important;
@@ -991,22 +990,22 @@ select {
 }
 // Backgrounds
 .img-cover {
-  background-image: url('../images/cover/bg-search-1.jpg');
+  background-image: url($img_path + 'cover/bg-search-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   @include bg-size(cover);
 }
 .bg-search-n {
   // Set a default value
-  background-image: url('../images/cover/bg-search-1.jpg');
+  background-image: url($img_path + 'cover/bg-search-1.jpg');
   background-position: center;
   @include bg-size(cover);
   min-height: 210px;
   position: relative;
-  margin-bottom: -80px;
+  margin-bottom: -63px;
 }
 .img-contact {
-  background-image: url('../images/cover/bg-contacto.jpg');
+  background-image: url( $img_path + 'cover/bg-contacto.jpg');
   background-repeat: no-repeat;
   background-position: center;
   @include bg-size(cover);

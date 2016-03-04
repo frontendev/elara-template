@@ -6283,13 +6283,12 @@ select {
     margin-bottom: 5px; }
 
 .search-box-n {
-  background: rgba(255, 175, 8, 0.77611);
   background: rgba(2, 25, 64, 0.687);
   margin: 0 0 5px;
   padding: 11px 0 0px;
   color: #fff;
   position: relative;
-  top: 17px; }
+  top: 0; }
   .search-box-n.ftt {
     margin-top: -17px !important; }
   .search-box-n .title-top {
@@ -6983,7 +6982,7 @@ select {
   background-size: cover;
   min-height: 210px;
   position: relative;
-  margin-bottom: -80px; }
+  margin-bottom: -63px; }
 
 .img-contact {
   background-image: url("../images/cover/bg-contacto.jpg");

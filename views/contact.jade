@@ -71,10 +71,10 @@ block content
               input.form-control(type='email' class='form-control' id='inputMail' placeholder='E-mail')  
           div.form-group.has-feedback
             div.col-sm-3
-              input.form-control#inputCheckIn(type='text' placeholder='Check in')
+              input.form-control#date_in(type='text' placeholder='Check in')
               i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
             div.col-sm-3
-              input.form-control#inputCheckOut(type='email' placeholder='Check Out')
+              input.form-control#date_out(type='email' placeholder='Check Out')
               i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
             div.col-sm-6
               select.form-control
@@ -90,5 +90,8 @@ block content
             div.col-sm-12
               button.btn.btn-warning(type='submit') Enviar Mensaje
 block scripts
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='javascripts/datepicker-e.js')
   script(type='text/javascript' src='javascripts/contact-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)

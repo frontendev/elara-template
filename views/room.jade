@@ -52,9 +52,8 @@ block content
           |Además un espacio de trabajo relajado y diferente con la tecnologia necesaria para el nuevo trabajador móvil. 
       //Amenities
       div.col-xs-12
-        p.sSubtitleb.mb Amenities
+        p.sSubtitle.mb Amenities
         //included amenities
-        p.sSubtitle Servicios incluidos
         div.row.amenities
           //- First Colum
           div.col-xs-6.col-sm-3
@@ -103,9 +102,10 @@ block content
           //- Button More
           div.col-xs-12 
             p.amt-more
-              a( data-toggle='modal' data-target='#myModal')
+              a(href='' data-toggle='modal' data-target='#amenities-inc')
                 i.fa.fa-plus
-                span.amt-name  ver todos (5)
+                span.amt-name  
+                | ver todos (5)
         //Optional amenities
         p.sSubtitle.last Servicios Opcionales
         div.row.amenities
@@ -144,19 +144,81 @@ block content
                 i.fa.fa-plus
                 span.amt-name 
                   | ver todos (2)
-  //Modals
-  //Modals
-  div.modal.fade(id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel')
-    div.modal-dialog(role='document')
-      div.modal-content
-        div.modal-header
-          buttom(type='button' class='close' data-dismiss='modal' aria-label='Close')
-            span(aria-hidden='true') &times;
-          h4.modal-title#amt-i Amenities
-        div.modal-body
-        div.modal-footer
-          button.btn-btn-default(type='button' data-dismiss='modal')
-            | Cerrar
 
-      
-  block scripts
+
+  include mixins.jade
+  +modal('Amenities incluidos', 'amenities-inc')
+    ul.list-unstyled.exp-list-l.amenities
+      li
+        i.fa.fa-wifi.fa-lg.icon
+        span.amt-name
+          | Wi-Fi
+      li
+        i.fa.fa-futbol-o.fa-lg.icon
+        span.amt-name
+          | Cancha de Futbol
+      li
+        i.fa.fa-bicycle.fa-lg.icon
+        span.amt-name
+          | Bicicletas
+      li
+        i.fa.fa-television.fa-lg.icon
+        span.amt-name
+          | TV por Cable
+      li
+        i.fa.fa-shopping-basket.fa-lg.icon
+        span.amt-name
+          | Shoppings
+      li
+        i.fa.fa-glass.fa-lg.icon
+        span.amt-name
+          | Bar
+      li
+        i.fa.fa-ticket.fa-lg.icon
+        span.amt-name
+          | Eventos
+      li
+        i.fa.fa-wheelchair.fa-lg.icon
+        span.amt-name
+          | Sillas de ruedas
+  //- Modal opcional
+  +modal('Amenities opcionales', 'amenities-opt')
+    ul.list-unstyled.exp-list-l.amenities
+      li
+        i.fa.fa-wifi.fa-lg.icon
+        span.amt-name
+          | Wi-Fi
+      li
+        i.fa.fa-futbol-o.fa-lg.icon
+        span.amt-name
+          | Cancha de Futbol
+      li
+        i.fa.fa-bicycle.fa-lg.icon
+        span.amt-name
+          | Bicicletas
+      li
+        i.fa.fa-television.fa-lg.icon
+        span.amt-name
+          | TV por Cable
+      li
+        i.fa.fa-shopping-basket.fa-lg.icon
+        span.amt-name
+          | Shoppings
+      li
+        i.fa.fa-glass.fa-lg.icon
+        span.amt-name
+          | Bar
+      li
+        i.fa.fa-ticket.fa-lg.icon
+        span.amt-name
+          | Eventos
+      li
+        i.fa.fa-wheelchair.fa-lg.icon
+        span.amt-name
+          | Sillas de ruedas
+block scripts
+  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')
