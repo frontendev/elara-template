@@ -25,13 +25,17 @@ router.get('/promocion', function(req, res, next) {
 router.get('/contacto', function(req, res, next) {
   res.render('contact', { title: 'Contacto - HTL Suica Hotel & Resort', url : "/contacto"});
 });
+/* Contact */
+router.get('/ubicacion', function(req, res, next) {
+  res.render('location', { title: 'Ubicacion - HTL Suica Hotel & Resort', url : "/contacto"});
+});
 
 /* Results */
 router.get('/reservas', function(req, res, next) {
   res.render('results', { title: 'Resultados - HTL Suica Hotel & Resort', url : "/reservas"});
 });
 
-/* Habitacion */
+/* Habitaciones */
 router.get('/habitaciones', function(req, res, next) {
   res.render('rooms', { title: 'Habitaciones - HTL Suica Hotel & Resort', url : "/habitaciones"});
 });

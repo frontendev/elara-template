@@ -1,7 +1,7 @@
 nav.navbar.navbar-default
   div.container
     // - Brand and toggle get grouped for better mobile display
-    div.navbar-header.hidden-sm
+    div.navbar-header
       button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#top-nav' aria-expanded='false')
         span.sr-only Menú
         span.icon-bar
@@ -14,8 +14,6 @@ nav.navbar.navbar-default
           img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
     div.collapse.navbar-collapse#top-nav
       ul.nav.navbar-nav.navbar-right
-        li
-          a(href='/') hotel
         li.dropdown
           a.drop-fix#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
             span.caret
@@ -41,11 +39,13 @@ nav.navbar.navbar-default
             li
               a(href='/promocion') Promo romantica
         li
+          a(href='/ubicacion') Ubicacion
+        li
           a(href='/servicios') Servicios
         li
           a(href='/imagenes') Imagenes
         li
-          a(href='contacto') Contacto
+          a(href='/contacto') Contacto
         li
           a.highlight(href='/reservas') Reserve online
         li.dropdown.fx-flag-nav

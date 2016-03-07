@@ -154,7 +154,7 @@ select {
   top: 0;
   //#Note: fix to top
   &.ftt {
-    margin-top: -17px !important;
+    margin-top: 0 !important;
   }
   .title-top {
     text-shadow: 1px 1px 0 #000;
@@ -318,6 +318,9 @@ select {
     &.o {
       background: none;
       padding: 0;
+      a {
+        background-color: transparent !important;
+      }
     }
     background: $main-bg-dark-trans;
     padding: 15px;
@@ -734,7 +737,8 @@ select {
 .amenities {
   background: #ededed;
   padding: 15px 0;
-  margin-left: 0px;
+  margin-left: 0;
+  margin-right: 0;
   color: $mid-grey;
 
   li .icon {
@@ -777,7 +781,7 @@ select {
     background: none;
     @include transition(all, .4s, ease-in, 0s);
     &:hover {
-      @include bshadow(0, 0, 10px, $white);
+      @include bshadow(0, 0, 10px, $main-dark);
     }
     &>.panel-heading {
       background-color: $thead2;
@@ -795,8 +799,8 @@ select {
         position: absolute;
       }
       .fa-stack.fa-lg.icon {
-        top: 150px;
-        right: 20px;
+        bottom: 25px;
+        right: 25px;
         color: orange;
       }
     }
@@ -1117,3 +1121,5 @@ select {
     font-weight: 300;
   }
 }
+
+@import "font-awesome/font-awesome.scss";

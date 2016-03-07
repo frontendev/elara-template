@@ -3,8 +3,7 @@ extends layout
 block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
   link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
-  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='/stylesheets/blueimp-gallery.min.css')
   title HTL Suica Hotel & Resort - Home
 
 block nav
@@ -22,7 +21,7 @@ block content
   
   div.container.content.styleb
     div.row
-      div.col-sm-7
+      div.col-xs-12.col-sm-7
         p.title #{hotel.name} 
         p.subtitle #{hotel.subtitle} 
         p.description
@@ -32,19 +31,19 @@ block content
         p.description
           span.bold #{hotel.name} 
           | se compromete a garantizarte una estancia satisfactoria y confortable en Buenos Aires.
-      div.col-sm-5.mtb20
+      div.hidden-xs.col-sm-5.mtb20
         div.gallery.o
           a.img-rhh-t2(style='background-image: url(images/vista.jpg);' href='/images/vista.jpg' title="Vista de habitacion" data-gallery)
   //- Location y amenities
   div.container.content
     div.row
-      div.col-sm-6.col-md-8
+      div.col-sm-12.col-md-8
         p.sTitle Ubicacion
         p.sSubtitle #{hotel.address}
         div.embed-responsive.embed-responsive-16by9
           div#map
   
-      div.col-sm-6.col-md-4
+      div.col-sm-12.col-md-4.mb30
         p.sTitle Amenities
         p.sSubtitle Servicios incluidos
         div.row.amenities
@@ -120,26 +119,26 @@ block content
   div.container-fluid.promo
     div.container.pt30
       // Promos title + line
-      div.col-md-4.line
-      div.col-md-4
+      div.hidden-xs.col-sm-3.col-md-4.line
+      div.col-xs-12.col-sm-6.col-md-4
         p.title Promociones
-      div.col-md-4.line
+      div.hidden-xs.col-sm-3.col-md-4.line
       div.clearfix
         
       // Promos
       // Promo #1
-      div.col-md-3
+      div.col-sm-6.col-md-3
         a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
               span Viajé en Familia
             div.panel-body
-              img.img-responsive(src='images/promo/family.jpg' alt='')
+              img.img-responsive(src='images/promo/family.png' alt='')
               span.fa-stack.fa-lg.icon
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #2
-      div.col-md-3
+      div.col-sm-6.col-md-3
         a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
@@ -150,7 +149,7 @@ block content
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #3
-      div.col-md-3
+      div.col-sm-6.col-md-3
         a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
@@ -161,7 +160,7 @@ block content
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
       // Promo #4
-      div.col-md-3
+      div.col-sm-6.col-md-3
         a.clean(href='/promocion')
           div.panel.panel-info
             div.panel-heading
@@ -231,12 +230,19 @@ block content
               p
                 a.btn.btn-info(href='/habitacion' role='button') Ver más  
   include gallery.jade
+  include mixins.jade
+  +modal('Amenities incluidos', 'amenities-inc')
+    include inc-amenities.jade
+
+  //- Modal opcional
+  +modal('Amenities opcionales', 'amenities-opt')
+    include opt-amenities.jade
   
 block scripts   
-  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
-  script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
-  script(type='text/javascript' src='javascripts/datepicker-e.js')
-  script(type='text/javascript' src='javascripts/index-map.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')
+  script(type='text/javascript' src='/javascripts/index-map.js')
   script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?callback=initMap' async defer)
-  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
-  script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')

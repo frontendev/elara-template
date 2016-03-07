@@ -107,6 +107,14 @@
       vertical-align: middle;
     }
   }
+  .shape-para {
+    width: 60%;
+    left: -9%;
+  }
+  .shape-para-o {
+    width: 60%;
+    left: -10%;
+  }
 }
 
 //- ================================
@@ -121,6 +129,40 @@
         color: $orange;
       }
     }
+    .shape-para {
+      width: 50%;
+      left: -9%;
+    }
+    .shape-para-o {
+      width: 50%;
+      left: -10%;
+    }
+ }
+//- ================================
+//- ======== 1200px and less
+//- ================================
+@media (max-width: 1200px) {
+  .navbar-default .navbar-nav>li>a, {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding:10px 3px;
+      &:hover {
+        color: red;
+      }
+    }
+ }
+//- ================================
+//- ======== 1200px and more
+//- ================================
+@media (min-width: 1200px) {
+  .shape-para {
+    width: 45%;
+    left: -11%;
+  }
+  .shape-para-o {
+    width: 45%;
+    left: -12%;
+  }
  }
 
  //- ================================
@@ -151,25 +193,10 @@
 @media (min-width: 1420px) {
   .shape-para {
   	width: 50%;
-    position: absolute;
-  	height: 100%;
     left: -9%;
-    min-height: 100%;
-    z-index: 0;
-  	-webkit-transform: skew(-12deg);
-  	   -moz-transform: skew(-12deg);
-  	     -o-transform: skew(-12deg);
-  	background: transparentize($main-light, .3);
   }
   .shape-para-o {
   	width: 50%;
-    position: absolute;
-  	height: 100%;
     left: -10%;
-    min-height: 100%;
-  	-webkit-transform: skew(-12deg);
-  	   -moz-transform: skew(-12deg);
-  	     -o-transform: skew(-12deg);
-  	background: $main-light;
   }
 }

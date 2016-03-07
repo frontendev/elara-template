@@ -1,0 +1,35 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/datepicker.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
+  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
+  title Ubicacion - HTL Suica Hotel & Resort 
+  
+block nav
+  include nav.jade
+
+block content
+  
+  // Search N
+  include search_n.jade
+  
+  //Habitaciones
+  div.container.content.styleb
+    div.row
+      div.col-xs-12
+        p.sTitle Landing en construccion
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+block scripts
+  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')
+  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')

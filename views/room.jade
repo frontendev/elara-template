@@ -3,8 +3,7 @@ extends layout
 block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
   link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
-  link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='/stylesheets/blueimp-gallery.min.css')
   title Habitacion - HTL Suica Hotel & Resort 
   
 block nav
@@ -148,74 +147,12 @@ block content
 
   include mixins.jade
   +modal('Amenities incluidos', 'amenities-inc')
-    ul.list-unstyled.exp-list-l.amenities
-      li
-        i.fa.fa-wifi.fa-lg.icon
-        span.amt-name
-          | Wi-Fi
-      li
-        i.fa.fa-futbol-o.fa-lg.icon
-        span.amt-name
-          | Cancha de Futbol
-      li
-        i.fa.fa-bicycle.fa-lg.icon
-        span.amt-name
-          | Bicicletas
-      li
-        i.fa.fa-television.fa-lg.icon
-        span.amt-name
-          | TV por Cable
-      li
-        i.fa.fa-shopping-basket.fa-lg.icon
-        span.amt-name
-          | Shoppings
-      li
-        i.fa.fa-glass.fa-lg.icon
-        span.amt-name
-          | Bar
-      li
-        i.fa.fa-ticket.fa-lg.icon
-        span.amt-name
-          | Eventos
-      li
-        i.fa.fa-wheelchair.fa-lg.icon
-        span.amt-name
-          | Sillas de ruedas
+    include inc-amenities.jade
+
   //- Modal opcional
   +modal('Amenities opcionales', 'amenities-opt')
-    ul.list-unstyled.exp-list-l.amenities
-      li
-        i.fa.fa-wifi.fa-lg.icon
-        span.amt-name
-          | Wi-Fi
-      li
-        i.fa.fa-futbol-o.fa-lg.icon
-        span.amt-name
-          | Cancha de Futbol
-      li
-        i.fa.fa-bicycle.fa-lg.icon
-        span.amt-name
-          | Bicicletas
-      li
-        i.fa.fa-television.fa-lg.icon
-        span.amt-name
-          | TV por Cable
-      li
-        i.fa.fa-shopping-basket.fa-lg.icon
-        span.amt-name
-          | Shoppings
-      li
-        i.fa.fa-glass.fa-lg.icon
-        span.amt-name
-          | Bar
-      li
-        i.fa.fa-ticket.fa-lg.icon
-        span.amt-name
-          | Eventos
-      li
-        i.fa.fa-wheelchair.fa-lg.icon
-        span.amt-name
-          | Sillas de ruedas
+    include opt-amenities.jade
+    
 block scripts
   script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
   script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')
