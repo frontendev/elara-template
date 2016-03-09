@@ -50,10 +50,12 @@
 @mixin img-box-square {
   background-color: transparentize($main-dark, .88);
   display: block;
-  height: 242.5px !important;
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-size: 135%;
   cursor: zoom-in;
   @include transition (all, 1s, linear, 0.2s);
+  &:hover {
+    @include bshadow(0,0, 8px, $main);
+  }
 }

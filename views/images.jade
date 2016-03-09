@@ -24,9 +24,9 @@ block content
           |Conoce el hotel a traves de las imagenes que te mostramos en esta sección. 
           |Este es un texto de relleno cuyo contenido son estas mismas palabras. 
           |La idea del mensaje es justamente lo que quiere decir. Gracias por su atención.
-      div.col-xs-6
+      
+      div.col-xs-12.col-sm-6
         div.gallery
-          //-galler for 3 images
           p.sSubtitleb Interior del Hotel
           div.row
             div.col-xs-6.pr7
@@ -35,40 +35,41 @@ block content
               a.img-rhh-t(style='background-image: url(images/images/hab2.jpg);' href='/images/images/hab1.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7
               a.img-rhh-b(style='background-image: url(images/images/hab3.jpg);' href='/images/images/hab3.jpg' title="Vista de habitacion" data-gallery)
-      div.col-xs-6
+
+      div.col-xs-12.col-sm-6
         div.gallery
-          //-galler for 2 images
           p.sSubtitleb Arquitectura
           div.row
             div.col-xs-6.pr7
-              a.img-fh(style='background-image: url(images/images/arq1.jpg);' href='/images/images/arq1.jpg' title="Vista de habitacion" data-gallery)
+              a.img-fh(style='background-image: url(/images/images/arq1.jpg);' href='/images/images/arq1.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7
-              a.img-fh(style='background-image: url(images/images/arq2.jpg);' href='/images/images/arq2.jpg' title="Vista de habitacion" data-gallery)
+              a.img-fh(style='background-image: url(/images/images/arq2.jpg);' href='/images/images/arq2.jpg' title="Vista de habitacion" data-gallery)
                 
-      div.col-xs-6.mtb20
+      div.col-xs-12.col-sm-6.mt30
         div.gallery
-          p.sSubtitleb Habitaciones
+          p.sSubtitleb Habitaciaones
           div.row
             div.col-xs-6.pr7
-              a.img-rhh-t(style='background-image: url(images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-t(style='background-image: url(/images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7
-              a.img-rhh-b.mt(style='background-image: url(images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-b.mt(style='background-image: url(/images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pr7.mt15
-              a.img-rhh-t(style='background-image: url(images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-t(style='background-image: url(/images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7.mt15
-              div.img-rhh-b.mt(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
-      div.col-xs-6.mtb20
+              div.img-rhh-b.mt(style='background-image: url(/images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
+      
+      div.col-xs-12.col-sm-6.mt30
         div.gallery
           p.sSubtitleb Interiores
           div.row
             div.col-xs-6.pr7
-              a.img-rhh-t(style='background-image: url(images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-t(style='background-image: url(/images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7
-              a.img-rhh-b.mt(style='background-image: url(images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-b.mt(style='background-image: url(/images/images/hab5.jpg);' href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pr7.mt15
-              a.img-rhh-t(style='background-image: url(images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-t(style='background-image: url(/images/images/hab6.jpg);'  href='/images/images/hab5.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7.mt15
-              a.img-rhh-b.mt(style='background-image: url(images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-b.mt(style='background-image: url(/images/images/hab7.jpg);' href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7.more
               a.img-rhh-b(href='/images/images/hab6.jpg' title="Vista de habitacion" data-gallery)
                 p.num 5+
@@ -99,9 +100,9 @@ block content
                 i.fa.fa-caret-right
   include gallery.jade
   //Footer
-  block scripts
-    script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
-    script(type='text/javascript' src='javascripts/bootstrap-image-gallery.min.js')
-    script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
-    script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
-    script(type='text/javascript' src='javascripts/datepicker-e.js')
+block scripts
+  script(type='text/javascript' src='/javascripts/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')

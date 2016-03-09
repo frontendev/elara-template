@@ -18,12 +18,8 @@
 //- ================================
 @media (max-width: 400px) {
   .search-box {
-    .title-top {
-      letter-spacing: 2px;
-      color: red;
-    }
-    .title-sub {
-      letter-spacing: 2px;
+    .title-top , .title-sub {
+      text-transform: uppercase;
     }
   }
 }
@@ -49,18 +45,29 @@
       &.right {
         padding-left: 8px;
         .fa {
-          color: red;
           right: 14px;
         }
       }
     }
+  }
+  .promo {
+    .btn-promo {
+      font-size: 18px;
+      padding: 10px 10px 8px;
+      letter-spacing: 0px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  .media-cont .thumbnail {
+    clear: both;
   }
 }
 
 //- ================================
 //- ======== 768px and up
 //- ================================
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px){
   .navbar {
     @include border-radius (0,0);
   }
@@ -115,12 +122,37 @@
     width: 60%;
     left: -10%;
   }
+  .media-cont {
+    .thumbnail {
+      &.fw-top {
+        .caption {
+          margin-top: -11px;
+          color: green;
+          &.to {
+            margin-top: -46px;
+          }
+        }
+      }
+    }
+  }
+  .gallery {
+    .img-fh {
+      height: 426px;
+    }
+    .img-rhh-t, .img-rhh-t2, .img-rhh-b {
+      height: 205.5px !important;
+      color: yellow;
+    }
+    .more {
+      margin-top: -221px;
+    }
+  }
 }
 
 //- ================================
 //- ======== 992px and up
 //- ================================
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .navbar-default .navbar-nav>li>a, {
     text-transform: uppercase;
     font-weight: 300;
@@ -136,6 +168,35 @@
     .shape-para-o {
       width: 50%;
       left: -10%;
+    }
+    .masonry-init {
+      min-height: 203px;
+    }
+    //- Only for /promotions
+    .media-cont {
+      .thumbnail {
+        &.fw-top {
+          .caption {
+            margin-top: -50px;
+            color: red;
+            &.to {
+              margin-top: -85px;
+            }
+          }
+        }
+      }
+    }
+    .gallery {
+      .img-fh {
+        height: 426px;
+      }
+      .img-rhh-t, .img-rhh-t2, .img-rhh-b {
+        height: 205.5px !important;
+        color: red;
+      }
+      .more {
+        margin-top: -221px;
+      }
     }
  }
 //- ================================
@@ -162,6 +223,29 @@
   .shape-para-o {
     width: 45%;
     left: -12%;
+  }
+  //- Only for /promotions
+  .media-cont {
+    .thumbnail {
+      &.fw-top {
+        .caption {
+          margin-top: 0;
+          color: red !important;
+        }
+      }
+    }
+  }
+  .gallery {
+    .img-fh {
+      height: 500px;
+    }
+    .img-rhh-t, .img-rhh-t2, .img-rhh-b {
+      height: 242.5px;
+      color: green;
+    }
+    .more {
+      margin-top: -257px;
+    }
   }
  }
 

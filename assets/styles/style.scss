@@ -7,14 +7,14 @@
 @import "color";
 @import "_bootstrap.scss";
 @import "mixins";
-@import "fonts";
 @import "nav";
+@import "fonts";
 @import "paddings";
 @import "margins";
 @import "bubble";
 @import "buttons";
+@import "gallery";
 @import "footer";
-@import "media-queries";
 
 $img_path : '../images/';
 
@@ -312,87 +312,6 @@ select {
       color: $mid-grey;
       position: relative;
       top: -2px;
-    }
-  }
-  .gallery {
-    &.o {
-      background: none;
-      padding: 0;
-      a {
-        background-color: transparent !important;
-      }
-    }
-    background: $main-bg-dark-trans;
-    padding: 15px;
-    .left {
-      padding: 0 7.5px 0 0;
-      margin-bottom: 15px;
-      &.last {
-        margin-bottom: 0;
-      }
-    }
-    .right {
-      padding: 0 0 0 7.5px;
-    }
-    //img left full height
-    .img-fh {
-      background: transparentize($main-dark, .88);
-      width: 100%;
-      display: block;
-      overflow: hidden;
-      height: 500px !important;
-      background-position: 0% 0%;
-      background-repeat: no-repeat;
-      cursor: zoom-in;
-      @include transition (all, 2.5s, linear, 0.4s);
-      &:hover {
-        @include bshadow(0,0, 8px, $main);
-        background-position: 50% 0%;
-      }
-    }
-    //img right half height bottotm
-    .img-rhh-t {
-      @include img-box-square;
-      &:hover {
-        @include bshadow(0,0, 8px, $main);
-        background-position: 50% 0%;
-      }
-    }
-    .img-rhh-t2 {
-      @include img-box-square;
-      &:hover {
-        @include bshadow(0,0, 8px, $main);
-      }
-    }
-    //img right half height bottotm
-    .img-rhh-b {
-      @include img-box-square;
-      margin-top:15px;
-      &.mt {
-        margin-top: 0 !important;
-      }
-      &:hover {
-        @include bshadow(0,0, 8px, $main);
-        background-position: 50% 0%;
-      }
-    }
-    .more {
-      position: relative;
-      margin-top: -257px;
-      float: right;
-      .img-rhh-b {
-        cursor: zoom-in;
-        background-color: transparentize($main-dark, .5);
-        &:hover {
-          text-decoration: none;
-        }
-        .num {
-          color: white;
-          text-align: center;
-          font-size: 36px;
-          padding-top: 85px;
-        }
-      }
     }
   }
   // Made for results | checkout-s1 | checkout-s2
@@ -829,13 +748,13 @@ select {
 // Rooms
 .media-cont {
   margin-bottom: 15px;
+  position: relative;
   .thumbnail {
+    position: relative;
     padding: 10px;
     -webkit-transition: all .5s;
     transition: all .5s;
     @include border-radius (0);
-
-
     &:hover {
       @include bshadow(0,0, 8px, $mid-grey);
     }
@@ -843,7 +762,7 @@ select {
     &.fw-top {
       padding: 0;
       border: none;
-      .top-img {
+      .top-media-img {
         height: 230px;
         overflow: hidden;
         img {
@@ -855,15 +774,17 @@ select {
         padding: 10px;
         border: 1px solid transparentize(#0965ff, .4);
         border-top: none;
-        margin-top: -35px;
-
-        .title {
+        // For title-over images
+        &.to {
+          margin-top: -35px;
+        }
+        .title-over {
           @extend .subtitle;
           z-index: 2000 !important;
           color: $white;
           padding: 5px 10px;
           position: relative;
-          margin: -45px -11px 9px;
+          margin: 1px -11px 9px;
           background-color: transparentize(#0965ff, .4);
         }
       }
@@ -1122,4 +1043,6 @@ select {
   }
 }
 
+
 @import "font-awesome/font-awesome.scss";
+@import "media-queries";

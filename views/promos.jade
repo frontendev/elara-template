@@ -10,8 +10,12 @@ block nav
 
 block content
   
-  // Search N
-  include search_n.jade
+  div.hidden-xs
+    // Search N
+    include search_n.jade
+  div.visible-xs
+    // Search N
+    include search.jade
   
   // Section Description
   div.container.content.styleb
@@ -20,14 +24,14 @@ block content
         p.sTitle Promociones
     div.row.grid
       // Room #1  
-      div.col-md-4.media-cont.grid-item
+      div.col-sm-6.col-md-4.media-cont.grid-item
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
-              img.img-responsive(src='images/promo/cuotas.jpg' alt='Loft Doble')
-          div.caption
+              img.img-responsive(src='images/promo/cuotas.png' alt='Loft Doble')
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title Promo Tarjeta de Crédito 
+              p.title-over Promo Tarjeta de Crédito 
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Pagando tu estadía con tarjeta de crédito obtén un 20% de descuento en la tarifa. Contacta a nuestro departamento de reservas para solicitar esta promoción.
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -53,14 +57,14 @@ block content
                 a.btn.btn-warning.btn-left-double(href='/reservas' role='button') Llamar 
                 a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar      
       // Room #2  
-      div.col-md-4.media-cont.grid-item 
+      div.col-sm-6.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
               img.img-responsive(src='images/promo/family.png' alt='Loft Doble')
-          div.caption
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title Promo Familiar (1 menor gratis)
+              p.title-over Promo Familiar (1 menor gratis)
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -85,14 +89,14 @@ block content
               div.col-xs-6
                 a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
       // Room #3  
-      div.col-md-4.media-cont.grid-item 
+      div.col-sm-6.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
-              img.img-responsive(src='images/promo/romance.jpg' alt='Loft Doble')
-          div.caption
+              img.img-responsive(src='images/promo/romance.png' alt='Loft Doble')
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title Promo Romantica
+              p.title-over Promo Romantica
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -117,14 +121,14 @@ block content
               div.col-xs-6
                 a.btn.btn-warning.btn-right-single(href='/reservas' role='button') Llamar
       // Room #4  
-      div.col-md-4.media-cont.grid-item 
+      div.col-sm-6.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
-              img.img-responsive(src='images/promo/cuotas.jpg' alt='Loft Doble')
-          div.caption
+              img.img-responsive(src='images/promo/cuotas.png' alt='Loft Doble')
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title Early Booking Bonus (25% off)
+              p.title-over Early Booking Bonus (25% off)
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Pagando tu estadía con tarjeta de crédito obtén un 20% de descuento en la tarifa. Contacta a nuestro departamento de reservas para solicitar esta promoción.
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -151,14 +155,14 @@ block content
                 a.btn.btn-info.btn-right-double(href='/reservas' role='button') Reservar
             
       // Room #5  
-      div.col-md-4.media-cont.grid-item 
+      div.col-sm-6.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
               img.img-responsive(src='images/promo/family.png' alt='Loft Doble')
-          div.caption
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title 12 Cuotas sin interés
+              p.title-over 12 Cuotas sin interés
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -183,14 +187,14 @@ block content
               div.col-xs-6
                 a.btn.btn-info.btn-right-single(href='/reservas' role='button') Reservar
       // Room #5  
-      div.col-md-4.media-cont.grid-item 
+      div.col-sm-6.col-md-4.media-cont.grid-item 
         div.thumbnail.fw-top
-          div.top-img
+          div.top-media-img
             a(href='/promocion' style='text-decoration: none;')
               img.img-responsive(src='images/promo/family.png' alt='Loft Doble')
-          div.caption
+          div.caption.to
             a(href='/promocion' style='text-decoration: none;')
-              p.title 12 Cuotas sin interés
+              p.title-over 12 Cuotas sin interés
               p.validity Del 30 de Febrero al 17 de Marzo
               p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
               p.conditions Sujeto a disponibilidad. No acumulable con otras promociones. Cancelacion gratuita
@@ -217,8 +221,8 @@ block content
       div.col-md-4.media-cont.grid-item 
                 
 block scripts
-  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
-  script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
-  script(type='text/javascript' src='javascripts/datepicker-e.js')
-  script(type='text/javascript' src='javascripts/masonry.pkgd.min.js')
-  script(type='text/javascript' src='javascripts/masonry.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')  
+  script(type='text/javascript' src='/javascripts/masonry.pkgd.min.js')
+  script(type='text/javascript' src='/javascripts/masonry.js')

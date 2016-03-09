@@ -39,6 +39,10 @@ router.get('/reservas', function(req, res, next) {
 router.get('/habitaciones', function(req, res, next) {
   res.render('rooms', { title: 'Habitaciones - HTL Suica Hotel & Resort', url : "/habitaciones"});
 });
+/* Habitaciones */
+router.get('/habitaciones2', function(req, res, next) {
+  res.render('rooms2', { title: 'Test masonry - HTL Suica Hotel & Resort', url : "/habitaciones"});
+});
 
 /* Habitacion */
 router.get('/habitacion', function(req, res, next) {

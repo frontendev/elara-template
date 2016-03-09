@@ -24,10 +24,10 @@ block content
     div.row.grid
       // Room #1  
       div.col-sm-6.col-md-4.media-cont.grid-item
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room1.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room1.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
               p
@@ -42,10 +42,10 @@ block content
                 a.btn.btn-info(href='/habitacion' role='button') Más info     
       // Room #2  
       div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room2.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room3.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
               p
@@ -61,29 +61,29 @@ block content
                 a.btn.btn-info(href='/habitacion' role='button') Más info 
       // Room #3  
       div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room3.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room3.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
-              p 
-                span.rm-title Loft Triple
-                span.rm-size (38m²) 
+              p
+                span.rm-title Loft triple 
+                span.rm-size (42m²) 
                 span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
                   i.fa.fa-user &nbsp;
                   i.fa.fa-user &nbsp;
-                  i.fa.fa-user 
+                  i.fa.fa-user
               p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
             div.row.ptb10
               div.col-xs-6
                 a.btn.btn-info(href='/habitacion' role='button') Más info 
       // Room #4  
       div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room4.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room4.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
               p
@@ -101,10 +101,10 @@ block content
             
       // Room #5  
       div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room5.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room5.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
               p 
@@ -120,10 +120,10 @@ block content
                 a.btn.btn-info(href='/habitacion' role='button') Más info 
       // Room #5  
       div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
+        div.thumbnail
           div.top-media-img
             a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room6.png' alt='Loft Doble')
+              img.masonry-init(src='/images/room/room6.png' alt='Loft Doble')
           div.caption
             a(href='/habitacion' style='text-decoration: none;')
               p
@@ -140,8 +140,8 @@ block content
                 a.btn.btn-info(href='/habitacion' role='button') Más info 
                 
 block scripts
-  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
-  script(type='text/javascript' src='javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
-  script(type='text/javascript' src='javascripts/datepicker-e.js')
-  script(type='text/javascript' src='javascripts/masonry.pkgd.min.js')
-  script(type='text/javascript' src='javascripts/masonry.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
+  script(type='text/javascript' src='/javascripts/datepicker-e.js')
+  script(type='text/javascript' src='/javascripts/masonry.pkgd.min.js')
+  script(type='text/javascript' src='/javascripts/masonry.js')

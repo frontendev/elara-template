@@ -1,0 +1,73 @@
+.gallery {
+  &.o {
+    background: none;
+    padding: 0;
+    a {
+      background-color: transparent !important;
+    }
+  }
+  background: $main-bg-dark-trans;
+  padding: 15px;
+  .left {
+    padding: 0 7.5px 0 0;
+    margin-bottom: 15px;
+    &.last {
+      margin-bottom: 0;
+    }
+  }
+  .right {
+    padding: 0 0 0 7.5px;
+  }
+  //img left full height
+  .img-fh {
+    background: transparentize($main-dark, .88);
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    cursor: zoom-in;
+    @include transition (all, 2.5s, linear, 0.4s);
+    &:hover {
+      background-position: 50% 0%;
+    }
+  }
+  //img right half height bottom
+  .img-rhh-t {
+    @include img-box-square;
+    &:hover {
+      background-position: 50% 0%;
+    }
+  }
+  .img-rhh-t2 {
+    @include img-box-square;
+  }
+  //img right half height bottotm
+  .img-rhh-b {
+    @include img-box-square;
+    margin-top:15px;
+    &.mt {
+      margin-top: 0 !important;
+    }
+    &:hover {
+      background-position: 50% 0%;
+    }
+  }
+  .more {
+    position: relative;
+    float: right;
+    .img-rhh-b {
+      cursor: zoom-in;
+      background-color: transparentize($main-dark, .5);
+      &:hover {
+        text-decoration: none;
+      }
+      .num {
+        color: white;
+        text-align: center;
+        font-size: 36px;
+        padding-top: 85px;
+      }
+    }
+  }
+}

@@ -4,4 +4,4 @@ $(document).ready(function(){
     percentPosition: true,
     gutter: 0
   });
-})
+});
