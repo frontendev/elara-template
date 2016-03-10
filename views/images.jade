@@ -4,7 +4,6 @@ block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
   link(rel='stylesheet', href='/stylesheets/bootstrap-image-gallery.min.css')
   link(rel='stylesheet', href='//blueimp.github.io/Gallery/css/blueimp-gallery.min.css')
-  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
   title Imágenes - HTL Suica Hotel & Resort
   
 block nav
@@ -12,8 +11,12 @@ block nav
 
 block content
   
-  // Search N
-  include search_n.jade
+  div.hidden-xs
+    // Search N
+    include search_n.jade
+  div.visible-xs
+    // Search N
+    include search.jade
   
   //Habitaciones
   div.container.content.styleb
@@ -25,16 +28,18 @@ block content
           |Este es un texto de relleno cuyo contenido son estas mismas palabras. 
           |La idea del mensaje es justamente lo que quiere decir. Gracias por su atención.
       
-      div.col-xs-12.col-sm-6
+      div.col-xs-12.col-sm-6.mb30-xs
+        div.gallery-m
+          p You need a larger resolution to view this component
         div.gallery
           p.sSubtitleb Interior del Hotel
           div.row
             div.col-xs-6.pr7
-              a.img-fh(style='background-image: url(images/images/hab1.jpg);' href='/images/images/hab1.jpg' title="Vista de habitacion" data-gallery)
+              a.img-fh(style='background-image: url(/images/images/hab1.jpg);' href='/images/images/hab1.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7 
-              a.img-rhh-t(style='background-image: url(images/images/hab2.jpg);' href='/images/images/hab1.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-t(style='background-image: url(/images/images/hab2.jpg);' href='/images/images/hab1.jpg' title="Vista de habitacion" data-gallery)
             div.col-xs-6.pl7
-              a.img-rhh-b(style='background-image: url(images/images/hab3.jpg);' href='/images/images/hab3.jpg' title="Vista de habitacion" data-gallery)
+              a.img-rhh-b(style='background-image: url(/images/images/hab3.jpg);' href='/images/images/hab3.jpg' title="Vista de habitacion" data-gallery)
 
       div.col-xs-12.col-sm-6
         div.gallery
@@ -47,7 +52,7 @@ block content
                 
       div.col-xs-12.col-sm-6.mt30
         div.gallery
-          p.sSubtitleb Habitaciaones
+          p.sSubtitleb Habitaciones
           div.row
             div.col-xs-6.pr7
               a.img-rhh-t(style='background-image: url(/images/images/hab4.jpg);' href='/images/images/hab4.jpg' title="Vista de habitacion" data-gallery)

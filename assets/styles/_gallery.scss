@@ -27,7 +27,7 @@
     background-position: 0% 0%;
     background-repeat: no-repeat;
     cursor: zoom-in;
-    @include transition (all, 2.5s, linear, 0.4s);
+    @include transition (background-position, 2s, linear, 0.2s);
     &:hover {
       background-position: 50% 0%;
     }
@@ -66,8 +66,10 @@
         color: white;
         text-align: center;
         font-size: 36px;
-        padding-top: 85px;
       }
     }
   }
+}
+.gallery-m {
+  display: none;
 }

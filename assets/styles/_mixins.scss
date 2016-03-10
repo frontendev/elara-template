@@ -54,7 +54,7 @@
   background-position: 0% 0%;
   background-size: 135%;
   cursor: zoom-in;
-  @include transition (all, 1s, linear, 0.2s);
+  @include transition (background-position , 1s, linear, 0.2s);
   &:hover {
     @include bshadow(0,0, 8px, $main);
   }
