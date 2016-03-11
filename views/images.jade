@@ -29,8 +29,10 @@ block content
           |La idea del mensaje es justamente lo que quiere decir. Gracias por su atención.
       
       div.col-xs-12.col-sm-6.mb30-xs
-        div.gallery-m
-          p You need a larger resolution to view this component
+        
+        //-Oculta el componente el resoluciones menores a 320px 
+        include resolution-message.jade
+        
         div.gallery
           p.sSubtitleb Interior del Hotel
           div.row

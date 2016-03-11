@@ -10,6 +10,8 @@
 @import "_bootstrap.scss";
 @import "mixins";
 @import "nav";
+@import "search";
+@import "media";
 @import "fonts";
 @import "paddings";
 @import "margins";
@@ -48,6 +50,10 @@ $img_path : '../images/';
 .fa-main-dark {
   color: $main-dark !important;
 }
+.resolution-message {
+  display: none;
+}
+
 
 select {
   color: $min-grey !important;
@@ -64,122 +70,6 @@ select {
 .p-fix {
   position: relative;
   top: 7px;
-}
-//=================================================
-// Search (large)
-//=================================================
-.search-box {
-  height: 290px;
-  background-color: lighten($orange, 8%);
-  margin: 20px 0;
-  color: $white;
-  .title-top {
-    font-weight: 300;
-    margin-bottom: 0;
-    margin-top: 10px;
-    letter-spacing: 3px;
-  }
-  .title-sub {
-    margin-top: 0;
-    font-weight: 900;
-    letter-spacing: 3px;
-  }
-  .img-price {
-    position: relative;
-    right: 0;
-    top: 15px;
-    width: 85px;
-  }
-  label {
-    font-size: 18px;
-    font-weight: 400;
-  }
-  .label-light {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: $mid-grey;
-  }
-  .form-group {
-    &.left {
-      padding-right: 8px;
-      .fa {
-        right: 7px;
-      }
-    }
-    &.right {
-      padding-left: 8px;
-      .fa {
-        right: 14px;
-      }
-    }
-  }
-  .form-control {
-    height: 40px !important;
-    padding: 6px 0 6px 8px;
-    letter-spacing: 0px;
-    font-size: 15px;
-  }
-  .has-feedback .form-control {
-    padding-right: 27.5px;
-  }
-  .fa-calendar{
-    color: $min-grey;
-    top: 44px !important;
-  }
-  .fa-info {
-    color: $white;
-  }
-  .btn {
-    border-radius: 5px;
-    border-bottom: 4px solid $btn-info-border;
-    &:hover {
-      border-bottom: 4px solid darken($btn-info-border, 15%);
-    }
-  }
-  .btn-lg {
-    padding: 6px 16px;
-  }
-  .checkbox {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-}
-
-// Search (normal)
-.search-box-n {
-  background: transparentize($main-dark, .313);
-  margin: 0 0 5px;
-  padding: 11px 0 0px;
-  color: $white;
-  position: relative;
-  top: 0;
-  //#Note: fix to top
-  &.ftt {
-    margin-top: 0 !important;
-  }
-  .title-top {
-    text-shadow: 1px 1px 0 #000;
-    white-space: nowrap;
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  .form-control {
-    height: 40px !important;
-  }
-  label {
-    font-size: 18px;
-    text-align: right;
-    top: 8px;
-  }
-  .has-feedback .form-control-feedback {
-    color: $min-grey;
-    top: 14px;
-    right: 20px;
-  }
-  .btn-lg {
-    padding: 7px 16px 8px !important;
-  }
 }
 // Mercado Pago - Pago con tarjetas del home
 .mp-box {
@@ -746,144 +636,6 @@ select {
   }
 }
 
-
-// Rooms
-.media-cont {
-  margin-bottom: 15px;
-  position: relative;
-  .thumbnail {
-    position: relative;
-    padding: 10px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    @include border-radius (0);
-    &:hover {
-      @include bshadow(0,0, 8px, $mid-grey);
-    }
-    //full-width image top. Used for promotions landing
-    &.fw-top {
-      padding: 0;
-      border: none;
-      .top-media-img {
-        height: 230px;
-        overflow: hidden;
-        img {
-          position: relative;
-          top: -40px;
-        }
-      }
-      .caption {
-        padding: 10px;
-        border: 1px solid transparentize(#0965ff, .4);
-        border-top: none;
-        // For title-over images
-        &.to {
-          margin-top: -35px;
-        }
-        .title-over {
-          @extend .subtitle;
-          z-index: 2000 !important;
-          color: $white;
-          padding: 5px 10px;
-          position: relative;
-          margin: 1px -11px 9px;
-          background-color: transparentize(#0965ff, .4);
-        }
-      }
-    }
-    .caption {
-      padding: 10px 0 0;
-      font-size: 17px;
-      font-weight:500;
-      color: $min-grey;
-
-      .rm-title {
-        margin-top: 0;
-        color: $brand-info;
-      }
-      .rm-size {
-        letter-spacing: 1px;
-        color: $min-grey;
-      }
-      .ftitle {
-        margin-bottom: 10px;
-        text-decoration: none;
-        display: block;
-
-        .rm-size {
-          @extend .rm-size;
-        }
-        .rm-ocupant {
-          color: $min-grey;
-        }
-        .rm-description {
-          font-weight: 300;
-          color: $mid-grey;
-        }
-      }
-      // Promotions
-      .description {
-        @include title(15px, 300);
-        color: $main-dark;
-      }
-      .validity {
-        @include title(13px, 300);
-        color: lighten($main, 15%);
-        text-align: right;
-        margin-bottom: 5px;
-      }
-      .conditions {
-        @include title(13px, 300);
-        color: $green;
-        line-height: 14px;
-        letter-spacing: 0;
-      }
-      .btn-right-single {
-        position: relative;
-        right: -70px;
-        margin-bottom: 0px;
-      }
-      .btn-left-double {
-        position: relative;
-        right: -15px;
-      }
-      .btn-right-double {
-        float: right;
-        position: relative;
-        right: 5px;
-      }
-      .btn-group.open .dropdown-toggle {
-        box-shadow: none;
-      }
-      .social-menu {
-        .fa-facebook-square {
-          color: #3b5998;
-        }
-        .fa-twitter-square {
-          color:#55acee;
-        }
-        .fa-whatsapp {
-          color: #43d854;
-        }
-        .fa-google-plus-square {
-          color:#dc4e41;
-        }
-      }
-      .btn-share {
-        font-weight: 300;
-        text-decoration: none;
-        color: $mid-grey;
-        background: none;
-        border: none;
-        &.open {
-          background: none;
-          color: red;
-        }
-      }
-    }
-  }
-}
-
 // Suscribe
 .suscribe {
   padding-top: 30px;
@@ -965,23 +717,6 @@ select {
   padding: 15px;
   .subtitle {
     color: $main-dark;
-  }
-  .btn-360 {
-    padding: 6px 12px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    background: none;
-    border: 1px solid;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    .txt {
-      padding-right: 5px;
-      @include title(18px, 700);
-      color: $main-dark;
-    }
-    &:hover {
-      background-color: transparentize($main-dark, .76);
-    }
   }
   .fx-t4 {
     position: relative;

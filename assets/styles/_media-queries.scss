@@ -2,10 +2,10 @@
 //- ======== 375px and less
 //- ================================
 @media (max-width: 319px) {
-  .gallery {
-    display: none;
+  .gallery , .media-cont {
+    display: none !important;
   }
-  .gallery-m {
+  .resolution-message {
     display: block;
   }
 }
@@ -32,7 +32,70 @@
   }
 }
 //- ================================
-//- ======== Between 480px and 666px (This is for you Satan!)
+//- ======== Between 320px and 407px
+//- ================================
+@media (min-width: 320px) and (max-width: 407px) {
+  .media-cont {
+    .thumbnail {
+      clear: both;
+      &.fw-top {
+        .caption {
+          border: none;
+          margin-top: -11px;
+          &.to {
+            margin-top: -60px;
+          }
+          .title-over {
+            margin: 1px -11px 9px;
+            display: none;
+          }
+          // Title Over replace
+          .title-over-r {
+            display: block;
+          }
+        }
+      }
+      .caption {
+        .validity {
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+//- ================================
+//- ======== Between 320px and 407px
+//- ================================
+@media (min-width: 360px) and (max-width: 407px) {
+  .media-cont {
+    .thumbnail {
+      clear: both;
+      &.fw-top {
+        .caption {
+          border: none;
+          margin-top: -11px;
+          &.to {
+            margin-top: 0 !important;
+          }
+          .title-over {
+            margin: 1px -11px 9px;
+            color: navy;
+            display: none;
+          }
+          // Title Over replace
+          .title-over-r {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//- ================================
+//- ======== Between 320px and 489px
 //- ================================
 @media (min-width: 320px) and (max-width: 489px) {
   .gallery {
@@ -51,7 +114,7 @@
   }
 }
 //- ================================
-//- ======== Between 480px and 666px (This is for you Satan!)
+//- ======== Between 320px and 379px
 //- ================================
 @media (min-width: 320px) and (max-width: 379px) {
   .gallery {
@@ -62,7 +125,7 @@
   }
 }
 //- ================================
-//- ======== Between 380px and 479px (This is for you Satan!)
+//- ======== Between 380px and 479px
 //- ================================
 @media (min-width: 380px) and (max-width: 479px) {
   .gallery {
@@ -150,31 +213,36 @@
       margin-bottom: 30px;
     }
   }
-  .media-cont .thumbnail {
-    clear: both;
+  .media-cont {
+    .thumbnail {
+      clear: both;
+      &.fw-top {
+        .caption {
+          margin-top: -11px;
+          &.to {
+            margin-top: -46px;
+          }
+          .title-over {
+            margin: 1px -11px 9px;
+          }
+        }
+      }
+    }
   }
   //- == XS Margins
   .mb30-xs {
     padding-bottom: 30px;
+  }
+  .btn-360 {
+    margin-bottom: 5px; 
   }
 }
 
 //- ================================
 //- ======== 768px and up
 //- ================================
-@media (min-width: 768px) and (max-width: 992px){
-  .navbar {
-    @include border-radius (0,0);
-  }
-  .navbar-default .navbar-nav>li>a, {
-    text-transform: uppercase;
-    font-weight: 300;
-    padding:10px 12px;
-    &:hover {
-      color: $orange;
-    }
-  }
-  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu {
     display: block;
   }
   .dropdown-menu {
@@ -183,8 +251,14 @@
   .dropdown-toggle {
     margin-bottom: 2px;
   }
-  .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{
+  .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle {
     margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px){
+  .navbar-default .navbar-nav>li>a {
+    font-size: 15px;
+    padding: 10px 6px;
   }
   .search-box {
     .form-group {
@@ -222,9 +296,11 @@
       &.fw-top {
         .caption {
           margin-top: -11px;
-          color: green;
           &.to {
             margin-top: -46px;
+          }
+          .title-over {
+            margin: -10px -11px 9px;
           }
         }
       }
@@ -245,19 +321,26 @@
       }
     }
   }
+  .btn-360 {
+    margin-bottom: 5px;
+  }
 }
 
 //- ================================
 //- ======== 992px and up
 //- ================================
+@media (min-width: 992px) {
+  .btn-360 {
+    margin-bottom: 20px;
+  }
+}
+//- ================================
+//- ======== 992px and up
+//- ================================
 @media (min-width: 992px) and (max-width: 1200px) {
-  .navbar-default .navbar-nav>li>a, {
-    text-transform: uppercase;
-    font-weight: 300;
-    padding:10px 12px;
-      &:hover {
-        color: $orange;
-      }
+    .navbar-default .navbar-nav>li>a {
+      font-size: 15px;
+      padding: 10px 6px;
     }
     .shape-para {
       width: 50%;
@@ -276,9 +359,11 @@
         &.fw-top {
           .caption {
             margin-top: -50px;
-            color: red;
             &.to {
               margin-top: -85px;
+            }
+            .title-over {
+              margin: -10px -11px 9px;
             }
           }
         }
@@ -301,19 +386,6 @@
     }
  }
 //- ================================
-//- ======== 1200px and less
-//- ================================
-@media (max-width: 1200px) {
-  .navbar-default .navbar-nav>li>a, {
-    text-transform: uppercase;
-    font-weight: 300;
-    padding:10px 3px;
-      &:hover {
-        color: red;
-      }
-    }
- }
-//- ================================
 //- ======== 1200px and more
 //- ================================
 @media (min-width: 1200px) {
@@ -331,10 +403,16 @@
       &.fw-top {
         .caption {
           margin-top: 0;
-          color: red !important;
+          .title-over {
+            margin: 40px -11px 9px;
+          }
         }
       }
     }
+  }
+  .navbar-default .navbar-nav>li>a {
+    font-size: 17px;
+    padding: 10px;
   }
   .gallery {
     .img-fh {
@@ -352,6 +430,21 @@
       }
     }
   }
+ }
+
+ @media (min-width: 1201px) {
+   .media-cont {
+     .thumbnail {
+       &.fw-top {
+         .caption {
+           margin-top: 0;
+           .title-over {
+             margin: -10px -11px 9px;
+           }
+         }
+       }
+     }
+   }
  }
 
  //- ================================

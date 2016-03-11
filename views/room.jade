@@ -11,20 +11,24 @@ block nav
 
 block content
   
-  // Search N
-  include search_n.jade
+  div.hidden-xs
+    // Search N
+    include search_n.jade
+  div.visible-xs
+    // Search N
+    include search.jade
   
   //Habitaciones
   div.container.content.styleb
     div.row
       div.col-xs-12
         p.sTitle Loft doble superior
-      div.col-xs-6
+      div.col-xs-12.col-sm-6
         div.top-img
-          img.img-responsive(src='images/room/room1.jpg')
-      div.col-xs-6
+          img.img-responsive(src='images/room/room1.png')
+      div.col-xs-12.col-sm-6
         div.card-b
-          div.box-price.pull-right
+          div.box-price.pull-right.hidden-sm.hidden-xs
             p Precio promedio por día
             p.fPrice
               span.dsign $
@@ -36,11 +40,10 @@ block content
             span.subtitle2 49m²
           p.subtitle 1 baño privado con ducha 
           p.subtitle 1 cama Queen Size o camas twin
-          br
+          br.hidden-sm.hidden-xs
           button.btn-360
             span.txt.fx-t4 Tour virtual
             img.pull-right(src='images/room/360.png' alt='Tour 360°')
-          span.subtitle2.fx-t4 Conoce la habitacion antes de reservar
       //Amenities
       div.col-xs-12
         p.sSubtitleb.mb Description
@@ -154,8 +157,8 @@ block content
     include opt-amenities.jade
     
 block scripts
-  script(type='text/javascript' src='//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js')
+  script(type='text/javascript' src='/javascripts/jquery.blueimp-gallery.min.js')
   script(type='text/javascript' src='/javascripts/bootstrap-image-gallery.min.js')
-  script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js')
+  script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
   script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
   script(type='text/javascript' src='/javascripts/datepicker-e.js')

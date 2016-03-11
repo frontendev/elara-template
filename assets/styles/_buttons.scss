@@ -36,3 +36,19 @@
     background: transparentize($black, .2);
   }
 }
+.btn-360 {
+  padding: 6px 12px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background: none;
+  border: 1px solid;
+  @include transition (background-color , 1s, ease-in, 0s);
+  .txt {
+    padding-right: 5px;
+    @include title(18px, 700);
+    color: $main-dark;
+  }
+  &:hover {
+    background-color: transparentize($main-dark, .76);
+  }
+}
