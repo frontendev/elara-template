@@ -2,7 +2,7 @@
   &.o {
     background: none;
     padding: 0;
-    a {
+    .img-rhh-t2 {
       background-color: transparent !important;
     }
   }
@@ -40,6 +40,9 @@
     }
   }
   .img-rhh-t2 {
+    @include img-box-square;
+  }
+  .img-top-room {
     @include img-box-square;
   }
   //img right half height bottotm

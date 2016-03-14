@@ -16,13 +16,25 @@
     }
   }
 }
-
+// Made for results
 .btn-img-more {
   position: absolute;
   bottom: 14px;
 }
+
+// Made for rooms
+.btn-img-more-r {
+  position: relative;
+  padding: 10px 15px;
+  &:link {
+    color: $white !important;
+  }
+  &:link {
+    color: $white !important;
+  }
+}
 .btn-line {
-  background: transparentize($black, .5);
+  background-color: transparentize($black, .5);
   color: $white;
   border: 1px solid $white;
   border-left: none;
@@ -33,7 +45,7 @@
   }
   &:hover {
     color: $white;
-    background: transparentize($black, .2);
+    background-color: transparentize($black, .2);
   }
 }
 .btn-360 {
@@ -51,4 +63,7 @@
   &:hover {
     background-color: transparentize($main-dark, .76);
   }
+}
+.btn-360-o {
+    color: red;
 }

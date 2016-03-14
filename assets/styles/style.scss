@@ -188,6 +188,16 @@ select {
       top: -40px;
     }
   }
+  .top-img-half {
+    height: 260px;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+      position: relative;
+      top: -40px;
+    }
+  }
   // Made for services
   .item-list {
     margin-bottom: 40px;

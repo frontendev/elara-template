@@ -179,6 +179,14 @@
 }
 
 //- ================================
+//- ======== 465px and less
+//- ================================
+@media (max-width: 465px) {
+  .btn-line {
+    background-color: red !important;
+  }
+}
+//- ================================
 //- ======== 768px and less
 //- ================================
 @media (max-width: 768px) {
@@ -229,12 +237,26 @@
       }
     }
   }
-  //- == XS Margins
+  //- == XS Paddings
   .mb30-xs {
     padding-bottom: 30px;
   }
+  .pt30-xs {
+    padding-top: 30px;
+  }
+
+
   .btn-360 {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
+  }
+  .btn-img-more-r {
+    bottom: 40px;
+  }
+  .gallery {
+    .img-top-room {
+      height: 300px;
+      color: green;
+    }
   }
 }
 
@@ -314,6 +336,10 @@
     .img-rhh-t, .img-rhh-t2, .img-rhh-b {
       height: 152.5px;
     }
+    .img-top-room {
+      height: 203px;
+      color: green;
+    }
     .more {
       margin-top: -168px;
       .num {
@@ -324,6 +350,9 @@
   .btn-360 {
     margin-bottom: 5px;
   }
+  .btn-img-more-r {
+    bottom: 40px;
+  }
 }
 
 //- ================================
@@ -332,6 +361,9 @@
 @media (min-width: 992px) {
   .btn-360 {
     margin-bottom: 20px;
+  }
+  .btn-img-more-r {
+    bottom: 40px;
   }
 }
 //- ================================
@@ -377,6 +409,9 @@
       .img-rhh-t, .img-rhh-t2, .img-rhh-b {
         height: 205.5px;
       }
+      .img-top-room {
+        height: 260px;
+      }
       .more {
         margin-top: -221px;
         .num {
@@ -421,7 +456,9 @@
     }
     .img-rhh-t, .img-rhh-t2, .img-rhh-b {
       height: 242.5px;
-      color: green;
+    }
+    .img-top-room {
+      height: 260px;
     }
     .more {
       margin-top: -257px;
