@@ -23,14 +23,19 @@ div.container-fluid.img-cover(style='position:relative;')
             i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
           div.clearfix
           div.col-xs-12.form-group
+            //-PROMOCODER TRIGGER
             div.checkbox
               label.label-light
-                input(type='checkbox')  
+                input.promocode-t(type='checkbox')  
                 | Tengo un promocode 
                 span(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
                   i.fa.fa-info-circle
         div.row
-          div.col-xs-12.form-group.right.hidden-xs.col-sm-6.col-sm-offset-6
+          //-PROMOCODER INPUT
+          div.col-xs-6.col-sm-6.form-group.left.promocode-i.mtn20(style='display: none;')
+            label(for='promocode')
+            input.form-control#promocode(type='text' name='promocode' placeholder='i.e: a6a3y367i')
+          div.col-xs-12.form-group.right.hidden-xs.col-sm-6.pull-right
             a.btn.btn-info.btn-lg.btn-block(href='/reservas') Buscar
           div.col-xs-12.form-group.visible-xs
             a.btn.btn-info.btn-lg.btn-block(href='/reservas') Buscar

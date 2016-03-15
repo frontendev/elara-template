@@ -2,7 +2,7 @@
 // Search (large)
 //=================================================
 .search-box {
-  height: 290px;
+  min-height: 290px;
   background-color: lighten($orange, 8%);
   margin: 20px 0;
   color: $white;
@@ -64,7 +64,7 @@
     color: $white;
   }
   .btn {
-    border-radius: 5px;
+    @include border-radius(0,0);
     border-bottom: 4px solid $btn-info-border;
     &:hover {
       border-bottom: 4px solid darken($btn-info-border, 15%);
@@ -86,7 +86,6 @@
   padding: 11px 0 0px;
   color: $white;
   position: relative;
-  top: 0;
   //#Note: fix to top
   &.ftt {
     margin-top: 0 !important;
@@ -109,6 +108,9 @@
     color: $min-grey;
     top: 14px;
     right: 20px;
+  }
+  .has-feedback .form-control {
+    padding-right: 35px;
   }
   .btn-lg {
     padding: 7px 16px 8px !important;
@@ -144,4 +146,13 @@
 	   -moz-transform: skew(-12deg);
 	     -o-transform: skew(-12deg);
 	background: $main-light;
+}
+
+.bg-search-n {
+  // Set a default value
+  background-image: url($img_path + 'cover/bg-search-1.jpg');
+  background-position: center;
+  @include bg-size(cover);
+  position: relative;
+  margin-bottom: -63px;
 }

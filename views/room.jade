@@ -24,10 +24,14 @@ block content
       div.col-xs-12
         p.sTitle Loft doble superior
       div.col-xs-12.col-sm-6
+        
+        //-Oculta el componente el resoluciones menores a 320px 
+        include resolution-message.jade
+        
         div.gallery.o
           a.img-top-room(style='background-image: url(images/vista.jpg);' href='/images/vista.jpg' title="Vista de habitacion" data-gallery)
           a.btn.btn-line.btn-img-more-r(role='button' href='images/room/room1.png' title='Interior de la habitación' data-gallery)
-            |ver galería       
+            span.hidden-xxs ver galería       
             i.fa.fa-search
           a.btn-360-o.visible-sm.visible-xs
             img(src='images/room/360.png' alt='Tour 360°')

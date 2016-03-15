@@ -4530,7 +4530,7 @@ button.close {
   top: -2px; }
 
 .search-box {
-  height: 290px;
+  min-height: 290px;
   background-color: #ffa929;
   margin: 20px 0;
   color: #fff; }
@@ -4577,7 +4577,9 @@ button.close {
   .search-box .fa-info {
     color: #fff; }
   .search-box .btn {
-    border-radius: 5px;
+    -webkit-border-radius: 0 0;
+    -moz-border-radius: 0 0;
+    border-radius: 0 0;
     border-bottom: 4px solid #0044b7; }
     .search-box .btn:hover {
       border-bottom: 4px solid #00286a; }
@@ -4592,8 +4594,7 @@ button.close {
   margin: 0 0 5px;
   padding: 11px 0 0px;
   color: #fff;
-  position: relative;
-  top: 0; }
+  position: relative; }
   .search-box-n.ftt {
     margin-top: 0 !important; }
   .search-box-n .title-top {
@@ -4611,6 +4612,8 @@ button.close {
     color: #999;
     top: 14px;
     right: 20px; }
+  .search-box-n .has-feedback .form-control {
+    padding-right: 35px; }
   .search-box-n .btn-lg, .search-box-n .btn-group-lg > .btn {
     padding: 7px 16px 8px !important; }
 
@@ -4642,6 +4645,16 @@ button.close {
   -moz-transform: skew(-12deg);
   -o-transform: skew(-12deg);
   background: #00b0fe; }
+
+.bg-search-n {
+  background-image: url("../images/cover/bg-search-1.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -63px; }
 
 .media-cont {
   margin-bottom: 15px;
@@ -4819,6 +4832,9 @@ button.close {
 .mt30 {
   margin-top: 30px; }
 
+.mtn20 {
+  margin-top: -20px; }
+
 .mb {
   margin-bottom: 0; }
 
@@ -4834,6 +4850,9 @@ button.close {
 
 .mln15 {
   margin-left: -15px; }
+
+.mln25 {
+  margin-left: -25px; }
 
 .mtb20 {
   margin-top: 20px;
@@ -7807,8 +7826,18 @@ select {
     .gallery .more .num {
       padding-top: 110px; } }
 @media (max-width: 465px) {
-  .btn-line {
-    background-color: red !important; } }
+  .btn-img-more-r {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    top: 0;
+    bottom: 287px !important;
+    right: 15px;
+    border-right: none;
+    border-top: none; }
+
+  .hidden-xxs {
+    display: none; } }
 @media (max-width: 768px) {
   .navbar-collapse {
     margin-top: 15px; }
@@ -7931,6 +7960,15 @@ select {
     font-size: 15px;
     padding: 10px 6px; }
 
+  .search-box-n {
+    top: -80px;
+    margin-bottom: -80px;
+    padding: 11px 0 20px; }
+    .search-box-n .title-top {
+      border-bottom: 1px solid white;
+      padding-bottom: 10px;
+      margin-bottom: 20px; }
+
   .shape-para {
     width: 50%;
     left: -9%; }
@@ -7959,8 +7997,16 @@ select {
   .gallery .more {
     margin-top: -221px; }
     .gallery .more .num {
-      padding-top: 75px; } }
+      padding-top: 75px; }
+
+  .bg-search-n {
+    min-height: 250px; } }
 @media (min-width: 1200px) {
+  .search-box-n {
+    top: 0;
+    margin: 0 0 5px;
+    padding: 11px 0 0px; }
+
   .shape-para {
     width: 45%;
     left: -11%; }
@@ -7973,6 +8019,9 @@ select {
     margin-top: 0; }
     .media-cont .thumbnail.fw-top .caption .title-over {
       margin: 40px -11px 9px; }
+
+  .bg-search-n {
+    min-height: 210px; }
 
   .navbar-default .navbar-nav > li > a {
     font-size: 17px;

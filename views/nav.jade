@@ -1,6 +1,5 @@
 nav.navbar.navbar-default
   div.container
-    // - Brand and toggle get grouped for better mobile display
     div.navbar-header
       button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#top-nav' aria-expanded='false')
         span.sr-only Menú
@@ -26,6 +25,8 @@ nav.navbar.navbar-default
               a(href='/habitacion') Loft Triple 
             li
               a(href='/habitacion') Loft Triple Superior 
+            li.visible-xs
+              a(href='/habitaciones') Ver todas 
         li.dropdown
           a.drop-fix#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
             span.caret
@@ -38,6 +39,8 @@ nav.navbar.navbar-default
               a(href='/promocion') Promo Familia 
             li
               a(href='/promocion') Promo romantica
+            li.visible-xs
+              a(href='/promocion') Ver todas
         li
           a(href='/ubicacion') Ubicacion
         li

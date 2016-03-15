@@ -10,9 +10,12 @@ block nav
   include nav.jade
   
 block content
-  
-  //Search N
-  include search_n.jade
+  div.hidden-xs
+    // Search N
+    include search_n.jade
+  div.visible-xs
+    // Search N
+    include search.jade
   
   // Section Description
   div.container.content.styleb

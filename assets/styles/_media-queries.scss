@@ -182,8 +182,18 @@
 //- ======== 465px and less
 //- ================================
 @media (max-width: 465px) {
-  .btn-line {
-    background-color: red !important;
+  .btn-img-more-r {
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+    position: absolute;
+    top: 0;
+    bottom: 287px !important;
+    right: 15px;
+    border-right: none;
+    border-top: none;
+  }
+  .hidden-xxs {
+    display: none;
   }
 }
 //- ================================
@@ -374,6 +384,16 @@
       font-size: 15px;
       padding: 10px 6px;
     }
+    .search-box-n {
+      top: -80px;
+      margin-bottom: -80px;
+      padding: 11px 0 20px;
+      .title-top {
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    }
     .shape-para {
       width: 50%;
       left: -9%;
@@ -419,11 +439,19 @@
         }
       }
     }
+    .bg-search-n {
+      min-height: 250px;
+    }
  }
 //- ================================
 //- ======== 1200px and more
 //- ================================
 @media (min-width: 1200px) {
+  .search-box-n {
+    top: 0;
+    margin: 0 0 5px;
+    padding: 11px 0 0px;
+  }
   .shape-para {
     width: 45%;
     left: -11%;
@@ -444,6 +472,9 @@
         }
       }
     }
+  }
+  .bg-search-n {
+    min-height: 210px;
   }
   .navbar-default .navbar-nav>li>a {
     font-size: 17px;

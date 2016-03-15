@@ -2,23 +2,32 @@ div.container-fluid.bg-search-n
 div.container-fluid.search-box-n
   div.container
     div.row
-      div.col-xs-3.pl
-        p.title-top Reserve
+      div.col-sm-12.col-md-12.col-lg-3
+        p.title-top.nowrap Reserve
           span.bold  Online
-      div.col-xs-3.pl
-        label.col-xs-4(for='date_in') Entrada
-        div.col-xs-8.has-feedback
+      div.col-sm-6.col-md-4.col-lg-3
+        label.col-md-4(for='date_in') Entrada
+        div.col-md-8.has-feedback
           input(type='text' class='form-control' id='date_in' name='date_in' placeholder='17/02/2016')
           i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
-      div.col-xs-3.pl
-        label.col-xs-4(for='date_out') Salida
-        div.col-xs-8.has-feedback
+      div.col-sm-6.col-md-4.col-lg-3
+        label.col-md-4(for='date_out') Salida
+        div.col-md-8.has-feedback
           input(type='text' class='form-control' id='date_out' name='date_out' placeholder='28/02/2016')
           i.fa.fa-calendar.fa-lg.form-control-feedback(aria-hidden='true')
-      div.col-xs-2.pl
-        div.col-xs-12.has-feedback(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
-          input.form-control#promocode(type='text' name='promocode'  placeholder='Promocode')
-          i.fa.fa-info-circle.fa-lg.form-control-feedback(aria-hidden='true')
-      div.col-xs-1.pl
-        a.btn.btn-lg.btn-warning(href="/reservas") Buscar
+      div.col-sm-6.col-md-2.col-lg-2(style='display: none;')
+        div.col-md-12.text-center(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
+          |¿ Tiene un promocode?
+      div.col-sm-6.col-md-2.col-lg-2
+        div.col-md-12.text-center(data-toggle='tooltip' data-placement='top' title='Los códigos son entregados por el hotel via email')
+          div.dropdown
+            button.btn.btn-link(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+              |Dropdown trigger
+              span.caret
+            ul.dropdown-menu(aria-labelledby='dLabel')
+              li papa
+      div.col-sm-6.col-md-1.hidden-lg
+        a.btn.btn-lg.btn-warning(href='/reservas') Buscar
+      div.visible-lg.col-lg-1
+        a.btn.btn-lg.btn-warning.mln25(href='/reservas') Buscar
       div.clearfix
