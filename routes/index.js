@@ -1,8 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var soap = require('soap');
 
 /* Home. */
 router.get('/', function(req, res, next) {
+
+    var url = 'https://bs1.booking.com.ar/bookingservice/wsdl/HTL0000001';
+    var args =  {auth:{user: 'HTL0000001', password: '1fc6155a4182984348038f85058e17ca'}, request: {} };
+
+    var url = 'http://10.10.10.61/motorweb/bookingservice/wsdl/LOCAL00001';
+
+    var args =  {auth:{user: 'LOCAL00001', password: '1d9b9e8d477814a44c4bcd91ce90adbf'}, request: {} };
+    soap.createClient(url, function(err, client) {
+         var result = client.siteRequest(args,function(err, client){});
+       console.log('respuesta:' + result);
+       console.log('error' + err);
+    });
+
   res.render('index', { title: 'HTL Suica Hotel & Resort - Home', url : "/" });
 });
 
@@ -65,6 +79,7 @@ router.get('/checkout-s2', function(req, res, next) {
 router.get('/voucher', function(req, res, next) {
   res.render('voucher', { title: 'Voucher de compra - HTL Suica Hotel & Resort', url : "/voucher"});
 });
+
 
 
 module.exports = router;
