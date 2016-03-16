@@ -14,7 +14,8 @@ nav.navbar.navbar-default
     div.collapse.navbar-collapse#top-nav
       ul.nav.navbar-nav.navbar-right
         li.dropdown.onhover
-          a.drop-fix#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
+          a.drop-fix.hidden-xs#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
+          a.visible-xs(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
             span.caret
           ul.dropdown-menu.onhover-menu
             li
@@ -28,7 +29,7 @@ nav.navbar.navbar-default
             li.visible-xs
               a(href='/habitaciones') Ver todas 
         li.dropdown.onhover
-          a.drop-fix#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
+          a.drop-fix.hidden-xs#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
             span.caret
           a.visible-xs(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Promociones 
             span.caret
