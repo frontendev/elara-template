@@ -67,3 +67,18 @@
 .btn-360-o {
     color: red;
 }
+.btn-drop {
+  .btn-link {
+    color: $white;
+    &:hover {
+      color:  $white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .dropdown-menu {
+    color: $min-grey;
+    padding: 10px;
+  }
+}

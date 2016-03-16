@@ -274,16 +274,16 @@
 //- ======== 768px and up
 //- ================================
 @media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu {
+  .onhover:hover .onhover-menu {
     display: block;
   }
-  .dropdown-menu {
+  .onhover-menu {
     margin-top: 0;
   }
   .dropdown-toggle {
     margin-bottom: 2px;
   }
-  .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle {
+  .navbar .dropdown-toggle {
     margin-bottom: 0;
   }
 }
@@ -363,6 +363,22 @@
   .btn-img-more-r {
     bottom: 40px;
   }
+  .bg-search-n {
+    min-height: 258px;
+  }
+  .search-box-n {
+    top: -196px;
+    margin-bottom: -196px;
+    padding: 11px 0 20px;
+    .title-top {
+      border-bottom: 1px solid white;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  .pb15-sm {
+    padding-bottom: 15px;
+  }
 }
 
 //- ================================
@@ -440,7 +456,7 @@
       }
     }
     .bg-search-n {
-      min-height: 250px;
+      min-height: 142px;
     }
  }
 //- ================================

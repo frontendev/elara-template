@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
 	//Dropdownb on hover event
-	$(".dropdown, .btn-group").hover(function(){
-		var dropdownMenu = $(this).children(".dropdown-menu");
+	$(".onhover").hover(function(){
+		//var dropdownMenu = $(this).children(".dropdown-menu");
+		var dropdownMenu = $(this).children(".onhover-menu");
 		if(dropdownMenu.is(":visible")){
 			dropdownMenu.parent().toggleClass("open");
 		}
@@ -25,5 +26,10 @@ $(document).ready(function(){
 	// Fix tooltip issues
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip({container:'body'});
+	});
+
+	// Enables popover
+	$(function () {
+  	$('[data-toggle="popover"]').popover()
 	});
 });
