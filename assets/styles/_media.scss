@@ -1,135 +1,116 @@
-.media-cont {
-  margin-bottom: 15px;
-  position: relative;
-  .thumbnail {
-    position: relative;
-    padding: 10px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    @include border-radius (0);
-    &:hover {
-      @include bshadow(0,0, 8px, $mid-grey);
-    }
-    //full-width image top. Used for promotions landing
-    &.fw-top {
-      padding: 0;
-      border: none;
-      .top-media-img {
-        height: 230px;
-        overflow: hidden;
-        img {
-          position: relative;
-          top: -40px;
-        }
-      }
-      .caption {
-        padding: 10px;
-        border: 1px solid transparentize(#0965ff, .4);
-        border-top: none;
-        // For title-over images
-        &.to {
-          margin-top: -35px;
-        }
-        .title-over {
-          @extend .subtitle;
-          z-index: 2000 !important;
-          color: $white;
-          padding: 5px 10px;
-          position: relative;
-          background-color: transparentize(#0965ff, .4);
-        }
-        .title-over-r {
-          display: none;
-        }
-      }
-    }
-    .caption {
-      padding: 10px 0 0;
-      font-size: 17px;
-      font-weight:500;
-      color: $min-grey;
+.media {
+  // because i got high, because i got high, because i got high :D
+  &.high {
+    border: 1px solid $green;
+    padding: 15px 15px 0;
+    overflow: visible;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
+    .media-title {
+      background: $green;
+      margin: -15px -15px 15px;
+      padding: 5px 15px 5px;
+      position: relative;
+      color: $white;
+      @include title(16px, 500);
+      .txt {
+        padding-left: 50px;
+      }
+    }
+    .fa-stack {
+      position: absolute;
+      top: -11px;
+      left: 10px;
+      .fa-stack-2x {
+        color: green;
+        font-size: 2.5em;
+      }
+      .fa-stack-1x {
+        color: $white;
+        top: 3px;
+        left: 2px;
+      }
+    }
+  }
+  &.reg {
+    border: none;
+    padding: 15px 15px 0;
+    overflow: visible;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .media-left {
+    padding-right: 15px;
+  }
+  .box-price {
+    float: right;
+    @include title(15px, 300);
+    color: $min-grey;
+    text-align: center;
+    padding-left: 15px;
+    .fPrice {
+      position: relative;
+      bottom: 10px;
+      margin-bottom: -8px;
+      .dsign ,  .price {
+        color: $orange;
+      }
+      .dsign  {
+        @include title(21px,400);
+        position: relative;
+        bottom: 3px;
+      }
+      .price {
+        @include title(34px,700);
+      }
+    }
+  }
+  .media-body {
+    .media-heading {
+      @include title(20px, 400);
+      letter-spacing: 1px;
       .rm-title {
-        margin-top: 0;
-        color: $brand-info;
-      }
-      .rm-size {
-        letter-spacing: 1px;
-        color: $min-grey;
-      }
-      .ftitle {
-        margin-bottom: 10px;
-        text-decoration: none;
-        display: block;
-
-        .rm-size {
-          @extend .rm-size;
-        }
-        .rm-ocupant {
-          color: $min-grey;
-        }
-        .rm-description {
-          font-weight: 300;
-          color: $mid-grey;
-        }
-      }
-      // Promotions
-      .description {
-        @include title(15px, 300);
         color: $main-dark;
       }
-      .validity {
-        @include title(13px, 300);
-        color: lighten($main, 15%);
-        text-align: right;
-        margin-bottom: 5px;
+      .rm-size {
+        color: $min-grey;
       }
-      .conditions {
-        @include title(13px, 300);
-        color: $green;
-        line-height: 14px;
-        letter-spacing: 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      font-weight: 300;
+    }
+    .new-price {
+      font-weight: 700;
+    }
+    .reg-price {
+      font-weight: 500;
+    }
+    .table tr td {
+      vertical-align: middle;
+      padding: 5px;
+    }
+    .table {
+      margin-top: 13px;
+      margin-bottom: 10px;
+      thead {
+        background-color: $thead;
+        color: $white;
+        @include title(16px, 400);
+        border-bottom: none;
       }
-      .btn-right-single {
-        position: relative;
-        float: right;;
-        margin-bottom: 0px;
-      }
-      .btn-left-double {
-        float: right;
-        margin-right: 5px;
-      }
-      .btn-right-double {
-        float: right;
-        position: relative;
-        right: 15px;
-      }
-      .btn-group.open .dropdown-toggle {
-        box-shadow: none;
-      }
-      .social-menu {
-        .fa-facebook-square {
-          color: #3b5998;
+      tr {
+        th {
+          border: none;
         }
-        .fa-twitter-square {
-          color:#55acee;
-        }
-        .fa-whatsapp {
-          color: #43d854;
-        }
-        .fa-google-plus-square {
-          color:#dc4e41;
-        }
-      }
-      .btn-share {
-        font-weight: 300;
-        text-decoration: none;
-        color: $mid-grey;
-        background: none;
-        border: none;
-        &.open {
-          background: none;
-          color: red;
+        td {
+          select.form-control {
+            height: 28px;
+          }
+          &.cancel, .fa-info-circle {
+            color: $green;
+          }
         }
       }
     }

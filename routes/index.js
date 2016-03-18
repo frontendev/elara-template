@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var soap = require('soap');
 
 /* Home. */
 router.get('/', function(req, res, next) {

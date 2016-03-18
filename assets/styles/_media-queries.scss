@@ -379,6 +379,14 @@
   .pb15-sm {
     padding-bottom: 15px;
   }
+  .media {
+    .media-object {
+      color: green;
+    }
+  }
+  .total {
+    font-family: 'Roboto Condensed', sans-serif !important;
+  }
 }
 
 //- ================================
@@ -458,6 +466,33 @@
     .bg-search-n {
       min-height: 142px;
     }
+    .media {
+      .media-object {
+        width: 230px;
+      }
+    }
+    .total {
+      .total-title {
+        @include title(18px,500);
+      }
+      .stay {
+        font-size: 20px;
+      }
+      .date {
+        margin-top: 0;
+        .title {
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 0px;
+        }
+      }
+      .section-o {
+        .title-r {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
  }
 //- ================================
 //- ======== 1200px and more
@@ -514,7 +549,27 @@
       }
     }
   }
- }
+  // For images in results
+  .media {
+    .media-object {
+      width: 258px;
+    }
+  }
+  .total {
+    .total-title {
+      @include title(16px,700);
+    }
+    .date {
+      margin-top: -10px;
+    }
+    .section-o {
+      .title-r {
+        font-size: 16px;
+        line-height: inherit;
+      }
+    }
+  }
+}
 
  @media (min-width: 1201px) {
    .media-cont {

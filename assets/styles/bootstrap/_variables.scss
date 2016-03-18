@@ -159,7 +159,8 @@ $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
+//$btn-success-bg:                 $brand-success !default; Edited by Damn
+$btn-success-bg:                 #008b0d !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;

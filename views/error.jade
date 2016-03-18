@@ -1,12 +1,31 @@
 extends layout
 
+block head
+  title Error - HTL Suica Hotel & Resort
+
+block nav
+  include nav.jade  
+
 block content
+  
+  div.hidden-xs
+    include search_n.jade
+  div.visible-xs
+    include search.jade
   .container
-    h1= message
-    h2= error.status
-    h2 la pagina que estas buscando no existe. 
-    |Puede que nunca hay sido creada o el contenido haya sido movido a otra parte
+    .row
+      .col-xs-12.col-sm-6
+        h2 Error 
+          span= error.status  
+          small= message
+        h2 La pagina que estas buscando no existe. 
+        |Puede que nunca haya sido creada o el contenido haya sido movido a otra parte
+        
+      .col-xs-12.col-sm-6
+        br
+        img.img-responsive(src='images/giphy.gif' alt='Loft Doble')
+      .col-xs-12.col-sm-12
+          pre #{error.stack}
     
-    pre #{error.stack}aa
 
 include footer.jade

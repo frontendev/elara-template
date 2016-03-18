@@ -1,0 +1,102 @@
+.total {
+  background: $white;
+  border: 1px solid $orange;
+  .total-title {
+    color: $white;
+    background: $orange;
+    margin: 0 -15px;
+    padding: 8px 15px;
+  }
+  .stay {
+    padding-top: 15px;
+  }
+  .stay, .date .title, .date .dName {
+    color: $mid-grey;
+  }
+  .date {
+    margin-top: -10px;
+    margin-bottom:  10px;
+    .title {
+      background: none;
+      @include title(14px, 300);
+      margin-bottom: -7px;
+    }
+    .dName, .dNum, .dHour {
+      text-transform: uppercase;
+      @include title(20px, 500);
+      color: $mid-grey;
+    }
+    .dName, .dHour {
+      color: $mid-grey;
+    }
+    .dNum {
+      color: $min-grey;
+    }
+    .dHour {
+      position: relative;
+      top: -5px;
+    }
+  }
+  .section-o {
+    border-top: 1px solid $orange;
+
+  .narrow {
+    @extend .condensed;
+    font-size: 20px;
+    .item {
+      padding-bottom: 45px;
+      border-bottom: 1px solid orange;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .item:last-child {
+
+      border-bottom: none !important;
+    }
+    .price {
+      padding-top: 5px;
+      float: right;
+      font-weight: bold;
+    }
+  }
+
+  .title-r {
+      color:$orange;
+      padding-top: 10px;
+      font-weight: 500;
+    }
+    .rate-list {
+      color: $mid-grey;
+      li {
+        padding-bottom: 5px;
+      }
+    }
+  } //end section
+
+  .section-g {
+    background-color: transparentize($orange, .8);
+    border: none;
+    .title-r {
+      color: $grey;
+      padding-top: 10px;
+      @include title(16px, 500);
+    }
+    .equiv {
+      font-size: 12px !important;
+      text-align: right;
+      color: $mid-grey;
+    }
+  } //end section
+
+  .res {
+    padding: 10px 0 15px;
+    .sub {
+      font-size: 20px;
+      color: $mid-grey;
+    }
+    .res-total {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+}

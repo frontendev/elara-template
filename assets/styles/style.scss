@@ -4,7 +4,7 @@
  * for Div It
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 
 $img_path : '../images/';
 
@@ -14,6 +14,7 @@ $img_path : '../images/';
 @import "nav";
 @import "search";
 @import "media";
+@import "media-cont";
 @import "fonts";
 @import "paddings";
 @import "margins";
@@ -21,6 +22,7 @@ $img_path : '../images/';
 @import "buttons";
 @import "gallery";
 @import "footer";
+@import "totalizator";
 
 // 1 - Global
 .clean {
@@ -241,212 +243,14 @@ select {
       font-size: 12px;
     }
   }
-  .total {
-    //margin-top: 35px;
-    background: $white;
-    border: 1px solid $orange;
-    .title {
-      color: $white;
-      background: $orange;
-      @include title(16px,500);
-      margin: 0 -15px;
-      padding: 8px 15px;
-    }
-    .stay {
-      padding-top: 15px;
-    }
-    .stay, .date .title, .date .dName {
-      color: $mid-grey;
-    }
-    .date {
-      margin-top: -10px;
-      margin-bottom:  10px;
-      .title {
-        background: none;
-        @include title(14px, 300);
-        margin-bottom: -7px;
-      }
-      .dName, .dNum, .dHour {
-        text-transform: uppercase;
-        @include title(20px, 500);
-        color: $mid-grey;
-      }
-      .dName, .dHour {
-        color: $mid-grey;
-      }
-      .dNum {
-        color: $min-grey;
-      }
-      .dHour {
-        position: relative;
-        top: -5px;
-      }
-    }
-  .section-o {
-    border-top: 1px solid $orange;
-    .title-r {
-        color:$orange;
-        padding-top: 10px;
-        @include title(16px, 500);
-      }
-      .rate-list {
-        color: $mid-grey;
-        li {
-          padding-bottom: 5px;
-        }
-      }
-    } //end section
-
-    .section-g {
-      background-color: transparentize($orange, .8);
-      border: none;
-      .title-r {
-        color: $grey;
-        padding-top: 10px;
-        @include title(16px, 500);
-      }
-      .equiv {
-        font-size: 12px !important;
-        text-align: right;
-        color: $mid-grey;
-      }
-    } //end section
-
-    .res {
-      padding: 10px 0 15px;
-      .sub {
-        font-size: 20px;
-        color: $mid-grey;
-      }
-      .res-total {
-        font-size: 20px;
-        color: $black;
-      }
-    }
-  }
-  .media {
-    // because i got high, because i got high, because i got high :D
-    &.high {
-      border: 1px solid $green;
-      padding: 15px 15px 0;
-      overflow: visible;
-      margin-top: 20px;
-      margin-bottom: 10px;
-
-      .media-title {
-        background: $green;
-        margin: -15px -15px 15px;
-        padding: 5px 15px 5px;
-        position: relative;
-        color: $white;
-        @include title(16px, 500);
-        .txt {
-          padding-left: 50px;
-        }
-      }
-      .fa-stack {
-        position: absolute;
-        top: -11px;
-        left: 10px;
-        .fa-stack-2x {
-          color: green;
-          font-size: 2.5em;
-        }
-        .fa-stack-1x {
-          color: $white;
-          top: 3px;
-          left: 2px;
-        }
-      }
-    }
-    &.reg {
-      border: none;
-      padding: 15px 15px 0;
-      overflow: visible;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    .media-left {
-      padding-right: 15px;
-    }
-    .box-price {
-      float: right;
-      @include title(15px, 300);
-      color: $min-grey;
-      text-align: center;
-      padding-left: 15px;
-      .fPrice {
-        position: relative;
-        bottom: 10px;
-        margin-bottom: -8px;
-        .dsign ,  .price {
-          color: $orange;
-        }
-        .dsign  {
-          @include title(21px,400);
-          position: relative;
-          bottom: 3px;
-        }
-        .price {
-          @include title(34px,700);
-        }
-      }
-    }
-    .media-object {
-      width: 258px;
-    }
-    .media-body {
-      .media-heading {
-        @include title(20px, 400);
-        letter-spacing: 1px;
-        .rm-title {
-          color: $main-dark;
-        }
-        .rm-size {
-          color: $min-grey;
-        }
-      }
-      .old-price {
-        text-decoration: line-through;
-        font-weight: 300;
-      }
-      .new-price {
-        font-weight: 700;
-      }
-      .reg-price {
-        font-weight: 500;
-      }
-      .table tr td {
-        vertical-align: middle;
-        padding: 5px;
-      }
-      .table {
-        margin-top: 13px;
-        margin-bottom: 10px;
-        thead {
-          background-color: $thead;
-          color: $white;
-          @include title(16px, 400);
-          border-bottom: none;
-        }
-        tr {
-          th {
-            border: none;
-          }
-          td {
-            select.form-control {
-              height: 28px;
-            }
-            &.cancel, .fa-info-circle {
-              color: $green;
-            }
-          }
-        }
-      }
-    }
-  }
   .divider {
     border-bottom: 1px solid transparentize($main, .52);
+  }
+  .divider-o {
+    border-bottom: 1px solid $orange;
+  }
+  .divider-mg {
+    border-bottom: 1px solid $mid-grey;
   }
   .panel-group {
     margin-bottom: -5px;

@@ -1,10 +1,16 @@
 {
   "name": "elara-template",
+  "author": "Damian Palacios <d.ezequiel.palacios@gmail.com>",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendev/elara-template"
+  },
+  "readmeFilename": "README.md",
   "dependencies": {
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",

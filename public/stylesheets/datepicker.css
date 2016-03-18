@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   padding: 4px;
+  min-width: 250px !important;
   margin-top: 1px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -55,6 +56,16 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+.datepicker th {
+  text-align: center;
+  color: #021940;
+}
+.datepicker th.dow{
+  text-align: center;
+  background: orange;
+  border-radius: 0;
+  border: 1px solid #eee;
 }
 .datepicker td.day:hover {
   background: #eeeeee;
@@ -166,6 +177,7 @@
 .datepicker th.next,
 .datepicker th.prev {
   font-size: 21px;
+  cursor: pointer;
 }
 .datepicker thead tr:first-child th {
   cursor: pointer;
