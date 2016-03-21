@@ -19,41 +19,7 @@ block content
   // Habitaciones   
   div.container.content
     div.row.pt30
-      // top result 
-      div.media.high
-        div.media-title
-          span.fa-stack.fa-lg
-            i.fa.fa-circle.fa-stack-2x
-            i.fa.fa-fire.fa-stack-1x.fa-inverse
-          span.txt Esta es la mejor oferta para tu busqueda del 14/04/1912 al 15/04/1912
-        div.box-price
-          p Subtotal
-          p.fPrice
-            span.dsign $
-            span.price 1234
-          a.btn.btn-success.btn-right-double(href='/checkout-s1' role='button') Reservar ahora
-        div.media-left.media-top
-          a(href='images/room/room1.jpg' title="Vista de habitacion" data-gallery)
-            img.media-object(src='images/room/room1.jpg' alt='')
-        div.media-body
-          p.media-heading
-            a.clean(href='/habitacion' target='_blank')
-              span.rm-title Loft Doble 
-              span.rm-size (38m²) 
-              span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                i.fa.fa-user &nbsp;
-                i.fa.fa-user
-          p.description-sm
-            |Habitaciones de 2 amplias y modernas plantas generan la mejor privacidad para su estadía. 
-            |Una planta inferior con un living equipado con los mejores sillones de descanso y una planta superior, con la comodidad de una habitación de hotel. 
-            |Además un espacio de trabajo relajado y diferente con la tecnologia necesaria para el nuevo trabajador móvil. 
-          div.panel.panel-terms
-            div.panel-body
-              p.body-title Condiciones
-              ul.list-unstyled
-                li - El nombre del titular debe comenzar con la letra D
-                li - Debe reservar durante la noche con luna en fase de cuarto creciente.
-                li - Vigente del 14/04/1912 23:40 hs al 15/04/1912 a las 2:20 hs.
+      include top-result.jade
     div.row
       //Results
       div.col-sm-12(style='margin-bottom: -15px;')
@@ -61,11 +27,12 @@ block content
       //-TOTALIZATOR    
       include totalizator.jade
       
-      div.media.reg.col-sm-9.col-md-10.col-lg-9
-        img.visible-sm.img-responsive.center-block(src='/images/room/room4.jpg' alt='Some room')
-        div.media-left.media-top.hidden-sm
-          a(href='/images/room/room4.jpg' style='position: relative;' title="Vista de habitacion" data-gallery)
-            img.media-object.hidden-sm(src='/images/room/room4.jpg' alt='Some room')
+      div.media.reg.col-xs-12.col-sm-9.col-md-10.col-lg-9
+        img.visible-xs.visible-sm.img-responsive.center-block(src='/images/room/room4.png' alt='Some room')
+        
+        div.media-left.media-top.hidden-sm.hidden-xs
+          a(href='/images/room/room4.png' style='position: relative;' title="Vista de habitacion" data-gallery)
+            img.media-object.hidden-sm(src='/images/room/room4.png' alt='Some room')
             a.btn.btn-line.btn-img-more(role='button' href='/habitacion' target='_blank')
               |ver habitacion       
               i.fa.fa-search
@@ -82,7 +49,8 @@ block content
               tr
                 th Tarifas
                 th Condiciones
-                th Precio por noche
+                th.hidden-xs Precio por noche
+                th.visible-xs Noche
                 th Habitacion
             tbody
               tr
@@ -114,8 +82,8 @@ block content
                   span(data-toggle='tooltip' data-placement='bottom' title='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ') Tarifa standard
                 td.cancel
                   span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    | Cancelación gratuita 
                     i.fa.fa-info-circle
-                    | &nbsp; Cancelación gratuita
                 td
                   span.reg-price $1931.23
                 td
@@ -125,10 +93,11 @@ block content
                     option 2
         div.divider
           
-      div.media.reg.col-sm-9.col-md-10.col-lg-9
-        img.visible-sm.img-responsive.center-block(src='/images/room/room2.jpg' alt='')
-        div.media-left.media-top.hidden-sm
-          a(href='/images/room/room2.jpg' style='position: relative;')
+      div.media.reg.col-xs-12.col-sm-9.col-md-10.col-lg-9
+        img.visible-xs.visible-sm.img-responsive.center-block(src='/images/room/room2.png' alt='')
+          
+        div.media-left.media-top.hidden-sm.hidden-xs
+          a(href='/images/room/room2.png' style='position: relative;')
             img.media-object(src='/images/room/room2.jpg' alt='')
             a.btn.btn-line.btn-img-more(role='button' target='_blank'  href='/habitacion')
               |ver habitacion       
@@ -147,7 +116,8 @@ block content
               tr
                 th Tarifas
                 th Condiciones
-                th Precio por noche
+                th.hidden-xs Precio por noche
+                th.visible-xs Noche
                 th Habitacion
             tbody
               tr
@@ -179,8 +149,8 @@ block content
                   span(data-toggle='tooltip' data-placement='bottom' title='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')  Tarifa standard
                 td.cancel
                   span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    |Cancelación gratuita  &nbsp;
                     i.fa.fa-info-circle
-                    | &nbsp; Cancelación gratuita
                 td
                   span.reg-price $2031.23
                 td
@@ -190,11 +160,11 @@ block content
                     option 2
         div.divider
       //-result #2
-      div.media.reg.col-sm-9.col-md-10.col-lg-9
-        img.visible-sm.img-responsive.center-block(src='/images/room/room3.jpg' alt='Some room')
-        div.media-left.media-top.hidden-sm
+      div.media.reg.col-xs-12.col-sm-9.col-md-10.col-lg-9
+        img.visible-xs.visible-sm.img-responsive.center-block(src='/images/room/room3.png' alt='Some room')
+        div.media-left.media-top.hidden-sm.hidden-xs
           a(href='/images/room/room3.jpg' style='position: relative;')
-            img.media-object(src='images/room/room3.jpg' alt='')
+            img.media-object(src='images/room/room3.png' alt='')
             a.btn.btn-line.btn-img-more(role='button' href='/habitacion' target='_blank')
               |ver habitacion       
               i.fa.fa-search
@@ -213,7 +183,8 @@ block content
               tr
                 th Tarifas
                 th Condiciones
-                th Precio por noche
+                th.hidden-xs Precio por noche
+                th.visible-xs Noche
                 th Habitacion
             tbody
               tr
@@ -245,8 +216,8 @@ block content
                   span(data-toggle='tooltip' data-placement='bottom' title='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ') Tarifa standard
                 td.cancel
                   span(data-toggle='tooltip' data-placement='bottom' title='Podes cancelar la reserva hasta 24hs antes del Check In') 
+                    |Cancelación gratuita 
                     i.fa.fa-info-circle
-                    | &nbsp; Cancelación gratuita
                 td
                   span.old-price $2012.19 &nbsp;
                   span.new-price &nbsp; $2145.18

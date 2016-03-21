@@ -18,20 +18,13 @@
 }
 // Made for results
 .btn-img-more {
-  position: absolute;
-  bottom: 14px;
+  position: relative;
 }
 
 // Made for rooms
 .btn-img-more-r {
   position: relative;
   padding: 10px 15px;
-  &:link {
-    color: $white !important;
-  }
-  &:link {
-    color: $white !important;
-  }
 }
 .btn-line {
   background-color: transparentize($black, .5);
@@ -46,6 +39,9 @@
   &:hover {
     color: $white;
     background-color: transparentize($black, .2);
+  }
+  &:link {
+    color: $white;
   }
 }
 .btn-360 {

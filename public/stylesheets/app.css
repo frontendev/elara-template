@@ -5149,16 +5149,11 @@ button.close {
       color: red; }
 
 .btn-img-more {
-  position: absolute;
-  bottom: 14px; }
+  position: relative; }
 
 .btn-img-more-r {
   position: relative;
   padding: 10px 15px; }
-  .btn-img-more-r:link {
-    color: #fff !important; }
-  .btn-img-more-r:link {
-    color: #fff !important; }
 
 .btn-line {
   background-color: rgba(0, 0, 0, 0.5);
@@ -5175,6 +5170,8 @@ button.close {
   .btn-line:hover {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.8); }
+  .btn-line:link {
+    color: #fff; }
 
 .btn-360 {
   padding: 6px 12px;
@@ -8042,7 +8039,15 @@ select {
 
   .gallery .img-top-room {
     height: 300px;
-    color: green; } }
+    color: green; }
+
+  .media.high .media-left {
+    padding-bottom: 15px; }
+  .media.high .media-object {
+    width: 258px;
+    color: red !important; }
+  .media .media-object {
+    color: red; } }
 @media (min-width: 768px) {
   .onhover:hover .onhover-menu {
     display: block; }
@@ -8054,7 +8059,55 @@ select {
     margin-bottom: 2px; }
 
   .navbar .dropdown-toggle {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+
+  .total {
+    font-family: 'Roboto Condensed', sans-serif; }
+    .total .total-title {
+      font-size: 18px;
+      font-weight: 500; }
+    .total .stay {
+      font-size: 20px; }
+    .total .date {
+      margin-top: 0; }
+      .total .date .title {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 0px; }
+    .total .section-g .title-r {
+      color: #333;
+      padding-top: 10px;
+      font-size: 24px;
+      font-weight: 500; }
+    .total .section-g .exp-list li {
+      font-size: 20px; }
+    .total .section-g .equiv {
+      font-size: 12px !important;
+      text-align: right;
+      white-space: nowrap;
+      color: #666; }
+    .total .section-g .narrow .item {
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 300;
+      color: #333 !important; }
+      .total .section-g .narrow .item .price {
+        padding-top: 5px;
+        text-align: right;
+        font-weight: bold;
+        display: block; }
+    .total .section-g .narrow p.total-price {
+      font-size: 22px;
+      padding-top: 15px;
+      text-align: right;
+      color: #000; }
+    .total .section-o .title-r {
+      font-size: 20px;
+      line-height: 20px; }
+    .total .section-o .narrow .item {
+      line-height: 20px;
+      font-weight: 300;
+      color: #666; } }
 @media (min-width: 768px) and (max-width: 992px) {
   .navbar-default .navbar-nav > li > a {
     font-size: 15px;
@@ -8123,11 +8176,15 @@ select {
   .pb15-sm {
     padding-bottom: 15px; }
 
+  .media.high .media-left {
+    padding-bottom: 15px; }
+  .media.high .media-object {
+    width: 258px; }
   .media .media-object {
-    color: green; }
-
-  .total {
-    font-family: 'Roboto Condensed', sans-serif !important; } }
+    color: green; } }
+@media (max-width: 992px) {
+  .media .media-heading {
+    padding-top: 15px; } }
 @media (min-width: 992px) {
   .btn-360 {
     margin-bottom: 20px; }
@@ -8181,6 +8238,9 @@ select {
   .bg-search-n {
     min-height: 142px; }
 
+  .media.high .media-object {
+    width: 258px;
+    color: yellow !important; }
   .media .media-object {
     width: 230px; }
 
@@ -8197,7 +8257,14 @@ select {
       margin-bottom: 0px; }
   .total .section-o .title-r {
     font-size: 20px;
-    line-height: 20px; } }
+    line-height: 20px; }
+  .total .section-o .narrow .item {
+    line-height: 20px;
+    font-weight: 300; }
+
+  .btn-img-more {
+    bottom: 36px;
+    margin-bottom: -20px; } }
 @media (min-width: 1200px) {
   .search-box-n {
     top: 0;
@@ -8236,17 +8303,31 @@ select {
     .gallery .more .num {
       padding-top: 85px; }
 
+  .media.high .media-object {
+    width: 258px; }
   .media .media-object {
     width: 258px; }
 
-  .total .total-title {
-    font-size: 16px;
-    font-weight: 700; }
-  .total .date {
-    margin-top: -10px; }
-  .total .section-o .title-r {
-    font-size: 16px;
-    line-height: inherit; } }
+  .total {
+    font-family: 'Roboto', sans-serif; }
+    .total .total-title {
+      font-size: 18px;
+      font-weight: 400; }
+    .total .date {
+      margin-top: 0; }
+      .total .date .title {
+        font-size: 15px; }
+    .total .section-o .title-r {
+      font-size: 16px;
+      line-height: inherit; }
+    .total .section-o .rate-list {
+      font-size: 16px; }
+    .total .section-g .exp-list li {
+      font-size: 16px; }
+
+  .btn-img-more {
+    bottom: 36px;
+    margin-bottom: -20px; } }
 @media (min-width: 1201px) {
   .media-cont .thumbnail.fw-top .caption {
     margin-top: 0; }

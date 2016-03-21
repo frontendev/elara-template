@@ -1,4 +1,4 @@
-div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
+div.col-xs-12.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
   div.row
     div.col-xs-12
       p.total-title.visible-lg Detalle de selección
@@ -7,7 +7,7 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
       p.stay 
         span.bold 12 
         | noches
-        div.divider-o.hidden-lg.p20
+        div.divider-o.hidden-lg.hidden-xs.p20
     //- Fechas de entrada y salida
     div.col-xs-6.col-sm-12.col-lg-6.date.in
       p.title Entrada
@@ -16,7 +16,7 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
         span.dNum 19/12
       p.mb
         span.dHour 14:43 hs
-      div.divider-o.hidden-lg.pb5
+      div.divider-o.hidden-lg.hidden-xs.pb5
     div.col-xs-6.col-sm-12.col-lg-6.date.out
       p.title Salida
       p.mb
@@ -42,14 +42,14 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
           span.price $1.198
         div.clearfix
         p.item 1 Promo tarjeta de credito <br>
-          span.price $1.528S
-        p Subtotal 
-          span $2726
+          span.price $1.528
+        p.light Subtotal 
+          span.bold $2726
         
     //-Seleccion #2
     div.col-xs-12.section-o
       p.title-r Loft Doble comun
-      ul.list-unstyled.rate-list.hidden-sm
+      ul.list-unstyled.rate-list.hidden-sm.hidden-md
         li 1 oferta imbatitle
           span.pull-right $1.321
         li 2 tarjeta de credito 
@@ -61,7 +61,7 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
           span.sub $8.606
           
       //Items for small resolutions
-      div.visible-sm.narrow
+      div.visible-sm.visible-md.narrow
         p.item 1 oferta imbatitle <br>
           span.price $1.321
         div.clearfix
@@ -69,10 +69,14 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
           span.price $2.923
         p.item 2 Tarifa regular <br>
           span.price $4.332
+        p.light Subtotal 
+          span.bold $8.606
+    
+    
     //-Resultado Final
     div.col-xs-12.section-g
       p.title-r Resumen
-      ul.list-unstyled.exp-list
+      ul.list-unstyled.exp-list.hidden-sm.hidden-md
         li 2 Loft Triple Superior
           span.pull-right $2.726
         li 2 Loft Doble Comun
@@ -80,8 +84,20 @@ div.col-sm-3.col-md-2.col-lg-3.pull-right.total(style='margin-top: 30px;')
           li.pull-right.res  
             |total  
             span.res-total $11.332
+      //Items for small resolutions
+      div.visible-sm.visible-md.narrow
+        p.item 2 Loft Triple Superior <br>
+          span.price $2.726
+        div.clearfix
+        p.item 2 Loft Doblde Comun  <br>
+          span.price $8.606
+        div.clearfix
+        p.light.total-price Total 
+          span.bold $11.332
+          
       div.clearfix
-      a.btn.btn-info.pull-right(href='/checkout-s1' role='button') Reservar ahora
+      a.btn.btn-info.pull-right.hidden-sm.hidden-md(href='/checkout-s1' role='button') Reservar ahora
+      a.btn.btn-info.btn-block.btn-lg.visible-sm.visible-md(href='/checkout-s1' role='button') Reservar
       div.clearfix
       p.equiv  
         | &nbsp; Correponde a 
