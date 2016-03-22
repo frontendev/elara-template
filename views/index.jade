@@ -17,14 +17,16 @@ block content
   include mercadopago.jade
   
   //- Description
-  - var hotel = {name: 'Suíça Hotel & Resort', address: 'Av Felipe Wanscheer 3580 - Jd Sao Paulo, Foz do Iguaçu, Brazil', subtitle: 'Le damos la bienvenida a Suíça Hotel & Resort' }
+  - var hotel = {name: 'Suíça Hotel & Resort', address: 'Av Felipe Wanscheer 3580 - Jd Sao Paulo, Foz do Iguaçu, Brazil', subtitle: 'Le damos la bienvenida a Suíça Hotel & Resort'}
   
   div.container.content.styleb
+    
     div.row
       div.col-xs-12.col-sm-7
         p.title #{hotel.name} 
         p.subtitle #{hotel.subtitle} 
         p.description
+          
           span.bold #{hotel.name} 
           | te sorprende con un estilo vanguardista de motivos geométricos y colores vivos.
           | Un innovador  uso de madera curvada combinado con elementos de cristal y materiales de última generación, creando un ambiente de relax y distracción.
@@ -133,7 +135,7 @@ block content
             div.panel-heading
               span Viajé en Familia
             div.panel-body
-              img.img-responsive(src='images/promo/family.png' alt='')
+              img.img-responsive(src='/images/promo/family.png' alt='')
               span.fa-stack.fa-lg.icon
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
@@ -144,7 +146,7 @@ block content
             div.panel-heading
               span Promo Romántica
             div.panel-body
-              img.img-responsive(src='images/promo/romance.png' alt='')
+              img.img-responsive(src='/images/promo/romance.png' alt='')
               span.fa-stack.fa-lg.icon
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
@@ -155,7 +157,7 @@ block content
             div.panel-heading
               span Early Booking Bonus
             div.panel-body
-              img.img-responsive(src='images/promo/early.png' alt='')
+              img.img-responsive(src='/images/promo/early.png' alt='')
               span.fa-stack.fa-lg.icon
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
@@ -166,7 +168,7 @@ block content
             div.panel-heading
               span Pago en 12 cuotas
             div.panel-body
-              img.img-responsive(src='images/promo/cuotas.png' alt='')
+              img.img-responsive(src='/images/promo/cuotas.png' alt='')
               span.fa-stack.fa-lg.icon
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-flag.fa-stack-1x.fa-inverse
@@ -200,7 +202,7 @@ block content
       div.col-xs-12.col-sm-6.col-md-4.media-cont 
         div.thumbnail
           a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room2.png' alt='Loft Doble')
+            img.img-responsive(src='/images/room/room2.png' alt='Loft Doble')
             div.caption
               a.ftitle(href='/habitacion' role='button')
                 span.rm-title Loft Triple 
@@ -216,7 +218,7 @@ block content
       div.col-xs-12.col-sm-6.col-md-4.media-cont 
         div.thumbnail
           a.clean(href='/promociones')
-            img.img-responsive(src='images/room/room3.png' alt='Loft Doble')
+            img.img-responsive(src='/images/room/room3.png' alt='Loft Doble')
             div.caption
               p
                 span.rm-title Loft cuadruple 

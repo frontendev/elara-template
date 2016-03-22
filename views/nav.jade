@@ -1,3 +1,7 @@
+- var menu = {items: menu_items}
+script(type="text/javascript").
+  console.log(!{JSON.stringify(menu)})
+    
 nav.navbar.navbar-default
   div.container
     div.navbar-header
@@ -7,14 +11,19 @@ nav.navbar.navbar-default
         span.icon-bar
         span.icon-bar
       a.navbar-brand.hidden-sm(href='/')
-        img(src='images/htl-9-julio-logo.png', alt='')
-      div.container.visible-sm
+        img(src='/images/htl-9-julio-logo.png', alt='')
+      div.container.visible-sm.mln15
         a.text-center.center-block(href='/')
           img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
+            
     div.collapse.navbar-collapse#top-nav
+      p= item
       ul.nav.navbar-nav.navbar-right
+        
+        //Start parsing the menu
+        
         li.dropdown.onhover
-          a.drop-fix.hidden-xs#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
+          a.drop-fix.hidden-xs#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones
             span.caret
           a.visible-xs(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
             span.caret
@@ -57,19 +66,19 @@ nav.navbar.navbar-default
           a.highlight(href='/reservas') Reserve online
         li.dropdown.fx-flag-nav
           a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
-            img(src='images/sp.svg' alt='Spanish flag' width='20')
+            img(src='/images/sp.svg' alt='Spanish flag' width='20')
             | &nbsp;
             span.caret
           ul.dropdown-menu
             li.active
               a(href='#')
-                img(src='images/sp.svg' alt='Spanish flag' width='20') 
+                img(src='/images/sp.svg' alt='Spanish flag' width='20') 
                 | &nbsp Español
             li
               a(href='#')
-                img(src='images/br.svg' alt='Brazilian flag' width='20')
+                img(src='/images/br.svg' alt='Brazilian flag' width='20')
                 | &nbsp Portugués
             li
               a(href='#')
-                img(src='images/uk.svg' alt='United Kingdom flag' width='20')
+                img(src='/images/uk.svg' alt='United Kingdom flag' width='20')
                 | &nbsp Inglés

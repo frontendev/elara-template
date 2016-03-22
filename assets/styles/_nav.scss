@@ -5,6 +5,7 @@
   border-bottom: 1px solid $min-grey;
   margin-bottom: 0;
   @include border-radius (0,0);
+  border: none;
 }
 .logo-sm {
   padding-top: 20px;
