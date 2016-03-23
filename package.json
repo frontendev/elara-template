@@ -19,10 +19,13 @@
     "jade": "~1.11.0",
     "jade-bootstrap": "^1.0.1",
     "jquery": "^2.2.0",
+    "kerberos": "0.0.19",
     "masonry-layout": "^4.0.0",
     "mongodb": "~2.0.33",
     "monk": "~1.0.1",
     "morgan": "~1.6.1",
+    "python": "0.0.4",
+    "restler": "^3.4.0",
     "serve-favicon": "~2.3.0"
   }
 }
