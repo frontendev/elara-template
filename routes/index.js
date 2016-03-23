@@ -5,14 +5,14 @@ var siteService = require('../services/sites');
 /* Home. */
 //router.all('/:pathUrl*', function(req, res, next) {
 router.get('/', function(req, res, next) {
-    var path = req.path;
-    var nodoRaiz  = 14;
-    var ss = new siteService('https://ra.mbooking.com.ar/','HTL0000001',3);
-      console.log(req.params.pathUrl);
-      ss.getPathRequest(path,function(result){
-          res.render('index', { title: 'HTL Suica Hotel & Resort - Home', url : "/", menu_items: result[nodoRaiz].hijos });
-          console.log(path);
-      });
+  var path = req.path;
+  var nodoRaiz  = 14;
+  var ss = new siteService('https://ra.mbooking.com.ar/','HTL0000001',3);
+    console.log(req.params.pathUrl);
+    ss.getPathRequest(path,function(result) {
+        res.render('index', { title: 'HTL Suica Hotel & Resort - Home', url : "/", menu_items: result[nodoRaiz].hijos });
+        console.log(path);
+    });
 });
 
 /* Service */
