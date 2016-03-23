@@ -1,6 +1,6 @@
 - var menu = {items: menu_items}
 script(type="text/javascript").
-  console.log(!{JSON.stringify(menu)});
+  var papa = !{JSON.stringify(menu)};
     
 nav.navbar.navbar-default
   div.container
@@ -14,12 +14,13 @@ nav.navbar.navbar-default
         img(src='/images/htl-9-julio-logo.png', alt='')
       div.container.visible-sm.mln15
         a.text-center.center-block(href='/')
-          img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo htl')
-            
+          img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo HTL')    
     div.collapse.navbar-collapse#top-nav
       p= item
       ul.nav.navbar-nav.navbar-right
         //Start parsing the menu
+        for each value in menu
+          //- code...
         li.dropdown.onhover
           a.drop-fix.hidden-xs#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones
             span.caret

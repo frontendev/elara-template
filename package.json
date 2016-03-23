@@ -1,7 +1,7 @@
 {
   "name": "elara-template",
   "author": "Damian Palacios <d.ezequiel.palacios@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
