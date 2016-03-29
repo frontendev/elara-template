@@ -4,9 +4,13 @@ var SiteRouter = function (req) {
 		var p = cleanUrl.split('/');
 		for( var i in $langCodes){
 			var langCode = $langCodes[i];
-			if(p.indexOf(langCode) != 0 ){
+			if(p.indexOf(langCode) != -1 ){
 				$langCode = langCode;
+				break;
 			}
+		}
+		if($langCode != 'es'){
+			$suffix = '_'+$langCode;
 		}
 	};
 
@@ -46,6 +50,11 @@ var SiteRouter = function (req) {
 	this.getLang = function (){
 		return $langCode;
 	};
+	this.getSuffix = function (){
+		return $suffix;
+	};
+
+
 	this.getParams = function (){
 		return $requestParams;
 	};
@@ -60,7 +69,7 @@ var SiteRouter = function (req) {
 	var $url = req.url;
 	var $requestParams = {};
 	var $valid = true;
-
+var $suffix ='';
 	//clean the get params  and set clean url
 	parseGet();
 	//

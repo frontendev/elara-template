@@ -4912,8 +4912,11 @@ button.close {
       .media-cont .thumbnail .caption .rm-title {
         margin-top: 0;
         color: #004ed0; }
+      .media-cont .thumbnail .caption .rm-ocupant,
+      .media-cont .thumbnail .caption .rm-size,
+      .media-cont .thumbnail .caption .ftitle .rm-size {
+        color: #999; }
       .media-cont .thumbnail .caption .rm-size, .media-cont .thumbnail .caption .ftitle .rm-size {
-        letter-spacing: 1px;
         color: #999; }
       .media-cont .thumbnail .caption .ftitle {
         margin-bottom: 10px;

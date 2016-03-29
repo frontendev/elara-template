@@ -17,27 +17,31 @@ var $parIdDistribucion =[{ 1: "index"}, { 2: "hotel"}, { 3: "room"}, {4: "servic
           return ;
       }
     }
-
-
   }
 
-    var setRootNode = function (rootNode ){
+    var setRootNode = function (rootNode ) {
        $rootNode = rootNode;
     }
-  this.getAction = function (){
+    var setActualNode = function (actualNode ) {
+       $actualNode = actualNode;
+    }
+  this.getAction = function () {
     return $action;
   };
-  this.getRootNode = function (){
+  this.getRootNode = function () {
     return $rootNode;
+  };
+  this.getActualNode = function () {
+    return $actualNode;
   };
 
     var responseHandler = function(error,result){
         if(!result || result.error != undefined){
-            console.log('Code:'+result.error.code);
-            console.log('Message:'+result.error.exception[0].message);
+            console.log('Code: '+result.error.code);
+            console.log('Message: '+result.error.exception[0].message);
             for(line in result.error.exception[0].trace){
-                var errorLine = result.error.exception[0].trace[line];
-                console.log('   ->'+errorLine.file +' ('+errorLine.line+')');
+              var errorLine = result.error.exception[0].trace[line];
+              console.log('   ->'+errorLine.file +' ('+errorLine.line+')');
             }
             return false;
         }else{
@@ -47,15 +51,20 @@ var $parIdDistribucion =[{ 1: "index"}, { 2: "hotel"}, { 3: "room"}, {4: "servic
 
      this.getPathRequest  =  function(path, callback){
         var rest = require('restler');
-        var url = $serviceUrl+'api/sites/'+$siteId+'?bookId='+$bookId+'&path='+path;
+        //TODO asegurarse de que exista el codigo de idioma este en la url
+        var langCode = path[1]+path[2];
+        path= path.substr(3);
+        var url = $serviceUrl + 'api/sites/' + $siteId + '?bookId=' + $bookId + '&path=' + path +'&lang=' + langCode;
         rest.get(url)
         .on('complete', function(result) {
-            if(responseHandler(null,result)){
-                if(result != 'undefined'){
+            if (responseHandler(null,result)) {
+                if (result != 'undefined') {
                   var keys = Object.keys( result.structure);
                   setRootNode(keys[0]);
-                  setDistribucion(result.structure[keys[keys.length-1]].distribucion_id);
-                  callback(result.structure);
+                  var actualNode = keys[keys.length-1];
+                  setActualNode(actualNode);
+                  setDistribucion(result.structure[actualNode].distribucion_id);
+                  callback(result);
                 }
             }
         })
@@ -68,6 +77,7 @@ var $parIdDistribucion =[{ 1: "index"}, { 2: "hotel"}, { 3: "room"}, {4: "servic
     var $serviceUrl = serviceUrl;
     var $siteId = siteId;
     var $rootNode = nodeRoot;
+    var $actualNode = null;
 
 };
 

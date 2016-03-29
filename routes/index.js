@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 var siteService = require('../services/sites');
 
-/* Home. */
-//router.all('/:pathUrl*', function(req, res, next) {
+
 router.get('/', function(req, res, next) {
   var path = req.path;
   var nodoRaiz  = 14;
@@ -14,6 +13,8 @@ router.get('/', function(req, res, next) {
         console.log(path);
     });
 });
+
+
 
 /* Service */
 router.get('/servicios', function(req, res, next) {

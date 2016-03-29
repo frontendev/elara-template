@@ -1,6 +1,8 @@
-- var menu = {items: menu_items}
-script(type="text/javascript").
-  var papa = !{JSON.stringify(menu)};
+- var menu = {items: menu_items};
+//
+  script(type="text/javascript").
+    var menu = !{JSON.stringify(structure)}
+    console.log(menu);
     
 nav.navbar.navbar-default
   div.container
@@ -10,74 +12,14 @@ nav.navbar.navbar-default
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand.hidden-sm(href='/')
+      a.navbar-brand.hidden-sm(href='/es')
         img(src='/images/htl-9-julio-logo.png', alt='')
       div.container.visible-sm.mln15
         a.text-center.center-block(href='/')
           img.center-block.logo-sm(src='/images/htl-9-julio-logo.png', alt='Logo HTL')    
     div.collapse.navbar-collapse#top-nav
-      p= item
       ul.nav.navbar-nav.navbar-right
         //Start parsing the menu
-        for each value in menu
-          //- code...
-        li.dropdown.onhover
-          a.drop-fix.hidden-xs#promos(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones
-            span.caret
-          a.visible-xs(href='/habitaciones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='habitaciones') Habitaciones 
-            span.caret
-          ul.dropdown-menu.onhover-menu
-            li
-              a(href='/habitacion') Loft Doble
-            li
-              a(href='/habitacion') Loft Doble Superior
-            li
-              a(href='/habitacion') Loft Triple 
-            li
-              a(href='/habitacion') Loft Triple Superior 
-            li.visible-xs
-              a(href='/habitaciones') Ver todas 
-        li.dropdown.onhover
-          a.drop-fix.hidden-xs#promos(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' data-url='promociones') Promociones 
-            span.caret
-          a.visible-xs(href='/promociones' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Promociones 
-            span.caret
-          ul.dropdown-menu.onhover-menu
-            li
-              a(href='/promocion') 12 cuotas
-            li
-              a(href='/promocion') Early booking
-            li
-              a(href='/promocion') Promo Familia 
-            li
-              a(href='/promocion') Promo romantica
-            li.visible-xs
-              a(href='/promocion') Ver todas
-        li
-          a(href='/ubicacion') Ubicacion
-        li
-          a(href='/servicios') Servicios
-        li
-          a(href='/imagenes') Imagenes
-        li
-          a(href='/contacto') Contacto
-        li
-          a.highlight(href='/reservas') Reserve online
-        li.dropdown.fx-flag-nav
-          a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
-            img(src='/images/sp.svg' alt='Spanish flag' width='20')
-            | &nbsp;
-            span.caret
-          ul.dropdown-menu
-            li.active
-              a(href='#')
-                img(src='/images/sp.svg' alt='Spanish flag' width='20') 
-                | &nbsp Español
-            li
-              a(href='#')
-                img(src='/images/br.svg' alt='Brazilian flag' width='20')
-                | &nbsp Portugués
-            li
-              a(href='#')
-                img(src='/images/uk.svg' alt='United Kingdom flag' width='20')
-                | &nbsp Inglés
+        each menu in menu_items
+          li
+            a(href='#{menu[1]}' class='#{menu[3]}') #{menu[0]}  

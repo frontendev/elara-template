@@ -53,8 +53,11 @@
         margin-top: 0;
         color: $brand-info;
       }
+      .rm-ocupant,
       .rm-size {
-        letter-spacing: 1px;
+        color: $min-grey;
+      }
+      .rm-size {
         color: $min-grey;
       }
       .ftitle {

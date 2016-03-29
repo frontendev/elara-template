@@ -3,12 +3,16 @@ extends layout
 block head
   link(rel='stylesheet', href='/stylesheets/datepicker.css')
   title Habitaciones - HTL Suica Hotel & Resort 
-  
+  script(type="text/javascript").
+    var rooms = !{JSON.stringify(rooms)};
+    console.log('rooms:' , rooms);
+    var galeries = !{JSON.stringify(galeries)};
+    console.log('galerias: ', galeries);      
+
 block nav
   include nav.jade
 
 block content
-  
   div.hidden-xs
     // Search N
     include search_n.jade
@@ -22,123 +26,29 @@ block content
       div.col-xs-12.pb20
         p.sTitle Habitaciones
     div.row.grid
-      // Room #1  
-      div.col-sm-6.col-md-4.media-cont.grid-item
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room1.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p
-                span.rm-title Loft Doble 
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user  
-              p.description Pagando tu estadía con tarjeta de crédito obtén un 20% de descuento en la tarifa. Contacta a nuestro departamento de reservas para solicitar esta promoción.
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info     
-      // Room #2  
-      div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room2.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p
-                span.rm-title Loft triple 
-                span.rm-size (42m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user  
-              p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info 
-      // Room #3  
-      div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room3.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p 
-                span.rm-title Loft Triple
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user 
-              p.description Ut sodales blandit leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse mollis mattis ex sit amet convallis.
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info 
-      // Room #4  
-      div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room4.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p
-                span.rm-title Loft triple 
-                span.rm-size (42m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Pagando tu estadía con tarjeta de crédito obtén un 20% de descuento en la tarifa. Contacta a nuestro departamento de reservas para solicitar esta promoción.
-            //footer with 2 buttons
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info 
-            
-      // Room #5  
-      div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room5.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p 
-                span.rm-title Loft Doble 
-                span.rm-size (38m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='2 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
-            //footer with 1 button
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info 
-      // Room #5  
-      div.col-sm-6.col-md-4.media-cont.grid-item 
-        div.thumbnail.fw-top
-          div.top-media-img
-            a(href='/habitacion' style='text-decoration: none;')
-              img.img-responsive(src='/images/room/room6.png' alt='Loft Doble')
-          div.caption
-            a(href='/habitacion' style='text-decoration: none;')
-              p
-                span.rm-title Loft triple 
-                span.rm-size (42m²) 
-                span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='3 ocupantes')
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user &nbsp;
-                  i.fa.fa-user
-              p.description Loft doble superior con Box Window con vista panorámica a Avenida 9 de Julio + Champagne para el brindis + Petitt Fours + late check out 16 horas. Acreditando fecha de aniversario el paquete es gratuito. Valor adicional a la estadía USD 35. 
-            //footer with 1 button
-            div.row.ptb10
-              div.col-xs-6
-                a.btn.btn-info(href='/habitacion' role='button') Más info 
-                
+      each room in rooms
+        div.col-sm-6.col-md-4.media-cont.grid-item
+          div.thumbnail.fw-top
+            div.top-media-img
+              a(href='/habitacion' style='text-decoration: none;')
+                img.img-responsive(src='https://ssmbooking.com/public/galerias/#{room.galeria.path}/#{room.galeria.fotos[1].archivo}' alt='#{room.galeria.fotos[1].nombre}')
+            div.caption
+              a(href='/habitacion' style='text-decoration: none;')
+                p
+                  span.rm-title= room.nombre + ' - '  
+                  //#ToDo Incluir las dimensiones en el object
+                  //span.rm-size (38m²)
+                  span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='#{room.adultos_max} mayores')
+                    i.fa.fa-male &nbsp;
+                    span #{room.adultos_max} 
+                  if room.menores_max > 0
+                    span.rm-ocupant(data-toggle='tooltip' data-placement='top' title='#{room.menores_max} menores')
+                      i.fa.fa-child &nbsp;
+                      span #{room.menores_max} 
+                p.description= room.descripcion
+              div.row.ptb10
+                div.col-xs-6
+                  a.btn.btn-info(href='/habitacion' role='button') Más info               
 block scripts
   script(type='text/javascript' src='/javascripts/bootstrap-datepicker.min.js')
   script(type='text/javascript' src='/javascripts/locales/bootstrap-datepicker.es.js' charset='UTF-8')
